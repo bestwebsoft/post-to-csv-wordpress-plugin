@@ -1,0 +1,310 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: contact_form\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-02-19 09:33+0300\n"
+"PO-Revision-Date: 2014-02-19 09:53+0300\n"
+"Last-Translator: bestwebsoft.com <plugins@bestwebsoft.com>\n"
+"Language-Team: bestwebsoft.com <plugin@bestwebsoft.com>\n"
+"Language: ru_RU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: post-to-csv.php:33
+msgid "Post To CSV"
+msgstr "Посты в CSV"
+
+#: post-to-csv.php:54
+msgid "Please, choose at least one Post Type."
+msgstr "Пожалуйста, выберите хотя бы один тип поста."
+
+#: post-to-csv.php:56
+msgid "Please, choose at least one Field."
+msgstr "Пожалуйста, выберите хотя бы одно поле."
+
+#: post-to-csv.php:62
+#: post-to-csv.php:235
+#: post-to-csv.php:247
+msgid "Settings"
+msgstr "Настройки"
+
+#: post-to-csv.php:68
+msgid "Post Type"
+msgstr "Тип поста"
+
+#: post-to-csv.php:76
+msgid "Fields"
+msgstr "Поля"
+
+#: post-to-csv.php:78
+#: post-to-csv.php:96
+msgid "Title"
+msgstr "Название"
+
+#: post-to-csv.php:79
+msgid "Guid"
+msgstr "Guid"
+
+#: post-to-csv.php:80
+msgid "Permalink"
+msgstr "Пермалинки"
+
+#: post-to-csv.php:84
+msgid "Post status"
+msgstr "Статус поста"
+
+#: post-to-csv.php:86
+msgid "All"
+msgstr "Все"
+
+#: post-to-csv.php:87
+msgid "Publish"
+msgstr "Опубликованные"
+
+#: post-to-csv.php:88
+msgid "Draft"
+msgstr "Черновик"
+
+#: post-to-csv.php:89
+msgid "Inherit"
+msgstr "Унаследованный"
+
+#: post-to-csv.php:90
+msgid "Private"
+msgstr "Личные"
+
+#: post-to-csv.php:94
+msgid "Order By"
+msgstr "Сортировка по"
+
+#: post-to-csv.php:97
+msgid "Date"
+msgstr "Дата"
+
+#: post-to-csv.php:98
+msgid "Author"
+msgstr "Автор"
+
+#: post-to-csv.php:102
+msgid "Order Direction"
+msgstr "Направление сортировки"
+
+#: post-to-csv.php:104
+msgid "ASC"
+msgstr "по возрастанию"
+
+#: post-to-csv.php:105
+msgid "DESC"
+msgstr "по убыванию"
+
+#: post-to-csv.php:111
+msgid "Save Changes"
+msgstr "Сохранить изменения"
+
+#: post-to-csv.php:117
+msgid "If you enjoy our plugin, please give it 5 stars on WordPress"
+msgstr "Если вам понравился плагин, пожалуйста, поставте нам 5 звезд на WordPress"
+
+#: post-to-csv.php:118
+msgid "Rate the plugin"
+msgstr "Оценить плагин"
+
+#: post-to-csv.php:121
+msgid "If there is something wrong about it, please contact us"
+msgstr "Если у вас есть какие-то вопросы, обращайтесь"
+
+#: post-to-csv.php:206
+msgid "No items found."
+msgstr "Не найдено элементов."
+
+#: post-to-csv.php:222
+msgid "requires"
+msgstr "требует"
+
+#: post-to-csv.php:222
+msgid "or higher, that is why it has been deactivated! Please upgrade WordPress and try again."
+msgstr "или выше, поэтому плагин был деактивирован! Пожалуйста, обновите WordPress и попробуйте снова."
+
+#: post-to-csv.php:222
+msgid "Back to the WordPress"
+msgstr "Вернуться к WordPress"
+
+#: post-to-csv.php:222
+msgid "Plugins page"
+msgstr "Странице плагинов"
+
+#: post-to-csv.php:248
+msgid "FAQ"
+msgstr "Часто задаваемые вопросы"
+
+#: post-to-csv.php:249
+msgid "Support"
+msgstr "Поддержка"
+
+#~ msgid "Not set"
+#~ msgstr "Не задан"
+
+#~ msgid "On"
+#~ msgstr "Вкл"
+
+#~ msgid "Off"
+#~ msgstr "Вкл"
+
+#~ msgid "N/A"
+#~ msgstr "Неизвестно"
+
+#~ msgid " Mb"
+#~ msgstr " Mb"
+
+#~ msgid "Yes"
+#~ msgstr "Да"
+
+#~ msgid "No"
+#~ msgstr "Нет"
+
+#~ msgid "Operating System"
+#~ msgstr "Операционная система"
+
+#~ msgid "Server"
+#~ msgstr "Тип сервера"
+
+#~ msgid "Memory usage"
+#~ msgstr "Памяти использовано"
+
+#~ msgid "MYSQL Version"
+#~ msgstr "Версия MYSQL"
+
+#~ msgid "SQL Mode"
+#~ msgstr "Режим SQL"
+
+#~ msgid "PHP Version"
+#~ msgstr "Версия PHP"
+
+#~ msgid "PHP Safe Mode"
+#~ msgstr "PHP Safe Mode"
+
+#~ msgid "PHP Allow URL fopen"
+#~ msgstr "PHP Allow URL fopen"
+
+#~ msgid "PHP Memory Limit"
+#~ msgstr "Лимит памяти"
+
+#~ msgid "PHP Max Upload Size"
+#~ msgstr "Макс. размер загружаемого файла"
+
+#~ msgid "PHP Max Post Size"
+#~ msgstr "Макс. размер записи"
+
+#~ msgid "PHP Max Script Execute Time"
+#~ msgstr "Макс. время выполнения сценария"
+
+#~ msgid "PHP Exif support"
+#~ msgstr "Поддержка PHP Exif"
+
+#~ msgid "PHP IPTC support"
+#~ msgstr "Поддержка PHP IPTC"
+
+#~ msgid "PHP XML support"
+#~ msgstr "Поддержка PHP XML"
+
+#~ msgid "Site URL"
+#~ msgstr "Адрес сайта"
+
+#~ msgid "Home URL"
+#~ msgstr "Основной адрес сайта"
+
+#~ msgid "WordPress Version"
+#~ msgstr "Версия WordPress"
+
+#~ msgid "WordPress DB Version"
+#~ msgstr "Версия базы данных WordPress"
+
+#~ msgid "Multisite"
+#~ msgstr "Мультиблог"
+
+#~ msgid "Active Theme"
+#~ msgstr "Текущая тема"
+
+#~ msgid "Please enter a valid email address."
+#~ msgstr "Пожалуйста, введите валидный email."
+
+#~ msgid "Email with system info is sent to "
+#~ msgstr "E-mail с системной информацией отправлен на"
+
+#~ msgid "Thank you for contacting us."
+#~ msgstr "Спасибо за контакт с нами."
+
+#~ msgid "Sorry, email message could not be delivered."
+#~ msgstr "Извините, ваш email не может быть отправлен."
+
+#~ msgid "Pro plugins"
+#~ msgstr "Про версии плагинов"
+
+#~ msgid "Activated plugins"
+#~ msgstr "Активированные плагины"
+
+#~ msgid "Read more"
+#~ msgstr "Читать далее"
+
+#~ msgid "Installed plugins"
+#~ msgstr "Установленные плагины"
+
+#~ msgid "Recommended plugins"
+#~ msgstr "Рекомендованные к установке плагины"
+
+#~ msgid "Purchase"
+#~ msgstr "Купить"
+
+#~ msgid "Free plugins"
+#~ msgstr "Бесплатные плагины"
+
+#~ msgid "Download"
+#~ msgstr "Скачать"
+
+#~ msgid "Install %s"
+#~ msgstr "Установлено %s"
+
+#~ msgid "Install now from wordpress.org"
+#~ msgstr "Установить с wordpress.org"
+
+#~ msgid "Free themes"
+#~ msgstr "Бесплатные темы"
+
+#~ msgid "Activated theme"
+#~ msgstr "Текущая тема"
+
+#~ msgid "Customize &#8220;%s&#8221;"
+#~ msgstr "Кастомизация &#8220;%s&#8221;"
+
+#~ msgid "Customize"
+#~ msgstr "Кстомизация"
+
+#~ msgid "Installed themes"
+#~ msgstr "Установлено %s"
+
+#~ msgid "Recommended themes"
+#~ msgstr "Рекомендованные к установке темы"
+
+#~ msgid "If you have any questions, please contact us via"
+#~ msgstr "Если у вас есть какие-то вопросы, обращайтесь"
+
+#~ msgid "Environment"
+#~ msgstr "Системная среда"
+
+#~ msgid "Active Plugins"
+#~ msgstr "Активированные плагины"
+
+#~ msgid "Inactive Plugins"
+#~ msgstr "Неактивированные плагины"
+
+#~ msgid "Send to support"
+#~ msgstr "Отправить в тех.поддержку"
+
+#~ msgid "Send to custom email &#187;"
+#~ msgstr "Отправить на емейл &#187;"
