@@ -4,7 +4,7 @@ Plugin Name: Post To CSV
 Plugin URI:  http://bestwebsoft.com/plugin/
 Description: The plugin Post To CSV allows to export posts of any types to a csv file.
 Author: BestWebSoft
-Version: 1.0
+Version: 1.1
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -12,7 +12,7 @@ License: GPLv2 or later
 /*  © Copyright 2014  BestWebSoft  ( http://support.bestwebsoft.com )
 
     This program is free software; you can redistribute it and/or modify
-    it under the terms of the GNU General Public License, version 2, as 
+    it under the terms of the GNU General Public License, version 2, as
     published by the Free Software Foundation.
 
     This program is distributed in the hope that it will be useful,
@@ -25,24 +25,110 @@ License: GPLv2 or later
     Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-require_once( dirname( __FILE__ ) . '/bws_menu/bws_menu.php' );
-
 if ( ! function_exists( 'add_psttcsv_admin_menu' ) ) {
 	function add_psttcsv_admin_menu() {
-		add_menu_page( 'BWS Plugins', 'BWS Plugins', 'manage_options', 'bws_plugins', 'bws_add_menu_render',  plugins_url( "images/px.png", __FILE__ ), 1001); 
+		global $bstwbsftwppdtplgns_options, $wpmu, $bstwbsftwppdtplgns_added_menu;
+		$bws_menu_version = '1.2.3';
+		$base = plugin_basename( __FILE__ );
+
+		if ( ! isset( $bstwbsftwppdtplgns_options ) ) {
+			if ( 1 == $wpmu ) {
+				if ( ! get_site_option( 'bstwbsftwppdtplgns_options' ) )
+					add_site_option( 'bstwbsftwppdtplgns_options', array(), '', 'yes' );
+				$bstwbsftwppdtplgns_options = get_site_option( 'bstwbsftwppdtplgns_options' );
+			} else {
+				if ( ! get_option( 'bstwbsftwppdtplgns_options' ) )
+					add_option( 'bstwbsftwppdtplgns_options', array(), '', 'yes' );
+				$bstwbsftwppdtplgns_options = get_option( 'bstwbsftwppdtplgns_options' );
+			}
+		}
+
+		if ( isset( $bstwbsftwppdtplgns_options['bws_menu_version'] ) ) {
+			$bstwbsftwppdtplgns_options['bws_menu']['version'][ $base ] = $bws_menu_version;
+			unset( $bstwbsftwppdtplgns_options['bws_menu_version'] );
+			update_option( 'bstwbsftwppdtplgns_options', $bstwbsftwppdtplgns_options, '', 'yes' );
+			require_once( dirname( __FILE__ ) . '/bws_menu/bws_menu.php' );
+		} else if ( ! isset( $bstwbsftwppdtplgns_options['bws_menu']['version'][ $base ] ) || $bstwbsftwppdtplgns_options['bws_menu']['version'][ $base ] < $bws_menu_version ) {
+			$bstwbsftwppdtplgns_options['bws_menu']['version'][ $base ] = $bws_menu_version;
+			update_option( 'bstwbsftwppdtplgns_options', $bstwbsftwppdtplgns_options, '', 'yes' );
+			require_once( dirname( __FILE__ ) . '/bws_menu/bws_menu.php' );
+		} else if ( ! isset( $bstwbsftwppdtplgns_added_menu ) ) {
+			$plugin_with_newer_menu = $base;
+			foreach ( $bstwbsftwppdtplgns_options['bws_menu']['version'] as $key => $value ) {
+				if ( $bws_menu_version < $value && is_plugin_active( $base ) ) {
+					$plugin_with_newer_menu = $key;
+				}
+			}
+			$plugin_with_newer_menu = explode( '/', $plugin_with_newer_menu );
+			$wp_content_dir = defined( 'WP_CONTENT_DIR' ) ? basename( WP_CONTENT_DIR ) : 'wp-content';
+			if ( file_exists( ABSPATH . $wp_content_dir . '/plugins/' . $plugin_with_newer_menu[0] . '/bws_menu/bws_menu.php' ) )
+				require_once( ABSPATH . $wp_content_dir . '/plugins/' . $plugin_with_newer_menu[0] . '/bws_menu/bws_menu.php' );
+			else
+				require_once( dirname( __FILE__ ) . '/bws_menu/bws_menu.php' );
+			$bstwbsftwppdtplgns_added_menu = true;
+		}
+
+		add_menu_page( 'BWS Plugins', 'BWS Plugins', 'manage_options', 'bws_plugins', 'bws_add_menu_render',  plugins_url( "images/px.png", __FILE__ ), 1001);
 		add_submenu_page( 'bws_plugins', __( 'Post To CSV', 'post_to_csv' ), __( 'Post To CSV', 'post_to_csv' ), 'manage_options', "post-to-csv.php", 'psttcsv_settings_page' );
 
-		//call register settings function
-		//add_action( 'admin_init', 'register_psttcsv_settings' );
+		/* Call register settings function */
+		/*add_action( 'admin_init', 'register_psttcsv_settings' );*/
 	}
 }
 
-// register settings function
+
+if ( ! function_exists ( 'psttcsv_plugin_init' ) ) {
+	function psttcsv_plugin_init() {
+		/* Internationalization, first(!) */
+		load_plugin_textdomain( 'post_to_csv', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
+	}
+}
+
+if ( ! function_exists ( 'psttcsv_plugin_admin_init' ) ) {
+	function psttcsv_plugin_admin_init() {
+		global $wpmu, $bws_plugin_info, $psttcsv_plugin_info;
+
+		$psttcsv_plugin_info = get_plugin_data( __FILE__, false );
+
+		$psttcsv_default_options = array(
+			'plugin_option_version' => $psttcsv_plugin_info["Version"]
+		);
+
+		if ( ! isset( $bws_plugin_info ) || empty( $bws_plugin_info ) )
+			$bws_plugin_info = array( 'id' => '113', 'version' => $psttcsv_plugin_info["Version"] );
+
+		/* Check version on WordPress */
+		psttcsv_version_check();
+
+		if ( isset( $_GET['page'] ) && "post-to-csv.php" == $_GET['page'] )
+			psttcsv_print_scv();
+
+		/* Install the option defaults */
+		if ( 1 == $wpmu ) {
+			if ( ! get_site_option( 'psttcsv_options' ) )
+				add_site_option( 'psttcsv_options',$psttcsv_default_options, '', 'yes' );
+			$psttcsv_options = get_site_option( 'psttcsv_options' );
+		} else {
+			if ( ! get_option( 'psttcsv_options' ) )
+				add_option( 'psttcsv_options', $psttcsv_default_options, '', 'yes' );
+			$psttcsv_options = get_option( 'psttcsv_options' );
+		}
+
+		/* Array merge incase this version has added new options */
+		if ( ! isset( $psttcsv_options['plugin_option_version'] ) || $psttcsv_options['plugin_option_version'] != $psttcsv_plugin_info["Version"] ) {
+			$psttcsv_options = array_merge( $psttcsv_default_options, $psttcsv_options );
+			$psttcsv_options['plugin_option_version'] = $psttcsv_plugin_info["Version"];
+			update_option( 'psttcsv_options', $psttcsv_options );
+		}
+	}
+}
+
+/* Register settings function */
 if ( ! function_exists( 'psttcsv_settings_page' ) ) {
-	function psttcsv_settings_page() { 
-		global $title, $psttcsv_message;
+	function psttcsv_settings_page() {
+		global $title, $psttcsv_message, $psttcsv_plugin_info;
 		$error = $message = '';
-		$psttcsv_all_post_types = get_post_types( array( 'public' => true ), 'names' );	
+		$psttcsv_all_post_types = get_post_types( array( 'public' => true ), 'names' );
 		$order		= isset( $_POST['psttcsv_order'] ) ? $_POST['psttcsv_order'] : 'post_date';
 		$direction	= isset( $_POST['psttcsv_direction'] ) ? $_POST['psttcsv_direction'] : 'desc';
 		$status		= isset( $_POST['psttcsv_status'] ) ? $_POST['psttcsv_status'] : 'publish';
@@ -127,36 +213,36 @@ if ( ! function_exists( 'psttcsv_settings_page' ) ) {
 }
 
 if ( ! function_exists( 'psttcsv_print_scv' ) ) {
-	function psttcsv_print_scv(){
+	function psttcsv_print_scv() {
 		global $wpdb, $psttcsv_message;
 
 		if ( isset( $_REQUEST['psttcsv_form_submit'] ) && check_admin_referer( plugin_basename(__FILE__), 'psttcsv_nonce_name' ) ) {
-			
+
 			if ( ! isset( $_POST["psttcsv_fields"] ) || ! isset( $_POST["psttcsv_post_type"] ) )
 				return;
 
-			$filename		= tempnam( sys_get_temp_dir(), "csv" );
-			$order			= isset( $_POST['psttcsv_order'] ) ? $_POST['psttcsv_order'] : 'post_date';
-			$direction		= isset( $_POST['psttcsv_direction'] ) ? strtoupper( $_POST['psttcsv_direction'] ) : 'DESC';
-			$status			= isset( $_POST['psttcsv_status'] ) ? $_POST['psttcsv_status'] : 'publish';
-			$post_type		= '';
-			$limit			= 1000;
-			$start			= 0;
+			$filename	=	tempnam( sys_get_temp_dir(), "csv" );
+			$order		=	isset( $_POST['psttcsv_order'] ) ? $_POST['psttcsv_order'] : 'post_date';
+			$direction	=	isset( $_POST['psttcsv_direction'] ) ? strtoupper( $_POST['psttcsv_direction'] ) : 'DESC';
+			$status		=	isset( $_POST['psttcsv_status'] ) ? $_POST['psttcsv_status'] : 'publish';
+			$post_type	=	'';
+			$limit		=	1000;
+			$start		=	0;
 
-			// Write column names
+			/* Write column names */
 			$colArray = $fieldArray = array();
 			$colArray = $_POST["psttcsv_fields"];
 			if ( in_array( 'permalink', $colArray ) ) {
-				unset( $_POST["psttcsv_fields"][ array_search( 'permalink', $colArray ) ] ); 
+				unset( $_POST["psttcsv_fields"][ array_search( 'permalink', $colArray ) ] );
 			}
-			if ( 'all' == $status ) 
+			if ( 'all' == $status )
 				$status_sql = "";
 			else {
 				if ( in_array( 'attachment', $_POST["psttcsv_post_type"] ) ) {
 					$status .= "', 'inherit";
 				}
 				$status_sql = " AND `post_status` IN ('" . $status . "')";
-			}			
+			}
 
 			$results = $wpdb->get_results( "
 				SELECT `ID`, `post_type`, `" . implode( "`, `", $_POST["psttcsv_fields"] ) . "` 
@@ -198,7 +284,7 @@ if ( ! function_exists( 'psttcsv_print_scv' ) ) {
 				header( "Content-Type: application/csv" );
 				header( "Content-Disposition: attachment;Filename=posts_export.csv" );
 
-				// send file to browser
+				/* Send file to browser */
 				readfile( $filename );
 				unlink( $filename );
 				exit();
@@ -209,17 +295,16 @@ if ( ! function_exists( 'psttcsv_print_scv' ) ) {
 	}
 }
 
-/* Function check if plugin is compatible with current WP version  */
+/* Function check if plugin is compatible with current WP version */
 if ( ! function_exists ( 'psttcsv_version_check' ) ) {
 	function psttcsv_version_check() {
-		global $wp_version;
-		$plugin_data	=	get_plugin_data( __FILE__, false );
+		global $wp_version, $psttcsv_plugin_info;
 		$require_wp		=	"3.5"; /* Wordpress at least requires version */
 		$plugin			=	plugin_basename( __FILE__ );
 	 	if ( version_compare( $wp_version, $require_wp, "<" ) ) {
 			if ( is_plugin_active( $plugin ) ) {
 				deactivate_plugins( $plugin );
-				wp_die( "<strong>" . $plugin_data['Name'] . " </strong> " . __( 'requires', 'post_to_csv' ) . " <strong>WordPress " . $require_wp . "</strong> " . __( 'or higher, that is why it has been deactivated! Please upgrade WordPress and try again.', 'post_to_csv') . "<br /><br />" . __( 'Back to the WordPress', 'post_to_csv') . " <a href='" . get_admin_url( null, 'plugins.php' ) . "'>" . __( 'Plugins page', 'post_to_csv') . "</a>." );
+				wp_die( "<strong>" . $psttcsv_plugin_info['Name'] . " </strong> " . __( 'requires', 'post_to_csv' ) . " <strong>WordPress " . $require_wp . "</strong> " . __( 'or higher, that is why it has been deactivated! Please upgrade WordPress and try again.', 'post_to_csv') . "<br /><br />" . __( 'Back to the WordPress', 'post_to_csv') . " <a href='" . get_admin_url( null, 'plugins.php' ) . "'>" . __( 'Plugins page', 'post_to_csv') . "</a>." );
 			}
 		}
 	}
@@ -227,22 +312,22 @@ if ( ! function_exists ( 'psttcsv_version_check' ) ) {
 
 if ( ! function_exists( 'psttcsv_plugin_action_links' ) ) {
 	function psttcsv_plugin_action_links( $links, $file ) {
-		//Static so we don't call plugin_basename on every plugin row.
+		/* Static so we don't call plugin_basename on every plugin row. */
 		static $this_plugin;
-		if ( ! $this_plugin ) $this_plugin = plugin_basename(__FILE__);
+		if ( ! $this_plugin ) $this_plugin = plugin_basename( __FILE__ );
 
-		if ( $file == $this_plugin ){
+		if ( $file == $this_plugin ) {
 			$settings_link = '<a href="admin.php?page=post-to-csv.php">' . __( 'Settings', 'post_to_csv' ) . '</a>';
 			array_unshift( $links, $settings_link );
 		}
 		return $links;
 	}
 }
-// end function psttcsv_plugin_action_links
+/* End function psttcsv_plugin_action_links */
 
 if ( ! function_exists( 'psttcsv_register_plugin_links' ) ) {
 	function psttcsv_register_plugin_links( $links, $file ) {
-		$base = plugin_basename(__FILE__);
+		$base = plugin_basename( __FILE__ );
 		if ( $file == $base ) {
 			$links[] = '<a href="admin.php?page=post-to-csv.php">' . __( 'Settings', 'post_to_csv' ) . '</a>';
 			$links[] = '<a href="http://wordpress.org/plugins/post-to-csv/faq/" target="_blank">' . __( 'FAQ', 'post_to_csv' ) . '</a>';
@@ -252,41 +337,22 @@ if ( ! function_exists( 'psttcsv_register_plugin_links' ) ) {
 	}
 }
 
-if ( ! function_exists ( 'psttcsv_plugin_init' ) ) {
-	function psttcsv_plugin_init() {
-		// Internationalization, first(!)
-		load_plugin_textdomain( 'post_to_csv', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' ); 
-
-		global $bws_plugin_info;
-		if ( function_exists( 'get_plugin_data' ) && ( ! isset( $bws_plugin_info ) || empty( $bws_plugin_info ) ) ) {
-			$plugin_info = get_plugin_data( __FILE__ );	
-			$bws_plugin_info = array( 'id' => '113', 'version' => $plugin_info["Version"] );
-		}		
+if ( ! function_exists ( 'psttcsv_plugin_uninstall' ) ) {
+	function psttcsv_plugin_uninstall() {
+		delete_site_option( 'psttcsv_options' );
+		delete_option( 'psttcsv_options' );
 	}
 }
 
-if ( ! function_exists ( 'psttcsv_head' ) ) {
-	function psttcsv_head() {
-		global $wp_version;
-		if ( 3.8 > $wp_version )
-			wp_enqueue_style( 'lstStylesheet', plugins_url( 'css/style_wp_before_3.8.css', __FILE__ ) );	
-		else
-			wp_enqueue_style( 'lstStylesheet', plugins_url( 'css/style.css', __FILE__ ) );
-	}
-}
-
-// adds "Settings" link to the plugin action page
-add_filter( 'plugin_action_links', 'psttcsv_plugin_action_links', 10, 2 );
-
-//Additional links on the plugin page
-add_filter( 'plugin_row_meta', 'psttcsv_register_plugin_links', 10, 2 );
-
-add_action( 'init', 'psttcsv_plugin_init' );
-add_action( 'admin_init', 'psttcsv_plugin_init' );
-add_action( 'admin_init', 'psttcsv_print_scv' );
-add_action( 'admin_init', 'psttcsv_version_check' );
 add_action( 'admin_menu', 'add_psttcsv_admin_menu' );
+add_action( 'init', 'psttcsv_plugin_init' );
+add_action( 'admin_init', 'psttcsv_plugin_admin_init' );
 
-add_action( 'admin_enqueue_scripts', 'psttcsv_head' );
+register_uninstall_hook( plugin_basename( __FILE__ ), 'psttcsv_plugin_uninstall' );
+
+/* Adds "Settings" link to the plugin action page */
+add_filter( 'plugin_action_links', 'psttcsv_plugin_action_links', 10, 2 );
+/* Additional links on the plugin page */
+add_filter( 'plugin_row_meta', 'psttcsv_register_plugin_links', 10, 2 );
 
 ?>
