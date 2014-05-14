@@ -1,10 +1,10 @@
 ﻿=== Post To CSV ===
 Contributors: bestwebsoft
-Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=10&product_id=13
-Tags: csv, export post, export to csv, posts, post type, order
+Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=1&product_id=94
+Tags: csv, csv file, export attachment, export fields, export page, export post, export to csv, fields, guid field, order, order by author, order by date,  order direction, post type, post to csv, post to cvs, post to csv plugin, post table, post status, posts, select order direction, title field
 Requires at least: 3.5
-Tested up to: 3.8.1
-Stable tag: 1.1
+Tested up to: 3.9.1
+Stable tag: 1.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -15,7 +15,6 @@ The plugin Post To CSV allows to export posts of any types to a csv file.
 The plugin Post To CSV allows to export posts of any types to a csv file.
 
 <a href="http://wordpress.org/plugins/post-to-csv/faq/" target="_blank">FAQ</a>
-
 <a href="http://support.bestwebsoft.com" target="_blank">Support</a>
 
 = Features =
@@ -34,6 +33,7 @@ There is also a premium version of the plugin <a href="http://bestwebsoft.com/pl
 = Translation =
 
 * Russian (ru_RU)
+* Ukrainian (uk)
 
 If you create your own language pack or update an existing one, you can send <a href="http://codex.wordpress.org/Translating_WordPress" target="_blank">the text of PO and MO files</a> for <a href="http://bestwebsoft.com/" target="_blank">BWS</a> and we'll add it to the plugin. You can download the latest version of the program for work with PO and MO files  <a href="http://www.poedit.net/download.php" target="_blank">Poedit</a>.
 
@@ -95,6 +95,10 @@ Here is an example for German language files.
 
 == Changelog ==
 
+= V1.2 - 14.05.2014 =
+* New : The Ukrainian language file is added to the plugin.
+* Update : We updated all functionality for wordpress 3.9.1.
+
 = V1.1 - 04.04.2014 =
 * Update : BWS plugins section is updated.
 * Budfix : Plugin optimization is done.
@@ -103,6 +107,9 @@ Here is an example for German language files.
 * NEW: The ability to select the fields to be sorted and the order direction were added.
 
 == Upgrade Notice ==
+
+= V1.2 =
+The Ukrainian language file is added to the plugin. We updated all functionality for wordpress 3.9.1.
 
 = V1.1 =
 BWS plugins section is updated. Plugin optimization is done.
