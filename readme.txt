@@ -14,7 +14,10 @@ The plugin Post To CSV allows to export posts of any types to a csv file.
 
 The plugin Post To CSV allows to export posts of any types to a csv file.
 
+http://www.youtube.com/watch?v=rAi-R8naBN0
+
 <a href="http://wordpress.org/plugins/post-to-csv/faq/" target="_blank">FAQ</a>
+
 <a href="http://support.bestwebsoft.com" target="_blank">Support</a>
 
 = Features =
