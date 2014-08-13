@@ -8,11 +8,11 @@ Stable tag: 1.2.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-The Post To CSV plugin allows to export posts of any types to a csv file. Post To CSV is a simple and effective exporter and a perfect solution for those people who have no time for a bunch of settings. Just a couple of clicks and you`ll see a csv file on your Desktop.
+The plugin Post To CSV allows to export posts of any types to a csv file.
 
 == Description ==
 
-The plugin Post To CSV allows to export posts of any types to a csv file.
+The Post To CSV plugin allows to export posts of any types to a csv file. Post To CSV is a simple and effective exporter and a perfect solution for those people who have no time for a bunch of settings. Just a couple of clicks and you`ll see a csv file on your Desktop.
 
 http://www.youtube.com/watch?v=rAi-R8naBN0
 
