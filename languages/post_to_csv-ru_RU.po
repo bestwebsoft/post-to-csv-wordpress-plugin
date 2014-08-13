@@ -2,9 +2,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Post To CSV\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-02-19 09:33+0300\n"
-"PO-Revision-Date: 2014-05-14 12:16+0300\n"
-"Last-Translator: bestwebsoft.com <support@bestwebsoft.com>\n"
+"POT-Creation-Date: 2014-08-13 10:03+0300\n"
+"PO-Revision-Date: 2014-08-13 10:03+0300\n"
+"Last-Translator: bestwebsoft.com <plugins@bestwebsoft.com>\n"
 "Language-Team: bestwebsoft.com <plugin@bestwebsoft.com>\n"
 "Language: ru_RU\n"
 "MIME-Version: 1.0\n"
@@ -16,134 +16,136 @@ msgstr ""
 "X-Generator: Poedit 1.5.7\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: post-to-csv.php:33
+#: post-to-csv.php:73
 msgid "Post To CSV"
-msgstr "Посты в CSV"
+msgstr "Post To CSV"
 
-#: post-to-csv.php:54
+#: post-to-csv.php:142
 msgid "Please, choose at least one Post Type."
 msgstr "Пожалуйста, выберите хотя бы один тип поста."
 
-#: post-to-csv.php:56
+#: post-to-csv.php:144
 msgid "Please, choose at least one Field."
 msgstr "Пожалуйста, выберите хотя бы одно поле."
 
-#: post-to-csv.php:62
-#: post-to-csv.php:235
-#: post-to-csv.php:247
+#: post-to-csv.php:150
+#: post-to-csv.php:152
+#: post-to-csv.php:326
+#: post-to-csv.php:338
 msgid "Settings"
 msgstr "Настройки"
 
-#: post-to-csv.php:68
-msgid "Post Type"
-msgstr "Тип поста"
-
-#: post-to-csv.php:76
-msgid "Fields"
-msgstr "Поля"
-
-#: post-to-csv.php:78
-#: post-to-csv.php:96
-msgid "Title"
-msgstr "Название"
-
-#: post-to-csv.php:79
-msgid "Guid"
-msgstr "Guid"
-
-#: post-to-csv.php:80
-msgid "Permalink"
-msgstr "Пермалинки"
-
-#: post-to-csv.php:84
-msgid "Post status"
-msgstr "Статус поста"
-
-#: post-to-csv.php:86
-msgid "All"
-msgstr "Все"
-
-#: post-to-csv.php:87
-msgid "Publish"
-msgstr "Опубликованные"
-
-#: post-to-csv.php:88
-msgid "Draft"
-msgstr "Черновик"
-
-#: post-to-csv.php:89
-msgid "Inherit"
-msgstr "Унаследованный"
-
-#: post-to-csv.php:90
-msgid "Private"
-msgstr "Личные"
-
-#: post-to-csv.php:94
-msgid "Order By"
-msgstr "Сортировка по"
-
-#: post-to-csv.php:97
-msgid "Date"
-msgstr "Дата"
-
-#: post-to-csv.php:98
-msgid "Author"
-msgstr "Автор"
-
-#: post-to-csv.php:102
-msgid "Order Direction"
-msgstr "Направление сортировки"
-
-#: post-to-csv.php:104
-msgid "ASC"
-msgstr "по возрастанию"
-
-#: post-to-csv.php:105
-msgid "DESC"
-msgstr "по убыванию"
-
-#: post-to-csv.php:111
-msgid "Save Changes"
-msgstr "Сохранить изменения"
-
-#: post-to-csv.php:117
-msgid "If you enjoy our plugin, please give it 5 stars on WordPress"
-msgstr "Если вам понравился плагин, пожалуйста, поставте нам 5 звезд на WordPress"
-
-#: post-to-csv.php:118
-msgid "Rate the plugin"
-msgstr "Оценить плагин"
-
-#: post-to-csv.php:121
-msgid "If there is something wrong about it, please contact us"
-msgstr "Если у вас есть какие-то вопросы, обращайтесь"
-
-#: post-to-csv.php:206
-msgid "No items found."
-msgstr "Не найдено элементов."
-
-#: post-to-csv.php:222
-msgid "requires"
-msgstr "требует"
-
-#: post-to-csv.php:222
-msgid "or higher, that is why it has been deactivated! Please upgrade WordPress and try again."
-msgstr "или выше, поэтому плагин был деактивирован! Пожалуйста, обновите WordPress и попробуйте снова."
-
-#: post-to-csv.php:222
-msgid "Back to the WordPress"
-msgstr "Вернуться к WordPress"
-
-#: post-to-csv.php:222
-msgid "Plugins page"
-msgstr "Странице плагинов"
-
-#: post-to-csv.php:248
+#: post-to-csv.php:153
+#: post-to-csv.php:339
 msgid "FAQ"
 msgstr "Часто задаваемые вопросы"
 
-#: post-to-csv.php:249
+#: post-to-csv.php:160
+msgid "Post Type"
+msgstr "Тип поста"
+
+#: post-to-csv.php:168
+msgid "Fields"
+msgstr "Поля"
+
+#: post-to-csv.php:170
+#: post-to-csv.php:188
+msgid "Title"
+msgstr "Название"
+
+#: post-to-csv.php:171
+msgid "Guid"
+msgstr "Guid"
+
+#: post-to-csv.php:172
+msgid "Permalink"
+msgstr "Пермалинки"
+
+#: post-to-csv.php:176
+msgid "Post status"
+msgstr "Статус поста"
+
+#: post-to-csv.php:178
+msgid "All"
+msgstr "Все"
+
+#: post-to-csv.php:179
+msgid "Publish"
+msgstr "Опубликованные"
+
+#: post-to-csv.php:180
+msgid "Draft"
+msgstr "Черновик"
+
+#: post-to-csv.php:181
+msgid "Inherit"
+msgstr "Унаследованный"
+
+#: post-to-csv.php:182
+msgid "Private"
+msgstr "Личные"
+
+#: post-to-csv.php:186
+msgid "Order By"
+msgstr "Сортировка по"
+
+#: post-to-csv.php:189
+msgid "Date"
+msgstr "Дата"
+
+#: post-to-csv.php:190
+msgid "Author"
+msgstr "Автор"
+
+#: post-to-csv.php:194
+msgid "Order Direction"
+msgstr "Направление сортировки"
+
+#: post-to-csv.php:196
+msgid "ASC"
+msgstr "по возрастанию"
+
+#: post-to-csv.php:197
+msgid "DESC"
+msgstr "по убыванию"
+
+#: post-to-csv.php:203
+msgid "Save Changes"
+msgstr "Сохранить изменения"
+
+#: post-to-csv.php:209
+msgid "If you enjoy our plugin, please give it 5 stars on WordPress"
+msgstr "Если вам понравился плагин, пожалуйста, поставте нам 5 звезд на WordPress"
+
+#: post-to-csv.php:210
+msgid "Rate the plugin"
+msgstr "Оценить плагин"
+
+#: post-to-csv.php:213
+msgid "If there is something wrong about it, please contact us"
+msgstr "Если у вас есть какие-то вопросы, обращайтесь"
+
+#: post-to-csv.php:298
+msgid "No items found."
+msgstr "Не найдено элементов."
+
+#: post-to-csv.php:313
+msgid "requires"
+msgstr "требует"
+
+#: post-to-csv.php:313
+msgid "or higher, that is why it has been deactivated! Please upgrade WordPress and try again."
+msgstr "или выше, поэтому плагин был деактивирован! Пожалуйста, обновите WordPress и попробуйте снова."
+
+#: post-to-csv.php:313
+msgid "Back to the WordPress"
+msgstr "Вернуться к WordPress"
+
+#: post-to-csv.php:313
+msgid "Plugins page"
+msgstr "Странице плагинов"
+
+#: post-to-csv.php:340
 msgid "Support"
 msgstr "Поддержка"
 

@@ -3,12 +3,12 @@ Contributors: bestwebsoft
 Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=1&product_id=94
 Tags: csv, csv file, export attachment, export fields, export page, export post, export to csv, fields, guid field, order, order by author, order by date,  order direction, post type, post to csv, post to cvs, post to csv plugin, post table, post status, posts, select order direction, title field
 Requires at least: 3.5
-Tested up to: 3.9.1
-Stable tag: 1.2
+Tested up to: 4.0-beta3
+Stable tag: 1.2.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-The plugin Post To CSV allows to export posts of any types to a csv file.
+The Post To CSV plugin allows to export posts of any types to a csv file. Post To CSV is a simple and effective exporter and a perfect solution for those people who have no time for a bunch of settings. Just a couple of clicks and you`ll see a csv file on your Desktop.
 
 == Description ==
 
@@ -98,6 +98,10 @@ Here is an example for German language files.
 
 == Changelog ==
 
+= V1.2.1 - 13.08.2014 =
+* Update : We updated all functionality for wordpress 4.0-beta3.
+* Budfix : Security Exploit was fixed.
+
 = V1.2 - 14.05.2014 =
 * New : The Ukrainian language file is added to the plugin.
 * Update : We updated all functionality for wordpress 3.9.1.
@@ -110,6 +114,9 @@ Here is an example for German language files.
 * NEW: The ability to select the fields to be sorted and the order direction were added.
 
 == Upgrade Notice ==
+
+= V1.2.1 =
+We updated all functionality for wordpress 4.0-beta3. Security Exploit was fixed.
 
 = V1.2 =
 The Ukrainian language file is added to the plugin. We updated all functionality for wordpress 3.9.1.
