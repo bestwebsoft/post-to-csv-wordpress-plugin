@@ -3,7 +3,7 @@ Contributors: bestwebsoft
 Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=1&product_id=94
 Tags: csv, csv file, export attachment, export fields, export page, export post, export to csv, fields, guid field, order, order by author, order by date,  order direction, post type, post to csv, post to cvs, post to csv plugin, post table, post status, posts, select order direction, title field
 Requires at least: 3.5
-Tested up to: 4.0-beta3
+Tested up to: 4.0
 Stable tag: 1.2.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
