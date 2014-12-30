@@ -3,8 +3,8 @@ Contributors: bestwebsoft
 Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=1&product_id=94
 Tags: csv, csv file, export attachment, export fields, export page, export post, export to csv, fields, guid field, order, order by author, order by date,  order direction, post type, post to csv, post to cvs, post to csv plugin, post table, post status, posts, select order direction, title field
 Requires at least: 3.5
-Tested up to: 4.0
-Stable tag: 1.2.1
+Tested up to: 4.1
+Stable tag: 1.2.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -31,7 +31,7 @@ http://www.youtube.com/watch?v=rAi-R8naBN0
 The author of the Post To CSV also recommends the following plugins:
 
 * <a href="http://wordpress.org/plugins/updater/">Updater</a> - This plugin updates WordPress core and the plugins to the recent versions. You can also use the auto mode or manual mode for updating and set email notifications.
-There is also a premium version of the plugin <a href="http://bestwebsoft.com/plugin/updater-pro/?k=0b49de6f754761a20284d411e7764d10">Updater Pro</a> with more useful features available. It can make backup of all your files and database before updating. Also it can forbid some plugins or WordPress Core update.
+There is also a premium version of the plugin <a href="http://bestwebsoft.com/products/updater/?k=0b49de6f754761a20284d411e7764d10">Updater Pro</a> with more useful features available. It can make backup of all your files and database before updating. Also it can forbid some plugins or WordPress Core update.
 
 = Translation =
 
@@ -98,6 +98,10 @@ Here is an example for German language files.
 
 == Changelog ==
 
+= V1.2.2 - 30.12.2014 =
+* Update : BWS plugins section is updated.
+* Update : We updated all functionality for wordpress 4.1.
+
 = V1.2.1 - 13.08.2014 =
 * Update : We updated all functionality for wordpress 4.0-beta3.
 * Budfix : Security Exploit was fixed.
@@ -114,6 +118,9 @@ Here is an example for German language files.
 * NEW: The ability to select the fields to be sorted and the order direction were added.
 
 == Upgrade Notice ==
+
+= V1.2.2 =
+BWS plugins section is updated. We updated all functionality for wordpress 4.1.
 
 = V1.2.1 =
 We updated all functionality for wordpress 4.0-beta3. Security Exploit was fixed.
