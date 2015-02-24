@@ -3,8 +3,8 @@ Contributors: bestwebsoft
 Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=1&product_id=94
 Tags: csv, csv file, export attachment, export fields, export page, export post, export to csv, fields, guid field, order, order by author, order by date,  order direction, post type, post to csv, post to cvs, post to csv plugin, post table, post status, posts, select order direction, title field
 Requires at least: 3.5
-Tested up to: 4.1
-Stable tag: 1.2.2
+Tested up to: 4.1.1
+Stable tag: 1.2.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -56,6 +56,8 @@ We can fix some things for free for the users who provide translation of our plu
 2. Activate the plugin through the 'Plugins' menu in WordPress.
 3. Plugin settings are located in 'BWS Plugin', 'Post To CSV'.
 
+<a href="https://docs.google.com/document/d/1J99llDmOKpEZBm1424Pf7laJYUq-xp_ReoT_lPtZ-aU/edit" target="_blank">View a Step-by-step Instruction on Post To CSV Installation</a>.
+
 == Frequently Asked Questions ==
 
 = How can I select fields to export? =
@@ -98,6 +100,9 @@ Here is an example for German language files.
 
 == Changelog ==
 
+= V1.2.3 - 24.02.2015 =
+* Update : We updated all functionality for wordpress 4.1.1.
+
 = V1.2.2 - 30.12.2014 =
 * Update : BWS plugins section is updated.
 * Update : We updated all functionality for wordpress 4.1.
@@ -118,6 +123,9 @@ Here is an example for German language files.
 * NEW: The ability to select the fields to be sorted and the order direction were added.
 
 == Upgrade Notice ==
+
+= V1.2.3 =
+We updated all functionality for wordpress 4.1.1.
 
 = V1.2.2 =
 BWS plugins section is updated. We updated all functionality for wordpress 4.1.
