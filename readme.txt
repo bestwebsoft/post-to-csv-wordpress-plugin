@@ -1,10 +1,10 @@
-﻿=== Post To CSV ===
+﻿=== Post To CSV by BestWebSoft ===
 Contributors: bestwebsoft
 Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=1&product_id=94
 Tags: csv, csv file, export attachment, export fields, export page, export post, export to csv, fields, guid field, order, order by author, order by date,  order direction, post type, post to csv, post to cvs, post to csv plugin, post table, post status, posts, select order direction, title field
 Requires at least: 3.5
-Tested up to: 4.1.1
-Stable tag: 1.2.3
+Tested up to: 4.2.1
+Stable tag: 1.2.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -15,6 +15,8 @@ The plugin Post To CSV allows to export posts of any types to a csv file.
 The Post To CSV plugin allows to export posts of any types to a csv file. Post To CSV is a simple and effective exporter and a perfect solution for those people who have no time for a bunch of settings. Just a couple of clicks and you`ll see a csv file on your Desktop.
 
 http://www.youtube.com/watch?v=rAi-R8naBN0
+
+<a href="http://www.youtube.com/watch?v=uI_ia_7yw4s" target="_blank">Video instruction on Installation</a>
 
 <a href="http://wordpress.org/plugins/post-to-csv/faq/" target="_blank">FAQ</a>
 
@@ -58,6 +60,8 @@ We can fix some things for free for the users who provide translation of our plu
 
 <a href="https://docs.google.com/document/d/1J99llDmOKpEZBm1424Pf7laJYUq-xp_ReoT_lPtZ-aU/edit" target="_blank">View a Step-by-step Instruction on Post To CSV Installation</a>.
 
+http://www.youtube.com/watch?v=uI_ia_7yw4s
+
 == Frequently Asked Questions ==
 
 = How can I select fields to export? =
@@ -100,6 +104,9 @@ Here is an example for German language files.
 
 == Changelog ==
 
+= V1.2.4 - 29.04.2015 =
+* Update : We updated all functionality for wordpress 4.2.1.
+
 = V1.2.3 - 24.02.2015 =
 * Update : We updated all functionality for wordpress 4.1.1.
 
@@ -123,6 +130,9 @@ Here is an example for German language files.
 * NEW: The ability to select the fields to be sorted and the order direction were added.
 
 == Upgrade Notice ==
+
+= V1.2.4 =
+We updated all functionality for wordpress 4.2.1.
 
 = V1.2.3 =
 We updated all functionality for wordpress 4.1.1.

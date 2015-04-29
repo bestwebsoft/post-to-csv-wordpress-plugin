@@ -1,10 +1,10 @@
 <?php
 /*
-Plugin Name: Post To CSV
+Plugin Name: Post To CSV by BestWebSoft
 Plugin URI:  http://bestwebsoft.com/products/
 Description: The plugin Post To CSV allows to export posts of any types to a csv file.
 Author: BestWebSoft
-Version: 1.2.3
+Version: 1.2.4
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -27,73 +27,33 @@ License: GPLv2 or later
 
 if ( ! function_exists( 'add_psttcsv_admin_menu' ) ) {
 	function add_psttcsv_admin_menu() {
-		global $bstwbsftwppdtplgns_options, $bstwbsftwppdtplgns_added_menu;
-		$bws_menu_info = get_plugin_data( plugin_dir_path( __FILE__ ) . "bws_menu/bws_menu.php" );
-		$bws_menu_version = $bws_menu_info["Version"];
-		$base = plugin_basename( __FILE__ );
-
-		if ( ! isset( $bstwbsftwppdtplgns_options ) ) {
-			if ( is_multisite() ) {
-				if ( ! get_site_option( 'bstwbsftwppdtplgns_options' ) )
-					add_site_option( 'bstwbsftwppdtplgns_options', array() );
-				$bstwbsftwppdtplgns_options = get_site_option( 'bstwbsftwppdtplgns_options' );
-			} else {
-				if ( ! get_option( 'bstwbsftwppdtplgns_options' ) )
-					add_option( 'bstwbsftwppdtplgns_options', array() );
-				$bstwbsftwppdtplgns_options = get_option( 'bstwbsftwppdtplgns_options' );
-			}
-		}
-
-		if ( isset( $bstwbsftwppdtplgns_options['bws_menu_version'] ) ) {
-			$bstwbsftwppdtplgns_options['bws_menu']['version'][ $base ] = $bws_menu_version;
-			unset( $bstwbsftwppdtplgns_options['bws_menu_version'] );
-			if ( is_multisite() )
-				update_site_option( 'bstwbsftwppdtplgns_options', $bstwbsftwppdtplgns_options );
-			else
-				update_option( 'bstwbsftwppdtplgns_options', $bstwbsftwppdtplgns_options );
-			require_once( dirname( __FILE__ ) . '/bws_menu/bws_menu.php' );
-		} else if ( ! isset( $bstwbsftwppdtplgns_options['bws_menu']['version'][ $base ] ) || $bstwbsftwppdtplgns_options['bws_menu']['version'][ $base ] < $bws_menu_version ) {
-			$bstwbsftwppdtplgns_options['bws_menu']['version'][ $base ] = $bws_menu_version;
-			if ( is_multisite() )
-				update_site_option( 'bstwbsftwppdtplgns_options', $bstwbsftwppdtplgns_options );
-			else
-				update_option( 'bstwbsftwppdtplgns_options', $bstwbsftwppdtplgns_options );
-			require_once( dirname( __FILE__ ) . '/bws_menu/bws_menu.php' );
-		} else if ( ! isset( $bstwbsftwppdtplgns_added_menu ) ) {
-			$plugin_with_newer_menu = $base;
-			foreach ( $bstwbsftwppdtplgns_options['bws_menu']['version'] as $key => $value ) {
-				if ( $bws_menu_version < $value && is_plugin_active( $base ) ) {
-					$plugin_with_newer_menu = $key;
-				}
-			}
-			$plugin_with_newer_menu = explode( '/', $plugin_with_newer_menu );
-			$wp_content_dir = defined( 'WP_CONTENT_DIR' ) ? basename( WP_CONTENT_DIR ) : 'wp-content';
-			if ( file_exists( ABSPATH . $wp_content_dir . '/plugins/' . $plugin_with_newer_menu[0] . '/bws_menu/bws_menu.php' ) )
-				require_once( ABSPATH . $wp_content_dir . '/plugins/' . $plugin_with_newer_menu[0] . '/bws_menu/bws_menu.php' );
-			else
-				require_once( dirname( __FILE__ ) . '/bws_menu/bws_menu.php' );	
-			$bstwbsftwppdtplgns_added_menu = true;			
-		}
-
-		add_menu_page( 'BWS Plugins', 'BWS Plugins', 'manage_options', 'bws_plugins', 'bws_add_menu_render',  plugins_url( "images/px.png", __FILE__ ), 1001);
+		bws_add_general_menu( plugin_basename( __FILE__ ) );
 		add_submenu_page( 'bws_plugins', __( 'Post To CSV', 'post_to_csv' ), __( 'Post To CSV', 'post_to_csv' ), 'manage_options', "post-to-csv.php", 'psttcsv_settings_page' );
 	}
 }
 
 if ( ! function_exists ( 'psttcsv_plugin_init' ) ) {
 	function psttcsv_plugin_init() {
+		global $psttcsv_plugin_info;
 		/* Internationalization, first(!) */
 		load_plugin_textdomain( 'post_to_csv', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
-		/* Check version on WordPress */
-		psttcsv_version_check();
+		
+		require_once( dirname( __FILE__ ) . '/bws_menu/bws_functions.php' );
+
+		if ( empty( $psttcsv_plugin_info ) ) {
+			if ( ! function_exists( 'get_plugin_data' ) )
+				require_once( ABSPATH . 'wp-admin/includes/plugin.php' );
+			$psttcsv_plugin_info = get_plugin_data( __FILE__ );
+		}
+
+		/* Function check if plugin is compatible with current WP version */
+		bws_wp_version_check( plugin_basename( __FILE__ ), $psttcsv_plugin_info, "3.5" );
 	}
 }
 
 if ( ! function_exists ( 'psttcsv_plugin_admin_init' ) ) {
 	function psttcsv_plugin_admin_init() {
 		global $bws_plugin_info, $psttcsv_plugin_info;		
-
-		$psttcsv_plugin_info = get_plugin_data( __FILE__, false );		
 
 		if ( ! isset( $bws_plugin_info ) || empty( $bws_plugin_info ) )
 			$bws_plugin_info = array( 'id' => '113', 'version' => $psttcsv_plugin_info["Version"] );
@@ -129,30 +89,10 @@ if ( ! function_exists ( 'register_psttcsv_settings' ) ) {
 	}
 }
 
-
-/* Function check if plugin is compatible with current WP version */
-if ( ! function_exists ( 'psttcsv_version_check' ) ) {
-	function psttcsv_version_check() {
-		global $wp_version, $psttcsv_plugin_info;
-		$require_wp		=	"3.5"; /* Wordpress at least requires version */
-		$plugin			=	plugin_basename( __FILE__ );
-	 	if ( version_compare( $wp_version, $require_wp, "<" ) ) {
-	 		include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
-			if ( is_plugin_active( $plugin ) ) {
-				deactivate_plugins( $plugin );
-				$admin_url = ( function_exists( 'get_admin_url' ) ) ? get_admin_url( null, 'plugins.php' ) : esc_url( '/wp-admin/plugins.php' );
-				if ( ! $psttcsv_plugin_info )
-					$psttcsv_plugin_info = get_plugin_data( __FILE__, false );
-				wp_die( "<strong>" . $psttcsv_plugin_info['Name'] . " </strong> " . __( 'requires', 'post_to_csv' ) . " <strong>WordPress " . $require_wp . "</strong> " . __( 'or higher, that is why it has been deactivated! Please upgrade WordPress and try again.', 'post_to_csv') . "<br /><br />" . __( 'Back to the WordPress', 'post_to_csv') . " <a href='" . $admin_url . "'>" . __( 'Plugins page', 'post_to_csv') . "</a>." );
-			}
-		}
-	}
-}
-
 /* Register settings function */
 if ( ! function_exists( 'psttcsv_settings_page' ) ) {
 	function psttcsv_settings_page() {
-		global $title, $psttcsv_message;
+		global $title, $psttcsv_message, $psttcsv_plugin_info;
 		$error = $message = '';
 		$psttcsv_all_post_types = get_post_types( array( 'public' => true ), 'names' );
 		$order		= isset( $_POST['psttcsv_order'] ) ? $_POST['psttcsv_order'] : 'post_date';
@@ -224,20 +164,11 @@ if ( ! function_exists( 'psttcsv_settings_page' ) ) {
 				</table>
 				<input type="hidden" name="psttcsv_form_submit" value="submit" />
 				<p class="submit">
-					<input type="submit" class="button-primary" value="<?php _e( 'Save Changes', 'post_to_csv' ) ?>" />
+					<input type="submit" class="button-primary" value="<?php _e( 'Save & Export', 'post_to_csv' ) ?>" />
 				</p>
 				<?php wp_nonce_field( plugin_basename(__FILE__), 'psttcsv_nonce_name' ); ?>
 			</form>
-			<div class="bws-plugin-reviews">
-				<div class="bws-plugin-reviews-rate">
-					<?php _e( 'If you enjoy our plugin, please give it 5 stars on WordPress', 'post_to_csv' ); ?>: 
-					<a href="http://wordpress.org/support/view/plugin-reviews/post-to-csv" target="_blank" title="Post to csv plugin reviews"><?php _e( 'Rate the plugin', 'post_to_csv' ); ?></a>
-				</div>
-				<div class="bws-plugin-reviews-support">
-					<?php _e( 'If there is something wrong about it, please contact us', 'post_to_csv' ); ?>: 
-					<a href="http://support.bestwebsoft.com">http://support.bestwebsoft.com</a>
-				</div>
-			</div>
+			<?php bws_plugin_reviews_block( $psttcsv_plugin_info['Name'], 'post-to-csv' ); ?>
 		</div>
 	<?php }
 }
