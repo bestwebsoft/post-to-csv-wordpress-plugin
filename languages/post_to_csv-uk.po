@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Post To CSV\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-04-29 14:13+0300\n"
-"PO-Revision-Date: 2015-04-29 14:13+0300\n"
+"POT-Creation-Date: 2015-06-05 13:12+0300\n"
+"PO-Revision-Date: 2015-06-05 13:12+0300\n"
 "Last-Translator: bestwebsoft.com <plugins@bestwebsoft.com>\n"
 "Language-Team: bestwebsoft.com <plugin@bestwebsoft.com>\n"
 "Language: uk_UA\n"
@@ -20,106 +20,108 @@ msgstr ""
 msgid "Post To CSV"
 msgstr "Post To CSV"
 
-#: post-to-csv.php:106
-msgid "Please, choose at least one Post Type."
-msgstr "Будь ласка, виберіть хоча б один тип Посту."
-
-#: post-to-csv.php:108
-msgid "Please, choose at least one Field."
-msgstr "Будь ласка, виберіть хоча б одне Поле."
-
-#: post-to-csv.php:114
-#: post-to-csv.php:116
-#: post-to-csv.php:267
-#: post-to-csv.php:281
-msgid "Settings"
-msgstr "Налаштування"
-
-#: post-to-csv.php:117
-#: post-to-csv.php:282
-msgid "FAQ"
-msgstr "FAQ"
-
-#: post-to-csv.php:124
-msgid "Post Type"
-msgstr "Тип Посту"
-
-#: post-to-csv.php:132
-msgid "Fields"
-msgstr "Поля"
-
-#: post-to-csv.php:134
-#: post-to-csv.php:152
+#: post-to-csv.php:100
+#: post-to-csv.php:172
 msgid "Title"
 msgstr "Назва"
 
-#: post-to-csv.php:135
+#: post-to-csv.php:101
 msgid "Guid"
 msgstr "Guid"
 
-#: post-to-csv.php:136
+#: post-to-csv.php:102
 msgid "Permalink"
 msgstr "Пермалінк"
 
-#: post-to-csv.php:140
-msgid "Post status"
-msgstr "Статус посту"
+#: post-to-csv.php:123
+msgid "Please, choose at least one Post Type."
+msgstr "Будь ласка, виберіть хоча б один тип Посту."
 
-#: post-to-csv.php:142
+#: post-to-csv.php:125
+msgid "Please, choose at least one Field."
+msgstr "Будь ласка, виберіть хоча б одне Поле."
+
+#: post-to-csv.php:127
+msgid "Please, choose at least one Post status."
+msgstr "Будь ласка, виберіть хоча б один Статус посту."
+
+#: post-to-csv.php:133
+#: post-to-csv.php:135
+#: post-to-csv.php:291
+#: post-to-csv.php:305
+msgid "Settings"
+msgstr "Налаштування"
+
+#: post-to-csv.php:136
+#: post-to-csv.php:306
+msgid "FAQ"
+msgstr "FAQ"
+
+#: post-to-csv.php:143
+msgid "Post Type"
+msgstr "Тип Посту"
+
+#: post-to-csv.php:145
+#: post-to-csv.php:154
+#: post-to-csv.php:163
 msgid "All"
 msgstr "Всі"
 
-#: post-to-csv.php:143
-msgid "Publish"
-msgstr "Опубліковано"
+#: post-to-csv.php:152
+msgid "Fields"
+msgstr "Поля"
 
-#: post-to-csv.php:144
-msgid "Draft"
-msgstr "Чернетка"
+#: post-to-csv.php:161
+msgid "Post status"
+msgstr "Статус посту"
 
-#: post-to-csv.php:145
-msgid "Inherit"
-msgstr "Успадкувати"
-
-#: post-to-csv.php:146
-msgid "Private"
-msgstr "Приватно"
-
-#: post-to-csv.php:150
+#: post-to-csv.php:170
 msgid "Order By"
 msgstr "Сортувати за"
 
-#: post-to-csv.php:153
+#: post-to-csv.php:173
 msgid "Date"
 msgstr "Дата"
 
-#: post-to-csv.php:154
+#: post-to-csv.php:174
 msgid "Author"
 msgstr "Автор"
 
-#: post-to-csv.php:158
+#: post-to-csv.php:178
 msgid "Order Direction"
 msgstr "Напрямок сортування"
 
-#: post-to-csv.php:160
+#: post-to-csv.php:180
 msgid "ASC"
 msgstr "за зростанням"
 
-#: post-to-csv.php:161
+#: post-to-csv.php:181
 msgid "DESC"
 msgstr "за спаданням"
 
-#: post-to-csv.php:167
+#: post-to-csv.php:187
 msgid "Save & Export"
 msgstr "Збереження та Експорт"
 
-#: post-to-csv.php:253
+#: post-to-csv.php:270
 msgid "No items found."
 msgstr "Елементів не знайдено."
 
-#: post-to-csv.php:283
+#: post-to-csv.php:307
 msgid "Support"
 msgstr "Підтримка"
+
+#~ msgid "Publish"
+#~ msgstr "Опубліковано"
+
+#~ msgid "Draft"
+#~ msgstr "Чернетка"
+
+#~ msgid "Inherit"
+#~ msgstr "Успадкувати"
+
+#~ msgid "Private"
+#~ msgstr "Приватно"
 
 #~ msgid "requires"
 #~ msgstr "вимагає"

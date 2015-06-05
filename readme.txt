@@ -1,10 +1,10 @@
 ﻿=== Post To CSV by BestWebSoft ===
 Contributors: bestwebsoft
-Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=1&product_id=94
+Donate link: http://bestwebsoft.com/donate/
 Tags: csv, csv file, export attachment, export fields, export page, export post, export to csv, fields, guid field, order, order by author, order by date,  order direction, post type, post to csv, post to cvs, post to csv plugin, post table, post status, posts, select order direction, title field
 Requires at least: 3.5
-Tested up to: 4.2.1
-Stable tag: 1.2.4
+Tested up to: 4.2.2
+Stable tag: 1.2.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -79,30 +79,21 @@ The lines in the export file are sorted by post types and separated by an emplty
 = I have some problems with the plugin's work. What Information should I provide to receive proper support? =
 
 Please make sure that the problem hasn't been discussed yet on our forum (<a href="http://support.bestwebsoft.com" target="_blank">http://support.bestwebsoft.com</a>). If no, please provide the following data along with your problem's description:
+
 1. the link to the page where the problem occurs
 2. the name of the plugin and its version. If you are using a pro version - your order number.
 3. the version of your WordPress installation
 4. copy and paste into the message your system status report. Please read more here: <a href="https://docs.google.com/document/d/1Wi2X8RdRGXk9kMszQy1xItJrpN0ncXgioH935MaBKtc/edit" target="_blank">Instuction on System Status</a>
-
-= How to use the other language files with the Post To CSV? = 
-
-Here is an example for German language files.
-
-1. In order to use another language for WordPress it is necessary to set the WP version to the required language and in configuration wp file - `wp-config.php` in the line `define('WPLANG', '');` write `define('WPLANG', 'de_DE');`. If everything is done properly the admin panel will be in German.
-
-2. Make sure that there are files `de_DE.po` and `de_DE.mo` in the plugin (the folder languages in the root of the plugin).
-
-3. If there are no such files it will be necessary to copy other files from this folder (for example, for Russian or Italian language) and rename them (you should write `de_DE` instead of `ru_RU` in the both files).
-
-4. The files are edited with the help of the program Poedit - http://www.poedit.net/download.php - please load this program, install it, open the file with the help of this program (the required language file) and for each line in English you should write translation in German.
-
-5. If everything has been done properly all the lines will be in German in the admin panel and on frontend.
 
 == Screenshots ==
 
 1. Plugin settings page.
 
 == Changelog ==
+
+= V1.2.5 - 05.06.2015 =
+* New : We added the ability to select several Post status.
+* New : We added "All" checkbox for convenience.
 
 = V1.2.4 - 29.04.2015 =
 * Update : We updated all functionality for wordpress 4.2.1.
@@ -130,6 +121,9 @@ Here is an example for German language files.
 * NEW: The ability to select the fields to be sorted and the order direction were added.
 
 == Upgrade Notice ==
+
+= V1.2.5 =
+We added the ability to select several Post status. We added "All" checkbox for convenience.
 
 = V1.2.4 =
 We updated all functionality for wordpress 4.2.1.
