@@ -1,36 +1,36 @@
-﻿=== Post To CSV by BestWebSoft ===
+﻿=== Post to CSV by BestWebSoft ===
 Contributors: bestwebsoft
 Donate link: http://bestwebsoft.com/donate/
-Tags: csv, csv file, export attachment, export fields, export page, export post, export to csv, fields, guid field, order, order by author, order by date,  order direction, post type, post to csv, post to cvs, post to csv plugin, post table, post status, posts, select order direction, title field
-Requires at least: 3.5
-Tested up to: 4.2.2
-Stable tag: 1.2.5
+Tags: add post to csv, add post to scv plugin, add post to csv wp plugin, add post to csv free plugin, best post to csv plugin, best post to csv wp plugin, best post to csv free plugin, csv, csv file, export attachment, export fields, export page, export post, export to csv, fields, guid field, order, order by author, order by date, order direction, post status, post table, post to csv, post to csv plugin, post to cvs, post type, posts, select order direction, title field,  wordpress, wp, wp plugin, wp free plugin, wp post to csv, wp post to csv plugin, wp simple post to csv plugin, wp free post to csv, wp free post to csv plugin, wordpress plugin, wordpress free plugin, wordpress post to csv, wordpress post to csv plugin, wordpress simple post to csv plugin, wordpress free post to csv, wordpress free post to csv plugin
+Requires at least: 3.8
+Tested up to: 4.3.1
+Stable tag: 1.2.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-The plugin Post To CSV allows to export posts of any types to a csv file.
+The plugin Post to CSV allows to export posts of any types to a csv file.
 
 == Description ==
 
-The Post To CSV plugin allows to export posts of any types to a csv file. Post To CSV is a simple and effective exporter and a perfect solution for those people who have no time for a bunch of settings. Just a couple of clicks and you`ll see a csv file on your Desktop.
+The Post to CSV plugin allows to export posts of any types to a csv file. Post to CSV is a simple and effective exporter and a perfect solution for those people who have no time for a bunch of settings. Just a couple of clicks and you`ll see a csv file on your Desktop.
 
 http://www.youtube.com/watch?v=rAi-R8naBN0
 
-<a href="http://www.youtube.com/watch?v=uI_ia_7yw4s" target="_blank">Video instruction on Installation</a>
+<a href="http://www.youtube.com/watch?v=uI_ia_7yw4s" target="_blank">Post to CSV by BestWebSoft Video instruction on Installation</a>
 
-<a href="http://wordpress.org/plugins/post-to-csv/faq/" target="_blank">FAQ</a>
+<a href="http://wordpress.org/plugins/post-to-csv/faq/" target="_blank">Post to CSV by BestWebSoft FAQ</a>
 
-<a href="http://support.bestwebsoft.com" target="_blank">Support</a>
+<a href="http://support.bestwebsoft.com" target="_blank">Post to CSV by BestWebSoft Support</a>
 
 = Features =
 
-* Actions: Export of selected fields of the posts' table.
-* Actions: Ability to order by date or author.
-* Actions: Ability to select the order direction.
+* Export of selected fields of the posts' table.
+* Ability to order by date or author.
+* Ability to select the order direction.
 
 = Recommended Plugins =
 
-The author of the Post To CSV also recommends the following plugins:
+The author of the Post to CSV also recommends the following plugins:
 
 * <a href="http://wordpress.org/plugins/updater/">Updater</a> - This plugin updates WordPress core and the plugins to the recent versions. You can also use the auto mode or manual mode for updating and set email notifications.
 There is also a premium version of the plugin <a href="http://bestwebsoft.com/products/updater/?k=0b49de6f754761a20284d411e7764d10">Updater Pro</a> with more useful features available. It can make backup of all your files and database before updating. Also it can forbid some plugins or WordPress Core update.
@@ -56,9 +56,9 @@ We can fix some things for free for the users who provide translation of our plu
 
 1. Upload `post-to-csv` folder to the `/wp-content/plugins/` directory.
 2. Activate the plugin through the 'Plugins' menu in WordPress.
-3. Plugin settings are located in 'BWS Plugin', 'Post To CSV'.
+3. Plugin settings are located in 'BWS Plugin', 'Post to CSV'.
 
-<a href="https://docs.google.com/document/d/1J99llDmOKpEZBm1424Pf7laJYUq-xp_ReoT_lPtZ-aU/edit" target="_blank">View a Step-by-step Instruction on Post To CSV Installation</a>.
+<a href="https://docs.google.com/document/d/1J99llDmOKpEZBm1424Pf7laJYUq-xp_ReoT_lPtZ-aU/edit" target="_blank">View a Step-by-step Instruction on Post to CSV Installation</a>.
 
 http://www.youtube.com/watch?v=uI_ia_7yw4s
 
@@ -91,6 +91,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 
 == Changelog ==
 
+= V1.2.6 - 20.10.2015 =
+* Update : Textdomain was changed.
+
 = V1.2.5 - 05.06.2015 =
 * New : We added the ability to select several Post status.
 * New : We added "All" checkbox for convenience.
@@ -121,6 +124,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 * NEW: The ability to select the fields to be sorted and the order direction were added.
 
 == Upgrade Notice ==
+
+= V1.2.6 =
+Textdomain was changed.
 
 = V1.2.5 =
 We added the ability to select several Post status. We added "All" checkbox for convenience.

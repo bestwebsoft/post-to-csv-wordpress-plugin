@@ -1,10 +1,12 @@
 <?php
 /*
-Plugin Name: Post To CSV by BestWebSoft
-Plugin URI:  http://bestwebsoft.com/products/
-Description: The plugin Post To CSV allows to export posts of any types to a csv file.
+Plugin Name: Post to CSV by BestWebSoft
+Plugin URI: http://bestwebsoft.com/products/
+Description: The plugin Post to CSV allows to export posts of any types to a csv file.
 Author: BestWebSoft
-Version: 1.2.5
+Text Domain: post-to-csv
+Domain Path: /languages
+Version: 1.2.6
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -28,17 +30,24 @@ License: GPLv2 or later
 if ( ! function_exists( 'add_psttcsv_admin_menu' ) ) {
 	function add_psttcsv_admin_menu() {
 		bws_add_general_menu( plugin_basename( __FILE__ ) );
-		add_submenu_page( 'bws_plugins', __( 'Post To CSV', 'post_to_csv' ), __( 'Post To CSV', 'post_to_csv' ), 'manage_options', "post-to-csv.php", 'psttcsv_settings_page' );
+		$settings = add_submenu_page( 'bws_plugins', 'Post to CSV', 'Post to CSV', 'manage_options', "post-to-csv.php", 'psttcsv_settings_page' );
+		add_action( 'load-' . $settings, 'psttcsv_add_tabs' );
+	}
+}
+
+if ( ! function_exists( 'psttcsv_plugins_loaded' ) ) {
+	function psttcsv_plugins_loaded() {
+		/* Internationalization, first(!) */
+		load_plugin_textdomain( 'post-to-csv', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
 	}
 }
 
 if ( ! function_exists ( 'psttcsv_plugin_init' ) ) {
 	function psttcsv_plugin_init() {
-		global $psttcsv_plugin_info;
-		/* Internationalization, first(!) */
-		load_plugin_textdomain( 'post_to_csv', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
+		global $psttcsv_plugin_info;		
 		
-		require_once( dirname( __FILE__ ) . '/bws_menu/bws_functions.php' );
+		require_once( dirname( __FILE__ ) . '/bws_menu/bws_include.php' );
+		bws_include_init( plugin_basename( __FILE__ ) );
 
 		if ( empty( $psttcsv_plugin_info ) ) {
 			if ( ! function_exists( 'get_plugin_data' ) )
@@ -47,7 +56,7 @@ if ( ! function_exists ( 'psttcsv_plugin_init' ) ) {
 		}
 
 		/* Function check if plugin is compatible with current WP version */
-		bws_wp_version_check( plugin_basename( __FILE__ ), $psttcsv_plugin_info, "3.5" );
+		bws_wp_min_version_check( plugin_basename( __FILE__ ), $psttcsv_plugin_info, '3.8', '3.5' );
 	}
 }
 
@@ -97,9 +106,9 @@ if ( ! function_exists( 'psttcsv_settings_page' ) ) {
 		
 		$all_post_types = get_post_types( array( 'public' => true ), 'names' );		
 		$all_fields = array(
-			'post_title' 	=> __( 'Title', 'post_to_csv' ),
-			'guid' 			=> __( 'Guid', 'post_to_csv' ),
-			'permalink' 	=> __( 'Permalink', 'post_to_csv' )
+			'post_title' 	=> __( 'Title', 'post-to-csv' ),
+			'guid' 			=> __( 'Guid', 'post-to-csv' ),
+			'permalink' 	=> __( 'Permalink', 'post-to-csv' )
 		);
 		$all_status = array( 'publish', 'draft', 'inherit', 'private' );
 
@@ -120,27 +129,23 @@ if ( ! function_exists( 'psttcsv_settings_page' ) ) {
 
 		if ( isset( $_REQUEST['psttcsv_form_submit'] ) && check_admin_referer( plugin_basename(__FILE__), 'psttcsv_nonce_name' ) ) {
 			if ( ! isset( $_POST["psttcsv_post_type"] ) )
-				$error = __( 'Please, choose at least one Post Type.', 'post_to_csv' );
+				$error = __( 'Please, choose at least one Post Type.', 'post-to-csv' );
 			if ( ! isset( $_POST["psttcsv_fields"] ) )
-				$error .= ' ' . __( 'Please, choose at least one Field.', 'post_to_csv' );
+				$error .= ' ' . __( 'Please, choose at least one Field.', 'post-to-csv' );
 			if ( ! isset( $_POST["psttcsv_status"] ) )
-				$error .= ' ' . __( 'Please, choose at least one Post status.', 'post_to_csv' );
+				$error .= ' ' . __( 'Please, choose at least one Post status.', 'post-to-csv' );
 		}
 		if ( ! empty( $psttcsv_message ) )
 			$message = $psttcsv_message; ?>
 		<div class="wrap">
 			<div class="icon32 icon32-bws" id="icon-options-general"></div>
-			<h2><?php echo $title; ?> <?php _e( 'Settings', 'post_to_csv' ); ?></h2>
-			<h2 class="nav-tab-wrapper">
-				<a class="nav-tab nav-tab-active" href="admin.php?page=post-to-csv.php"><?php _e( 'Settings', 'post_to_csv' ); ?></a>
-				<a class="nav-tab" href="http://bestwebsoft.com/products/post-to-csv/faq/" target="_blank"><?php _e( 'FAQ', 'post_to_csv' ); ?></a>
-			</h2>
+			<h2><?php echo $title; ?> <?php _e( 'Settings', 'post-to-csv' ); ?></h2>
 			<div class="updated fade" <?php if ( ! isset( $_REQUEST['psttcsv_form_submit'] ) || $error != "" ) echo "style=\"display:none\""; ?>><p><strong><?php echo $message; ?></strong></p></div>
 			<div class="error" <?php if ( "" == $error ) echo "style=\"display:none\""; ?>><p><?php echo $error; ?></p></div>
 			<form id="psttcsv_settings_form" method="post" action="admin.php?page=post-to-csv.php">
 				<table class="form-table">
 					<tr valign="top">
-						<th scope="row"><?php _e( 'Post Type', 'post_to_csv' ); ?></th>
+						<th scope="row"><?php _e( 'Post Type', 'post-to-csv' ); ?></th>
 						<td>
 							<div class="psttcsv_div_select_all" style="display:none;"><label><input class="psttcsv_select_all" type="checkbox" <?php echo $select_all_post_types; ?> /> <strong><?php _e( 'All', 'custom-search' ); ?></strong></label></div>
 							<?php foreach ( $all_post_types as $psttcsv_post_type ) { ?>
@@ -149,7 +154,7 @@ if ( ! function_exists( 'psttcsv_settings_page' ) ) {
 						</td>
 					</tr>
 					<tr valign="top">
-						<th scope="row"><?php _e( 'Fields', 'post_to_csv' ); ?></th>
+						<th scope="row"><?php _e( 'Fields', 'post-to-csv' ); ?></th>
 						<td>
 							<div class="psttcsv_div_select_all" style="display:none;"><label><input class="psttcsv_select_all" type="checkbox" <?php echo $select_all_fields; ?> /> <strong><?php _e( 'All', 'custom-search' ); ?></strong></label></div>
 							<?php foreach ( $all_fields as $field_key => $field_name ) { ?>
@@ -158,7 +163,7 @@ if ( ! function_exists( 'psttcsv_settings_page' ) ) {
 						</td>
 					</tr>
 					<tr valign="top">
-						<th scope="row"><?php _e( 'Post status', 'post_to_csv' ); ?></th>
+						<th scope="row"><?php _e( 'Post status', 'post-to-csv' ); ?></th>
 						<td>
 							<div class="psttcsv_div_select_all" style="display:none;"><label><input class="psttcsv_select_all" type="checkbox" <?php echo $select_all_status; ?> /> <strong><?php _e( 'All', 'custom-search' ); ?></strong></label></div>
 							<?php foreach ( $all_status as $status_value ) { ?>
@@ -167,24 +172,24 @@ if ( ! function_exists( 'psttcsv_settings_page' ) ) {
 						</td>
 					</tr>
 					<tr valign="top">
-						<th scope="row"><?php _e( 'Order By', 'post_to_csv' ); ?></th>
+						<th scope="row"><?php _e( 'Order By', 'post-to-csv' ); ?></th>
 						<td>
-							<label><input type="radio" name="psttcsv_order" value="post_title" <?php if ( $order == 'post_title' ) echo 'checked="checked"'; ?> /> <?php _e( 'Title', 'post_to_csv' ); ?></label><br />
-							<label><input type="radio" name="psttcsv_order" value="post_date" <?php if ( $order == 'post_date' ) echo 'checked="checked"'; ?> /> <?php _e( 'Date', 'post_to_csv' ); ?></label><br />
-							<label><input type="radio" name="psttcsv_order" value="post_author" <?php if ( $order == 'post_author' ) echo 'checked="checked"'; ?> /> <?php _e( 'Author', 'post_to_csv' ); ?></label><br />
+							<label><input type="radio" name="psttcsv_order" value="post_title" <?php if ( $order == 'post_title' ) echo 'checked="checked"'; ?> /> <?php _e( 'Title', 'post-to-csv' ); ?></label><br />
+							<label><input type="radio" name="psttcsv_order" value="post_date" <?php if ( $order == 'post_date' ) echo 'checked="checked"'; ?> /> <?php _e( 'Date', 'post-to-csv' ); ?></label><br />
+							<label><input type="radio" name="psttcsv_order" value="post_author" <?php if ( $order == 'post_author' ) echo 'checked="checked"'; ?> /> <?php _e( 'Author', 'post-to-csv' ); ?></label><br />
 						</td>
 					</tr>
 					<tr valign="top">
-						<th scope="row"><?php _e( 'Order Direction', 'post_to_csv' ); ?></th>
+						<th scope="row"><?php _e( 'Order Direction', 'post-to-csv' ); ?></th>
 						<td>
-							<label><input type="radio" name="psttcsv_direction" value="asc" <?php if ( $direction == 'asc' ) echo 'checked="checked"'; ?> /> <?php _e( 'ASC', 'post_to_csv' ); ?></label><br />
-							<label><input type="radio" name="psttcsv_direction" value="desc" <?php if ( $direction == 'desc' ) echo 'checked="checked"'; ?> /> <?php _e( 'DESC', 'post_to_csv' ); ?></label><br />
+							<label><input type="radio" name="psttcsv_direction" value="asc" <?php if ( $direction == 'asc' ) echo 'checked="checked"'; ?> /> <?php _e( 'ASC', 'post-to-csv' ); ?></label><br />
+							<label><input type="radio" name="psttcsv_direction" value="desc" <?php if ( $direction == 'desc' ) echo 'checked="checked"'; ?> /> <?php _e( 'DESC', 'post-to-csv' ); ?></label><br />
 						</td>
 					</tr>
 				</table>
 				<input type="hidden" name="psttcsv_form_submit" value="submit" />
 				<p class="submit">
-					<input type="submit" class="button-primary" value="<?php _e( 'Save & Export', 'post_to_csv' ) ?>" />
+					<input type="submit" class="button-primary" value="<?php _e( 'Save & Export', 'post-to-csv' ) ?>" />
 				</p>
 				<?php wp_nonce_field( plugin_basename(__FILE__), 'psttcsv_nonce_name' ); ?>
 			</form>
@@ -267,7 +272,7 @@ if ( ! function_exists( 'psttcsv_print_scv' ) ) {
 				unlink( $filename );
 				exit();
 			} else {
-				$psttcsv_message = __( 'No items found.', 'post_to_csv' );
+				$psttcsv_message = __( 'No items found.', 'post-to-csv' );
 			}
 		}
 	}
@@ -288,7 +293,7 @@ if ( ! function_exists( 'psttcsv_plugin_action_links' ) ) {
 			if ( ! $this_plugin ) $this_plugin = plugin_basename( __FILE__ );
 
 			if ( $file == $this_plugin ) {
-				$settings_link = '<a href="admin.php?page=post-to-csv.php">' . __( 'Settings', 'post_to_csv' ) . '</a>';
+				$settings_link = '<a href="admin.php?page=post-to-csv.php">' . __( 'Settings', 'post-to-csv' ) . '</a>';
 				array_unshift( $links, $settings_link );
 			}
 		}
@@ -302,23 +307,48 @@ if ( ! function_exists( 'psttcsv_register_plugin_links' ) ) {
 		$base = plugin_basename( __FILE__ );
 		if ( $file == $base ) {
 			if ( ! is_network_admin() )
-				$links[] = '<a href="admin.php?page=post-to-csv.php">' . __( 'Settings', 'post_to_csv' ) . '</a>';
-			$links[] = '<a href="http://wordpress.org/plugins/post-to-csv/faq/" target="_blank">' . __( 'FAQ', 'post_to_csv' ) . '</a>';
-			$links[] = '<a href="http://support.bestwebsoft.com">' . __( 'Support', 'post_to_csv' ) . '</a>';
+				$links[] = '<a href="admin.php?page=post-to-csv.php">' . __( 'Settings', 'post-to-csv' ) . '</a>';
+			$links[] = '<a href="http://wordpress.org/plugins/post-to-csv/faq/" target="_blank">' . __( 'FAQ', 'post-to-csv' ) . '</a>';
+			$links[] = '<a href="http://support.bestwebsoft.com">' . __( 'Support', 'post-to-csv' ) . '</a>';
 		}
 		return $links;
 	}
 }
 
+/* add help tab  */
+if ( ! function_exists( 'psttcsv_add_tabs' ) ) {
+	function psttcsv_add_tabs() {
+		$screen = get_current_screen();
+		$args = array(
+			'id' 			=> 'psttcsv',
+			'section' 		=> '200538829'
+		);
+		bws_help_tab( $screen, $args );
+	}
+}
+
 if ( ! function_exists ( 'psttcsv_plugin_uninstall' ) ) {
 	function psttcsv_plugin_uninstall() {
-		delete_option( 'psttcsv_options' );
+		global $wpdb;
+		if ( function_exists( 'is_multisite' ) && is_multisite() ) {
+			$old_blog = $wpdb->blogid;
+			/* Get all blog ids */
+			$blogids = $wpdb->get_col( "SELECT `blog_id` FROM $wpdb->blogs" );
+			foreach ( $blogids as $blog_id ) {
+				switch_to_blog( $blog_id );
+				delete_option( 'psttcsv_options' );
+			}
+			switch_to_blog( $old_blog );
+		} else {
+			delete_option( 'psttcsv_options' );
+		}
 	}
 }
 
 add_action( 'admin_menu', 'add_psttcsv_admin_menu' );
 add_action( 'init', 'psttcsv_plugin_init' );
 add_action( 'admin_init', 'psttcsv_plugin_admin_init' );
+add_action( 'plugins_loaded', 'psttcsv_plugins_loaded' );
 add_action( 'admin_enqueue_scripts', 'psttcsv_admin_js' );
 /* Additional links on the plugin page */
 add_filter( 'plugin_action_links', 'psttcsv_plugin_action_links', 10, 2 );
