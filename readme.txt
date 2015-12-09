@@ -3,8 +3,8 @@ Contributors: bestwebsoft
 Donate link: http://bestwebsoft.com/donate/
 Tags: add post to csv, add post to scv plugin, add post to csv wp plugin, add post to csv free plugin, best post to csv plugin, best post to csv wp plugin, best post to csv free plugin, csv, csv file, export attachment, export fields, export page, export post, export to csv, fields, guid field, order, order by author, order by date, order direction, post status, post table, post to csv, post to csv plugin, post to cvs, post type, posts, select order direction, title field,  wordpress, wp, wp plugin, wp free plugin, wp post to csv, wp post to csv plugin, wp simple post to csv plugin, wp free post to csv, wp free post to csv plugin, wordpress plugin, wordpress free plugin, wordpress post to csv, wordpress post to csv plugin, wordpress simple post to csv plugin, wordpress free post to csv, wordpress free post to csv plugin
 Requires at least: 3.8
-Tested up to: 4.3.1
-Stable tag: 1.2.6
+Tested up to: 4.4
+Stable tag: 1.2.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -91,6 +91,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 
 == Changelog ==
 
+= V1.2.7 - 09.12.2015 =
+* Bugfix : The bug with plugin menu duplicating was fixed.
+
 = V1.2.6 - 20.10.2015 =
 * Update : Textdomain was changed.
 
@@ -124,6 +127,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 * NEW: The ability to select the fields to be sorted and the order direction were added.
 
 == Upgrade Notice ==
+
+= V1.2.7 =
+The bug with plugin menu duplicating was fixed.
 
 = V1.2.6 =
 Textdomain was changed.

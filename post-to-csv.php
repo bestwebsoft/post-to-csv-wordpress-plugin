@@ -6,7 +6,7 @@ Description: The plugin Post to CSV allows to export posts of any types to a csv
 Author: BestWebSoft
 Text Domain: post-to-csv
 Domain Path: /languages
-Version: 1.2.6
+Version: 1.2.7
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -29,7 +29,7 @@ License: GPLv2 or later
 
 if ( ! function_exists( 'add_psttcsv_admin_menu' ) ) {
 	function add_psttcsv_admin_menu() {
-		bws_add_general_menu( plugin_basename( __FILE__ ) );
+		bws_general_menu();
 		$settings = add_submenu_page( 'bws_plugins', 'Post to CSV', 'Post to CSV', 'manage_options', "post-to-csv.php", 'psttcsv_settings_page' );
 		add_action( 'load-' . $settings, 'psttcsv_add_tabs' );
 	}
@@ -138,53 +138,52 @@ if ( ! function_exists( 'psttcsv_settings_page' ) ) {
 		if ( ! empty( $psttcsv_message ) )
 			$message = $psttcsv_message; ?>
 		<div class="wrap">
-			<div class="icon32 icon32-bws" id="icon-options-general"></div>
-			<h2><?php echo $title; ?> <?php _e( 'Settings', 'post-to-csv' ); ?></h2>
+			<h1><?php echo $title; ?> <?php _e( 'Settings', 'post-to-csv' ); ?></h1>
 			<div class="updated fade" <?php if ( ! isset( $_REQUEST['psttcsv_form_submit'] ) || $error != "" ) echo "style=\"display:none\""; ?>><p><strong><?php echo $message; ?></strong></p></div>
 			<div class="error" <?php if ( "" == $error ) echo "style=\"display:none\""; ?>><p><?php echo $error; ?></p></div>
 			<form id="psttcsv_settings_form" method="post" action="admin.php?page=post-to-csv.php">
 				<table class="form-table">
 					<tr valign="top">
 						<th scope="row"><?php _e( 'Post Type', 'post-to-csv' ); ?></th>
-						<td>
+						<td><fieldset>
 							<div class="psttcsv_div_select_all" style="display:none;"><label><input class="psttcsv_select_all" type="checkbox" <?php echo $select_all_post_types; ?> /> <strong><?php _e( 'All', 'custom-search' ); ?></strong></label></div>
 							<?php foreach ( $all_post_types as $psttcsv_post_type ) { ?>
 								<label><input type="checkbox" name="psttcsv_post_type[]" value="<?php echo $psttcsv_post_type; ?>" <?php if ( in_array( $psttcsv_post_type, $post_type ) ) echo 'checked="checked"'; ?> /> <?php echo ucfirst( $psttcsv_post_type ); ?></label><br />
 							<?php } ?>
-						</td>
+						</fieldset></td>
 					</tr>
 					<tr valign="top">
 						<th scope="row"><?php _e( 'Fields', 'post-to-csv' ); ?></th>
-						<td>
+						<td><fieldset>
 							<div class="psttcsv_div_select_all" style="display:none;"><label><input class="psttcsv_select_all" type="checkbox" <?php echo $select_all_fields; ?> /> <strong><?php _e( 'All', 'custom-search' ); ?></strong></label></div>
 							<?php foreach ( $all_fields as $field_key => $field_name ) { ?>
 								<label><input type="checkbox" name="psttcsv_fields[]" value="<?php echo $field_key; ?>" <?php if ( in_array( $field_key, $fields ) ) echo 'checked="checked"'; ?> /> <?php echo $field_name; ?></label><br />
 							<?php } ?>
-						</td>
+						</fieldset></td>
 					</tr>
 					<tr valign="top">
 						<th scope="row"><?php _e( 'Post status', 'post-to-csv' ); ?></th>
-						<td>
+						<td><fieldset>
 							<div class="psttcsv_div_select_all" style="display:none;"><label><input class="psttcsv_select_all" type="checkbox" <?php echo $select_all_status; ?> /> <strong><?php _e( 'All', 'custom-search' ); ?></strong></label></div>
 							<?php foreach ( $all_status as $status_value ) { ?>
 								<label><input type="checkbox" name="psttcsv_status[]" value="<?php echo $status_value; ?>" <?php if ( in_array( $status_value, $status ) ) echo 'checked="checked"'; ?> /> <?php echo ucfirst( $status_value ); ?></label><br />
 							<?php } ?>
-						</td>
+						</fieldset></td>
 					</tr>
 					<tr valign="top">
 						<th scope="row"><?php _e( 'Order By', 'post-to-csv' ); ?></th>
-						<td>
+						<td><fieldset>
 							<label><input type="radio" name="psttcsv_order" value="post_title" <?php if ( $order == 'post_title' ) echo 'checked="checked"'; ?> /> <?php _e( 'Title', 'post-to-csv' ); ?></label><br />
 							<label><input type="radio" name="psttcsv_order" value="post_date" <?php if ( $order == 'post_date' ) echo 'checked="checked"'; ?> /> <?php _e( 'Date', 'post-to-csv' ); ?></label><br />
 							<label><input type="radio" name="psttcsv_order" value="post_author" <?php if ( $order == 'post_author' ) echo 'checked="checked"'; ?> /> <?php _e( 'Author', 'post-to-csv' ); ?></label><br />
-						</td>
+						</fieldset></td>
 					</tr>
 					<tr valign="top">
 						<th scope="row"><?php _e( 'Order Direction', 'post-to-csv' ); ?></th>
-						<td>
+						<td><fieldset>
 							<label><input type="radio" name="psttcsv_direction" value="asc" <?php if ( $direction == 'asc' ) echo 'checked="checked"'; ?> /> <?php _e( 'ASC', 'post-to-csv' ); ?></label><br />
 							<label><input type="radio" name="psttcsv_direction" value="desc" <?php if ( $direction == 'desc' ) echo 'checked="checked"'; ?> /> <?php _e( 'DESC', 'post-to-csv' ); ?></label><br />
-						</td>
+						</fieldset></td>
 					</tr>
 				</table>
 				<input type="hidden" name="psttcsv_form_submit" value="submit" />
