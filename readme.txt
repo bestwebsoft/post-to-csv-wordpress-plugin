@@ -3,8 +3,8 @@ Contributors: bestwebsoft
 Donate link: http://bestwebsoft.com/donate/
 Tags: add post to csv, add post to scv plugin, add post to csv wp plugin, add post to csv free plugin, best post to csv plugin, best post to csv wp plugin, best post to csv free plugin, csv, csv file, export attachment, export fields, export page, export post, export to csv, fields, guid field, order, order by author, order by date, order direction, post status, post table, post to csv, post to csv plugin, post to cvs, post type, posts, select order direction, title field,  wordpress, wp, wp plugin, wp free plugin, wp post to csv, wp post to csv plugin, wp simple post to csv plugin, wp free post to csv, wp free post to csv plugin, wordpress plugin, wordpress free plugin, wordpress post to csv, wordpress post to csv plugin, wordpress simple post to csv plugin, wordpress free post to csv, wordpress free post to csv plugin
 Requires at least: 3.8
-Tested up to: 4.4
-Stable tag: 1.2.7
+Tested up to: 4.5
+Stable tag: 1.2.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -25,8 +25,10 @@ http://www.youtube.com/watch?v=rAi-R8naBN0
 = Features =
 
 * Export of selected fields of the posts' table.
-* Ability to order by date or author.
-* Ability to select the order direction.
+* Order by date or author.
+* Select the order direction.
+
+If you have a feature, suggestion or idea you'd like to see in the plugin, we'd love to hear about it! <a href="http://support.bestwebsoft.com/hc/en-us/requests/new" target="_blank">Suggest a Feature</a>
 
 = Recommended Plugins =
 
@@ -44,7 +46,7 @@ If you create your own language pack or update an existing one, you can send <a 
 
 = Technical support =
 
-Dear users, our plugins are available for free download. If you have any questions or recommendations regarding the functionality of our plugins (existing options, new options, current issues), please feel free to contact us. Please note that we accept requests in English only. All messages in another languages won't be accepted.
+Dear users, our plugins are available for free download. If you have any questions or recommendations regarding the functionality of our plugins (existing options, new options, current issues), please feel free to contact us. Please note that we accept requests in English only. All messages in other languages won't be accepted.
 
 If you notice any bugs in the plugin's work, you can notify us about it and we'll investigate and fix the issue then. Your request should contain URL of the website, issues description and WordPress admin panel credentials.
 
@@ -91,6 +93,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 
 == Changelog ==
 
+= V1.2.8 - 25.04.2016 =
+* Update : We updated all functionality for wordpress 4.5.
+
 = V1.2.7 - 09.12.2015 =
 * Bugfix : The bug with plugin menu duplicating was fixed.
 
@@ -127,6 +132,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 * NEW: The ability to select the fields to be sorted and the order direction were added.
 
 == Upgrade Notice ==
+
+= V1.2.8 =
+We updated all functionality for wordpress 4.5.
 
 = V1.2.7 =
 The bug with plugin menu duplicating was fixed.

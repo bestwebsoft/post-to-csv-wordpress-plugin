@@ -6,12 +6,12 @@ Description: The plugin Post to CSV allows to export posts of any types to a csv
 Author: BestWebSoft
 Text Domain: post-to-csv
 Domain Path: /languages
-Version: 1.2.7
+Version: 1.2.8
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
 
-/*  © Copyright 2015  BestWebSoft  ( http://support.bestwebsoft.com )
+/*  © Copyright 2016  BestWebSoft  ( http://support.bestwebsoft.com )
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License, version 2, as
@@ -81,7 +81,8 @@ if ( ! function_exists ( 'register_psttcsv_settings' ) ) {
 		global $psttcsv_plugin_info;
 
 		$psttcsv_default_options = array(
-			'plugin_option_version' => $psttcsv_plugin_info["Version"]
+			'plugin_option_version' 	=> $psttcsv_plugin_info["Version"],
+			'suggest_feature_banner'	=> 1
 		);
 
 		/* Install the option defaults */
@@ -139,8 +140,8 @@ if ( ! function_exists( 'psttcsv_settings_page' ) ) {
 			$message = $psttcsv_message; ?>
 		<div class="wrap">
 			<h1><?php echo $title; ?> <?php _e( 'Settings', 'post-to-csv' ); ?></h1>
-			<div class="updated fade" <?php if ( ! isset( $_REQUEST['psttcsv_form_submit'] ) || $error != "" ) echo "style=\"display:none\""; ?>><p><strong><?php echo $message; ?></strong></p></div>
-			<div class="error" <?php if ( "" == $error ) echo "style=\"display:none\""; ?>><p><?php echo $error; ?></p></div>
+			<div class="updated fade below-h2" <?php if ( ! isset( $_REQUEST['psttcsv_form_submit'] ) || $error != "" ) echo "style=\"display:none\""; ?>><p><strong><?php echo $message; ?></strong></p></div>
+			<div class="error below-h2" <?php if ( "" == $error ) echo "style=\"display:none\""; ?>><p><?php echo $error; ?></p></div>
 			<form id="psttcsv_settings_form" method="post" action="admin.php?page=post-to-csv.php">
 				<table class="form-table">
 					<tr valign="top">
@@ -284,6 +285,16 @@ if ( ! function_exists( 'psttcsv_admin_js' ) ) {
 	}
 }
 
+/* add admin notices */
+if ( ! function_exists ( 'psttcsv_admin_notices' ) ) {
+	function psttcsv_admin_notices() {
+		global $psttcsv_plugin_info;
+		if ( isset( $_GET['page'] ) && 'post-to-csv.php' == $_GET['page'] ) {
+			bws_plugin_suggest_feature_banner( $psttcsv_plugin_info, 'psttcsv_options', 'post-to-csv' );
+		}
+	}
+}
+
 if ( ! function_exists( 'psttcsv_plugin_action_links' ) ) {
 	function psttcsv_plugin_action_links( $links, $file ) {
 		if ( ! is_network_admin() ) {
@@ -341,6 +352,10 @@ if ( ! function_exists ( 'psttcsv_plugin_uninstall' ) ) {
 		} else {
 			delete_option( 'psttcsv_options' );
 		}
+
+		require_once( dirname( __FILE__ ) . '/bws_menu/bws_include.php' );
+		bws_include_init( plugin_basename( __FILE__ ) );
+		bws_delete_plugin( plugin_basename( __FILE__ ) );
 	}
 }
 
@@ -352,5 +367,7 @@ add_action( 'admin_enqueue_scripts', 'psttcsv_admin_js' );
 /* Additional links on the plugin page */
 add_filter( 'plugin_action_links', 'psttcsv_plugin_action_links', 10, 2 );
 add_filter( 'plugin_row_meta', 'psttcsv_register_plugin_links', 10, 2 );
+/* add admin notices */
+add_action( 'admin_notices', 'psttcsv_admin_notices' );
 
 register_uninstall_hook( plugin_basename( __FILE__ ), 'psttcsv_plugin_uninstall' );
