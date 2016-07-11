@@ -1,14 +1,14 @@
 ﻿=== Post to CSV by BestWebSoft ===
 Contributors: bestwebsoft
 Donate link: http://bestwebsoft.com/donate/
-Tags: add post to csv, add post to scv plugin, add post to csv wp plugin, add post to csv free plugin, best post to csv plugin, best post to csv wp plugin, best post to csv free plugin, csv, csv file, export attachment, export fields, export page, export post, export to csv, fields, guid field, order, order by author, order by date, order direction, post status, post table, post to csv, post to csv plugin, post to cvs, post type, posts, select order direction, title field,  wordpress, wp, wp plugin, wp free plugin, wp post to csv, wp post to csv plugin, wp simple post to csv plugin, wp free post to csv, wp free post to csv plugin, wordpress plugin, wordpress free plugin, wordpress post to csv, wordpress post to csv plugin, wordpress simple post to csv plugin, wordpress free post to csv, wordpress free post to csv plugin
+Tags: add post to csv, csv, csv file, export fields, export page, export post, export to csv, export attachment, csv plugin, post to csv plugin, order direction, guid field
 Requires at least: 3.8
-Tested up to: 4.5
-Stable tag: 1.2.8
+Tested up to: 4.5.3
+Stable tag: 1.2.9
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-The plugin Post to CSV allows to export posts of any types to a csv file.
+Export WordPress posts to CSV file format easily. Configure data order.
 
 == Description ==
 
@@ -42,7 +42,7 @@ There is also a premium version of the plugin <a href="http://bestwebsoft.com/pr
 * Russian (ru_RU)
 * Ukrainian (uk)
 
-If you create your own language pack or update an existing one, you can send <a href="http://codex.wordpress.org/Translating_WordPress" target="_blank">the text of PO and MO files</a> for <a href="http://bestwebsoft.com/" target="_blank">BWS</a> and we'll add it to the plugin. You can download the latest version of the program for work with PO and MO files  <a href="http://www.poedit.net/download.php" target="_blank">Poedit</a>.
+If you create your own language pack or update an existing one, you can send <a href="http://codex.wordpress.org/Translating_WordPress" target="_blank">the text of PO and MO files</a> for <a href="http://support.bestwebsoft.com/hc/en-us/requests/new" target="_blank">BWS</a> and we'll add it to the plugin. You can download the latest version of the program for work with PO and MO files  <a href="http://www.poedit.net/download.php" target="_blank">Poedit</a>.
 
 = Technical support =
 
@@ -58,7 +58,7 @@ We can fix some things for free for the users who provide translation of our plu
 
 1. Upload `post-to-csv` folder to the `/wp-content/plugins/` directory.
 2. Activate the plugin through the 'Plugins' menu in WordPress.
-3. Plugin settings are located in 'BWS Plugin', 'Post to CSV'.
+3. Plugin settings are located in 'BWS Panel', 'Post to CSV'.
 
 <a href="https://docs.google.com/document/d/1J99llDmOKpEZBm1424Pf7laJYUq-xp_ReoT_lPtZ-aU/edit" target="_blank">View a Step-by-step Instruction on Post to CSV Installation</a>.
 
@@ -92,6 +92,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 1. Plugin settings page.
 
 == Changelog ==
+
+= V1.2.9 - 11.07.2016 =
+* Update : We updated all functionality for wordpress 4.5.3.
 
 = V1.2.8 - 25.04.2016 =
 * Update : We updated all functionality for wordpress 4.5.
@@ -132,6 +135,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 * NEW: The ability to select the fields to be sorted and the order direction were added.
 
 == Upgrade Notice ==
+
+= V1.2.9 =
+We updated all functionality for wordpress 4.5.3.
 
 = V1.2.8 =
 We updated all functionality for wordpress 4.5.

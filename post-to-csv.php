@@ -1,12 +1,12 @@
 <?php
 /*
 Plugin Name: Post to CSV by BestWebSoft
-Plugin URI: http://bestwebsoft.com/products/
-Description: The plugin Post to CSV allows to export posts of any types to a csv file.
+Plugin URI: http://bestwebsoft.com/products/post-to-csv/
+Description: Export WordPress posts to CSV file format easily. Configure data order.
 Author: BestWebSoft
 Text Domain: post-to-csv
 Domain Path: /languages
-Version: 1.2.8
+Version: 1.2.9
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -30,7 +30,7 @@ License: GPLv2 or later
 if ( ! function_exists( 'add_psttcsv_admin_menu' ) ) {
 	function add_psttcsv_admin_menu() {
 		bws_general_menu();
-		$settings = add_submenu_page( 'bws_plugins', 'Post to CSV', 'Post to CSV', 'manage_options', "post-to-csv.php", 'psttcsv_settings_page' );
+		$settings = add_submenu_page( 'bws_panel', 'Post to CSV', 'Post to CSV', 'manage_options', "post-to-csv.php", 'psttcsv_settings_page' );
 		add_action( 'load-' . $settings, 'psttcsv_add_tabs' );
 	}
 }
