@@ -3,8 +3,8 @@ Contributors: bestwebsoft
 Donate link: http://bestwebsoft.com/donate/
 Tags: add post to csv, csv, csv file, export fields, export page, export post, export to csv, export attachment, csv plugin, post to csv plugin, order direction, guid field
 Requires at least: 3.8
-Tested up to: 4.5.3
-Stable tag: 1.2.9
+Tested up to: 4.6.1
+Stable tag: 1.3.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -35,7 +35,7 @@ If you have a feature, suggestion or idea you'd like to see in the plugin, we'd 
 The author of the Post to CSV also recommends the following plugins:
 
 * <a href="http://wordpress.org/plugins/updater/">Updater</a> - This plugin updates WordPress core and the plugins to the recent versions. You can also use the auto mode or manual mode for updating and set email notifications.
-There is also a premium version of the plugin <a href="http://bestwebsoft.com/products/updater/?k=0b49de6f754761a20284d411e7764d10">Updater Pro</a> with more useful features available. It can make backup of all your files and database before updating. Also it can forbid some plugins or WordPress Core update.
+There is also a premium version of the plugin <a href="http://bestwebsoft.com/products/wordpress/plugins/updater/?k=0b49de6f754761a20284d411e7764d10">Updater Pro</a> with more useful features available. It can make backup of all your files and database before updating. Also it can forbid some plugins or WordPress Core update.
 
 = Translation =
 
@@ -93,6 +93,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 
 == Changelog ==
 
+= V1.3.0 - 12.10.2016 =
+* Update : BWS plugins section is updated.
+
 = V1.2.9 - 11.07.2016 =
 * Update : We updated all functionality for wordpress 4.5.3.
 
@@ -135,6 +138,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 * NEW: The ability to select the fields to be sorted and the order direction were added.
 
 == Upgrade Notice ==
+
+= V1.3.0 =
+* Plugin optimization completed.
 
 = V1.2.9 =
 We updated all functionality for wordpress 4.5.3.

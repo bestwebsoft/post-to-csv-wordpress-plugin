@@ -1,12 +1,12 @@
 <?php
 /*
 Plugin Name: Post to CSV by BestWebSoft
-Plugin URI: http://bestwebsoft.com/products/post-to-csv/
+Plugin URI: http://bestwebsoft.com/products/wordpress/plugins/post-to-csv/
 Description: Export WordPress posts to CSV file format easily. Configure data order.
 Author: BestWebSoft
 Text Domain: post-to-csv
 Domain Path: /languages
-Version: 1.2.9
+Version: 1.3.0
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
