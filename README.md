@@ -1,9 +1,7 @@
-<a href="http://bestwebsoft.com/products/post-to-csv/" target=_blank>Post to CSV WordPress Plugin</a>
+<a href="http://bestwebsoft.com/products/wordpress/plugins/post-to-csv/" target=_blank>Post to CSV WordPress Plugin</a>
 ========================
 
 Export WordPress posts to CSV file format easily. Configure data order.
-
-<img src="http://bestwebsoft.com/wp-content/uploads/2014/09/post-to-csv-banner-website.jpg" />
 
 <p>The Post to CSV plugin allows to export posts of any types to a csv file. Post to CSV is a simple and effective exporter and a perfect solution for those people who have no time for a bunch of settings. Just a couple of clicks and you`ll see a csv file on your Desktop.</p>
 
