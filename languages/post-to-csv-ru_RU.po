@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Post To CSV\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-06-05 13:12+0300\n"
-"PO-Revision-Date: 2015-06-05 13:12+0300\n"
+"POT-Creation-Date: 2017-03-15 11:32+0200\n"
+"PO-Revision-Date: 2017-03-15 11:47+0200\n"
 "Last-Translator: bestwebsoft.com <plugins@bestwebsoft.com>\n"
 "Language-Team: bestwebsoft.com <plugin@bestwebsoft.com>\n"
 "Language: ru_RU\n"
@@ -13,125 +13,129 @@ msgstr ""
 "X-Poedit-KeywordsList: __;_e\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Generator: Poedit 1.5.7\n"
+"X-Generator: Poedit 1.8.7.1\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: post-to-csv.php:31
-msgid "Post To CSV"
-msgstr "Post To CSV"
+#: post-to-csv.php:115
+msgid "Post"
+msgstr "Записи"
 
-#: post-to-csv.php:100
-#: post-to-csv.php:172
+#: post-to-csv.php:116
+msgid "Page"
+msgstr "Страницы"
+
+#: post-to-csv.php:117
+msgid "Attachment"
+msgstr "Вложения"
+
+#: post-to-csv.php:121 post-to-csv.php:193
 msgid "Title"
 msgstr "Название"
 
-#: post-to-csv.php:101
+#: post-to-csv.php:122
 msgid "Guid"
 msgstr "Guid"
 
-#: post-to-csv.php:102
+#: post-to-csv.php:123
 msgid "Permalink"
 msgstr "Пермалинки"
 
-#: post-to-csv.php:123
+#: post-to-csv.php:127
+msgid "Publish"
+msgstr "Опубликованный"
+
+#: post-to-csv.php:128
+msgid "Draft"
+msgstr "Черновик"
+
+#: post-to-csv.php:129
+msgid "Inherit"
+msgstr "Унаследованный"
+
+#: post-to-csv.php:130
+msgid "Private"
+msgstr "Личное"
+
+#: post-to-csv.php:149
 msgid "Please, choose at least one Post Type."
 msgstr "Пожалуйста, выберите хотя бы один тип поста."
 
-#: post-to-csv.php:125
+#: post-to-csv.php:151
 msgid "Please, choose at least one Field."
 msgstr "Пожалуйста, выберите хотя бы одно поле."
 
-#: post-to-csv.php:127
+#: post-to-csv.php:153
 msgid "Please, choose at least one Post status."
 msgstr "Пожалуйста, выберите хотя бы один cтатус поста."
 
-#: post-to-csv.php:133
-#: post-to-csv.php:135
-#: post-to-csv.php:291
-#: post-to-csv.php:305
+#: post-to-csv.php:158 post-to-csv.php:324 post-to-csv.php:338
 msgid "Settings"
 msgstr "Настройки"
 
-#: post-to-csv.php:136
-#: post-to-csv.php:306
-msgid "FAQ"
-msgstr "FAQ"
-
-#: post-to-csv.php:143
+#: post-to-csv.php:164
 msgid "Post Type"
 msgstr "Тип поста"
 
-#: post-to-csv.php:145
-#: post-to-csv.php:154
-#: post-to-csv.php:163
+#: post-to-csv.php:166 post-to-csv.php:175 post-to-csv.php:184
 msgid "All"
 msgstr "Все"
 
-#: post-to-csv.php:152
+#: post-to-csv.php:173
 msgid "Fields"
 msgstr "Поля"
 
-#: post-to-csv.php:161
+#: post-to-csv.php:182
 msgid "Post status"
 msgstr "Статус поста"
 
-#: post-to-csv.php:170
+#: post-to-csv.php:191
 msgid "Order By"
 msgstr "Сортировка по"
 
-#: post-to-csv.php:173
+#: post-to-csv.php:194
 msgid "Date"
 msgstr "Дата"
 
-#: post-to-csv.php:174
+#: post-to-csv.php:195
 msgid "Author"
 msgstr "Автор"
 
-#: post-to-csv.php:178
+#: post-to-csv.php:199
 msgid "Order Direction"
 msgstr "Направление сортировки"
 
-#: post-to-csv.php:180
+#: post-to-csv.php:201
 msgid "ASC"
 msgstr "по возрастанию"
 
-#: post-to-csv.php:181
+#: post-to-csv.php:202
 msgid "DESC"
 msgstr "по убыванию"
 
-#: post-to-csv.php:187
+#: post-to-csv.php:208
 msgid "Save & Export"
 msgstr "Сохранение и Экспорт"
 
-#: post-to-csv.php:270
+#: post-to-csv.php:293
 msgid "No items found."
 msgstr "Не найдено элементов."
 
-#: post-to-csv.php:307
+#: post-to-csv.php:339
+msgid "FAQ"
+msgstr "FAQ"
+
+#: post-to-csv.php:340
 msgid "Support"
 msgstr "Поддержка"
 
-#~ msgid "Publish"
-#~ msgstr "Опубликованные"
-
-#~ msgid "Draft"
-#~ msgstr "Черновик"
-
-#~ msgid "Inherit"
-#~ msgstr "Унаследованный"
-
-#~ msgid "Private"
-#~ msgstr "Личные"
+#~ msgid "Post To CSV"
+#~ msgstr "Post To CSV"
 
 #~ msgid "requires"
 #~ msgstr "требует"
 
-#~ msgid ""
-#~ "or higher, that is why it has been deactivated! Please upgrade WordPress "
-#~ "and try again."
-#~ msgstr ""
-#~ "или выше, поэтому плагин был деактивирован! Пожалуйста, обновите "
-#~ "WordPress и попробуйте снова."
+#~ msgid "or higher, that is why it has been deactivated! Please upgrade WordPress and try again."
+#~ msgstr "или выше, поэтому плагин был деактивирован! Пожалуйста, обновите WordPress и попробуйте снова."
 
 #~ msgid "Back to the WordPress"
 #~ msgstr "Вернуться к WordPress"
@@ -143,8 +147,7 @@ msgstr "Поддержка"
 #~ msgstr "Сохранить изменения"
 
 #~ msgid "If you enjoy our plugin, please give it 5 stars on WordPress"
-#~ msgstr ""
-#~ "Если вам понравился плагин, пожалуйста, поставте нам 5 звезд на WordPress"
+#~ msgstr "Если вам понравился плагин, пожалуйста, поставте нам 5 звезд на WordPress"
 
 #~ msgid "Rate the plugin"
 #~ msgstr "Оценить плагин"

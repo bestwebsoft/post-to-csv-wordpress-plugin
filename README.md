@@ -1,38 +1,72 @@
-<a href="http://bestwebsoft.com/products/wordpress/plugins/post-to-csv/" target=_blank>Post to CSV WordPress Plugin</a>
+<a href="https://bestwebsoft.com/products/wordpress/plugins/post-to-csv/" target=_blank>Post to CSV WordPress Plugin</a>
 ========================
 
 Export WordPress posts to CSV file format easily. Configure data order.
 
-<p>The Post to CSV plugin allows to export posts of any types to a csv file. Post to CSV is a simple and effective exporter and a perfect solution for those people who have no time for a bunch of settings. Just a couple of clicks and you`ll see a csv file on your Desktop.</p>
+<p>Simple plugin which exports any default and custom post types from your WordPress website to a CSV file. Perfect solution for those who have no time for a bunch of settings: install, configure, choose what you want to export, and get the CSV.</p>
+
+<p>Save your time and get important WordPress data in seconds!</p>
 
 
 <div class='video'></div>
 
 
-<p><a href="http://www.youtube.com/watch?v=uI_ia_7yw4s">Post to CSV by BestWebSoft Video instruction on Installation</a></p>
-
-<p><a href="http://wordpress.org/plugins/post-to-csv/faq/">Post to CSV by BestWebSoft FAQ</a></p>
-
-<p><a href="http://support.bestwebsoft.com">Post to CSV by BestWebSoft Support</a></p>
-
 <h4>Features</h4>
 
 <ul>
-<li>Export of selected fields of the posts' table.</li>
-<li>Order by date or author.</li>
-<li>Select the order direction.</li>
-</ul>
-
-<p>If you have a feature, suggestion or idea you'd like to see in the plugin, we'd love to hear about it! <a href="http://support.bestwebsoft.com/hc/en-us/requests/new">Suggest a Feature</a></p>
-
-<h4>Recommended Plugins</h4>
-
-<p>The author of the Post to CSV also recommends the following plugins:</p>
+<li>Export:
 
 <ul>
-<li><a href="http://wordpress.org/plugins/updater/">Updater</a> - This plugin updates WordPress core and the plugins to the recent versions. You can also use the auto mode or manual mode for updating and set email notifications.
-There is also a premium version of the plugin <a href="http://bestwebsoft.com/products/wordpress/plugins/updater/?k=0b49de6f754761a20284d411e7764d10">Updater Pro</a> with more useful features available. It can make backup of all your files and database before updating. Also it can forbid some plugins or WordPress Core update.</li>
+<li>Post types
+
+<ul>
+<li>Posts</li>
+<li>Pages</li>
+<li>Attachments</li>
+<li>Custom post types</li>
+</ul></li>
+<li>Fields
+
+<ul>
+<li>Titles</li>
+<li>Guids</li>
+<li>Permalinks</li>
+</ul></li>
+</ul></li>
+<li>Choose exported post status:
+
+<ul>
+<li>Published</li>
+<li>Draft</li>
+<li>Inherit</li>
+<li>Private</li>
+</ul></li>
+<li>Set default post sorting order by:
+
+<ul>
+<li>Title</li>
+<li>Date</li>
+<li>Author</li>
+<li>ASC (ascending order from lowest to highest values)</li>
+<li>DESC (descending order from highest to lowest values)</li>
+</ul></li>
+<li>Compatible with latest WordPress version</li>
+<li>Incredibly simple settings for fast setup without modifying code</li>
+<li>Detailed step-by-step documentation and videos</li>
 </ul>
+
+<p>If you have a feature suggestion or idea you'd like to see in the plugin, we'd love to hear about it! <a href="https://support.bestwebsoft.com/hc/en-us/requests/new">Suggest a Feature</a></p>
+
+<h4>Documentation &#38; Videos</h4>
+
+<ul>
+<li><a href="https://docs.google.com/document/d/1-hvn6WRvWnOqj5v5pLUk7Awyu87lq5B_dO-Tv-MC9JQ/">[Doc] Installation</a></li>
+<li><a href="http://www.youtube.com/watch?v=uI_ia_7yw4s">[Video] Installation Instruction</a></li>
+</ul>
+
+<h4>Help &#38; Support</h4>
+
+<p>Visit our Help Center if you have any questions, our friendly Support Team is happy to help &#8212; <a href="https://support.bestwebsoft.com/">https://support.bestwebsoft.com/</a></p>
 
 <h4>Translation</h4>
 
@@ -41,14 +75,18 @@ There is also a premium version of the plugin <a href="http://bestwebsoft.com/pr
 <li>Ukrainian (uk)</li>
 </ul>
 
-<p>If you create your own language pack or update an existing one, you can send <a href="http://codex.wordpress.org/Translating_WordPress">the text of PO and MO files</a> for <a href="http://support.bestwebsoft.com/hc/en-us/requests/new">BWS</a> and we'll add it to the plugin. You can download the latest version of the program for work with PO and MO files  <a href="http://www.poedit.net/download.php">Poedit</a>.</p>
+<p>Some of these translations are not complete. We are constantly adding new features which should be translated. If you would like to create your own language pack or update the existing one, you can send <a href="http://codex.wordpress.org/Translating_WordPress">the text of PO and MO files</a> to <a href="https://support.bestwebsoft.com/hc/en-us/requests/new">BestWebSoft</a> and we'll add it to the plugin. You can download the latest version of the program for work with PO and MO <a href="http://www.poedit.net/download.php">files Poedit</a>.</p>
 
-<h4>Technical support</h4>
+<h4>Recommended Plugins</h4>
 
-<p>Dear users, our plugins are available for free download. If you have any questions or recommendations regarding the functionality of our plugins (existing options, new options, current issues), please feel free to contact us. Please note that we accept requests in English only. All messages in other languages won't be accepted.</p>
+<ul>
+<li><a href="https://bestwebsoft.com/products/wordpress/plugins/updater/?k=0b49de6f754761a20284d411e7764d10">Updater</a> - Automatically check and update WordPress core with all installed plugins to the latest versions. Manual mode, email notifications and backups of all your files and database before updating.</li>
+</ul>
 
-<p>If you notice any bugs in the plugin's work, you can notify us about it and we'll investigate and fix the issue then. Your request should contain URL of the website, issues description and WordPress admin panel credentials.</p>
+<h4>Donate</h4>
 
-<p>Moreover we can customize the plugin according to your requirements. It's a paid service (as a rule it costs $40, but the price can vary depending on the amount of the necessary changes and their complexity). Please note that we could also include this or that feature (developed for you) in the next release and share with the other users then.</p>
+<p>Donations play an important role in supporting open-source projects. We greatly appreciate any donation you can make to help us continue further development of free products.</p>
 
-<p>We can fix some things for free for the users who provide translation of our plugin into their native language (this should be a new translation of a certain plugin, you can check available translations on the official plugin page).</p>
+<p><a href="https://bestwebsoft.com/donate/">Donate Now</a></p>
+
+<p>If you have a feature, suggestion or idea you'd like to see in the plugin, we'd love to hear about it! <a href="https://support.bestwebsoft.com/hc/en-us/requests/new">Suggest a Feature</a></p>

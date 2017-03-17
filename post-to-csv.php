@@ -1,30 +1,30 @@
 <?php
 /*
 Plugin Name: Post to CSV by BestWebSoft
-Plugin URI: http://bestwebsoft.com/products/wordpress/plugins/post-to-csv/
+Plugin URI: https://bestwebsoft.com/products/wordpress/plugins/post-to-csv/
 Description: Export WordPress posts to CSV file format easily. Configure data order.
 Author: BestWebSoft
 Text Domain: post-to-csv
 Domain Path: /languages
-Version: 1.3.0
-Author URI: http://bestwebsoft.com/
+Version: 1.3.1
+Author URI: https://bestwebsoft.com/
 License: GPLv2 or later
 */
 
-/*  © Copyright 2016  BestWebSoft  ( http://support.bestwebsoft.com )
+/*  © Copyright 2017  BestWebSoft  ( https://support.bestwebsoft.com )
 
-    This program is free software; you can redistribute it and/or modify
-    it under the terms of the GNU General Public License, version 2, as
-    published by the Free Software Foundation.
+	This program is free software; you can redistribute it and/or modify
+	it under the terms of the GNU General Public License, version 2, as
+	published by the Free Software Foundation.
 
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
 
-    You should have received a copy of the GNU General Public License
-    along with this program; if not, write to the Free Software
-    Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+	You should have received a copy of the GNU General Public License
+	along with this program; if not, write to the Free Software
+	Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
 if ( ! function_exists( 'add_psttcsv_admin_menu' ) ) {
@@ -104,22 +104,38 @@ if ( ! function_exists( 'psttcsv_settings_page' ) ) {
 	function psttcsv_settings_page() {
 		global $title, $psttcsv_message, $psttcsv_plugin_info;
 		$error = $message = $select_all_status = $select_all_post_types = $select_all_fields = '';
-		
-		$all_post_types = get_post_types( array( 'public' => true ), 'names' );		
-		$all_fields = array(
-			'post_title' 	=> __( 'Title', 'post-to-csv' ),
-			'guid' 			=> __( 'Guid', 'post-to-csv' ),
-			'permalink' 	=> __( 'Permalink', 'post-to-csv' )
-		);
-		$all_status = array( 'publish', 'draft', 'inherit', 'private' );
 
+		$args=array(
+			'public'   => true,
+			'_builtin' => false
+		);
+		$post_types =get_post_types( $args, 'names', 'and' );
+
+		$all_post_types = array_merge( array(
+			'post'		 => __( 'Post', 'post-to-csv' ),
+			'page' 		 => __( 'Page', 'post-to-csv' ),
+			'attachment' => __( 'Attachment', 'post-to-csv' ),
+		), $post_types );
+
+		$all_fields = array(
+			'post_title' => __( 'Title', 'post-to-csv' ),
+			'guid'       => __( 'Guid', 'post-to-csv' ),
+			'permalink'  => __( 'Permalink', 'post-to-csv' )
+		);
+
+		$all_status = array(
+			'publish' 	=> __( 'Publish', 'post-to-csv' ),
+			'draft' 	=> __( 'Draft', 'post-to-csv' ),
+			'inherit' 	=> __( 'Inherit', 'post-to-csv' ),
+			'private' 	=> __( 'Private', 'post-to-csv' )
+		);
 		$order		= isset( $_POST['psttcsv_order'] ) ? $_POST['psttcsv_order'] : 'post_date';
 		$direction	= isset( $_POST['psttcsv_direction'] ) ? $_POST['psttcsv_direction'] : 'desc';
 		$status		= isset( $_POST['psttcsv_status'] ) ? $_POST['psttcsv_status'] : array( 'publish' );
 		$post_type	= isset( $_POST['psttcsv_post_type'] ) ? $_POST['psttcsv_post_type'] : array();
 		$fields		= isset( $_POST['psttcsv_fields'] ) ? $_POST['psttcsv_fields'] : array();
 
- 		if ( count( $post_type ) == count( $all_post_types ) )
+		if ( count( $post_type ) == count( $all_post_types ) )
 			$select_all_post_types = ' checked="checked"';
 
 		if ( count( $fields ) == count( $all_fields ) )
@@ -147,7 +163,7 @@ if ( ! function_exists( 'psttcsv_settings_page' ) ) {
 					<tr valign="top">
 						<th scope="row"><?php _e( 'Post Type', 'post-to-csv' ); ?></th>
 						<td><fieldset>
-							<div class="psttcsv_div_select_all" style="display:none;"><label><input class="psttcsv_select_all" type="checkbox" <?php echo $select_all_post_types; ?> /> <strong><?php _e( 'All', 'custom-search' ); ?></strong></label></div>
+							<div class="psttcsv_div_select_all" style="display:none;"><label><input class="psttcsv_select_all" type="checkbox" <?php echo $select_all_post_types; ?> /> <strong><?php _e( 'All', 'post-to-csv' ); ?></strong></label></div>
 							<?php foreach ( $all_post_types as $psttcsv_post_type ) { ?>
 								<label><input type="checkbox" name="psttcsv_post_type[]" value="<?php echo $psttcsv_post_type; ?>" <?php if ( in_array( $psttcsv_post_type, $post_type ) ) echo 'checked="checked"'; ?> /> <?php echo ucfirst( $psttcsv_post_type ); ?></label><br />
 							<?php } ?>
@@ -156,7 +172,7 @@ if ( ! function_exists( 'psttcsv_settings_page' ) ) {
 					<tr valign="top">
 						<th scope="row"><?php _e( 'Fields', 'post-to-csv' ); ?></th>
 						<td><fieldset>
-							<div class="psttcsv_div_select_all" style="display:none;"><label><input class="psttcsv_select_all" type="checkbox" <?php echo $select_all_fields; ?> /> <strong><?php _e( 'All', 'custom-search' ); ?></strong></label></div>
+							<div class="psttcsv_div_select_all" style="display:none;"><label><input class="psttcsv_select_all" type="checkbox" <?php echo $select_all_fields; ?> /> <strong><?php _e( 'All', 'post-to-csv' ); ?></strong></label></div>
 							<?php foreach ( $all_fields as $field_key => $field_name ) { ?>
 								<label><input type="checkbox" name="psttcsv_fields[]" value="<?php echo $field_key; ?>" <?php if ( in_array( $field_key, $fields ) ) echo 'checked="checked"'; ?> /> <?php echo $field_name; ?></label><br />
 							<?php } ?>
@@ -165,10 +181,10 @@ if ( ! function_exists( 'psttcsv_settings_page' ) ) {
 					<tr valign="top">
 						<th scope="row"><?php _e( 'Post status', 'post-to-csv' ); ?></th>
 						<td><fieldset>
-							<div class="psttcsv_div_select_all" style="display:none;"><label><input class="psttcsv_select_all" type="checkbox" <?php echo $select_all_status; ?> /> <strong><?php _e( 'All', 'custom-search' ); ?></strong></label></div>
-							<?php foreach ( $all_status as $status_value ) { ?>
-								<label><input type="checkbox" name="psttcsv_status[]" value="<?php echo $status_value; ?>" <?php if ( in_array( $status_value, $status ) ) echo 'checked="checked"'; ?> /> <?php echo ucfirst( $status_value ); ?></label><br />
-							<?php } ?>
+							<div class="psttcsv_div_select_all" style="display:none;"><label><input class="psttcsv_select_all" type="checkbox" <?php echo $select_all_status; ?> /> <strong><?php _e( 'All', 'post-to-csv' ); ?></strong></label></div>
+								<?php foreach ( $all_status as $status_value => $status_name ) { ?>
+									<label><input type="checkbox" name="psttcsv_status[]" value="<?php echo $status_value; ?>" <?php if ( in_array( $status_value, $status ) ) echo 'checked="checked"'; ?> /> <?php echo $status_name; ?></label><br />
+								<?php } ?>
 						</fieldset></td>
 					</tr>
 					<tr valign="top">
@@ -217,6 +233,7 @@ if ( ! function_exists( 'psttcsv_print_scv' ) ) {
 			/* Write column names */
 			$colArray = $fieldArray = array();
 			$colArray = $_POST["psttcsv_fields"];
+
 			if ( in_array( 'permalink', $colArray ) ) {
 				unset( $_POST["psttcsv_fields"][ array_search( 'permalink', $colArray ) ] );
 			}
@@ -226,15 +243,16 @@ if ( ! function_exists( 'psttcsv_print_scv' ) ) {
 				$status .= "', 'inherit";
 			}
 
+			$fields = ( ! empty( $_POST["psttcsv_fields"] ) && is_array( $_POST["psttcsv_fields"] ) ) ? ', `' . implode( '`, `', $_POST["psttcsv_fields"] ) . '`' : '';
+
 			$results = $wpdb->get_results( "
-				SELECT `ID`, `post_type`, `" . implode( "`, `", $_POST["psttcsv_fields"] ) . "` 
+				SELECT `ID`, `post_type`{$fields} 
 				FROM $wpdb->posts 
 				WHERE `post_type` IN ('" . implode( "', '", $_POST["psttcsv_post_type"] ) . "') 
 					AND `post_status` IN ('" . $status . "') 
 				ORDER BY `post_type`, `" . $order . "` " . $direction . "
 				LIMIT " . $start * $limit . ", " . $limit . "
 			", ARRAY_A );
-
 			if ( ! empty( $results ) ) {
 				$file = fopen( $filename, "w" );
 				fputcsv( $file, $colArray, ';' );
@@ -318,8 +336,8 @@ if ( ! function_exists( 'psttcsv_register_plugin_links' ) ) {
 		if ( $file == $base ) {
 			if ( ! is_network_admin() )
 				$links[] = '<a href="admin.php?page=post-to-csv.php">' . __( 'Settings', 'post-to-csv' ) . '</a>';
-			$links[] = '<a href="http://wordpress.org/plugins/post-to-csv/faq/" target="_blank">' . __( 'FAQ', 'post-to-csv' ) . '</a>';
-			$links[] = '<a href="http://support.bestwebsoft.com">' . __( 'Support', 'post-to-csv' ) . '</a>';
+			$links[] = '<a href="https://support.bestwebsoft.com/hc/en-us/sections/200538829" target="_blank">' . __( 'FAQ', 'post-to-csv' ) . '</a>';
+			$links[] = '<a href="https://support.bestwebsoft.com">' . __( 'Support', 'post-to-csv' ) . '</a>';
 		}
 		return $links;
 	}
