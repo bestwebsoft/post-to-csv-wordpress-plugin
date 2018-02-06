@@ -1,0 +1,8 @@
+/* Post to CSV icon */
+.menu-top.toplevel_page_post-to-csv .wp-menu-image {
+	font-family: 'bwsicons' !important;
+}
+.menu-top.toplevel_page_post-to-csv .wp-menu-image:before {
+	content: "\e922";
+	font-family: 'bwsicons' !important;
+}

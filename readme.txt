@@ -2,9 +2,9 @@
 Contributors: bestwebsoft
 Donate link: https://bestwebsoft.com/donate/
 Tags: add post to csv, csv, csv file, export fields, export page, export post, export to csv, export attachment, csv plugin, post to csv plugin, order direction, guid field
-Requires at least: 3.8
-Tested up to: 4.7.3
-Stable tag: 1.3.1
+Requires at least: 3.9
+Tested up to: 4.9.3
+Stable tag: 1.3.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -27,9 +27,13 @@ http://www.youtube.com/watch?v=rAi-R8naBN0
 		* Attachments
 		* Custom post types
 	* Fields
-		* Titles
-		* Guids
-		* Permalinks
+		* Title
+		* Guid
+		* Permalink
+		* Post date [NEW]
+		* Author [NEW]
+		* Content [NEW]
+	* Custom fields [NEW]
 * Choose exported post status:
 	* Published
 	* Draft
@@ -65,21 +69,13 @@ Some of these translations are not complete. We are constantly adding new featur
 
 = Recommended Plugins =
 
-* [Updater](https://bestwebsoft.com/products/wordpress/plugins/updater/?k=0b49de6f754761a20284d411e7764d10) - Automatically check and update WordPress core with all installed plugins to the latest versions. Manual mode, email notifications and backups of all your files and database before updating.
-
-= Donate =
-
-Donations play an important role in supporting open-source projects. We greatly appreciate any donation you can make to help us continue further development of free products.
-
-[Donate Now](https://bestwebsoft.com/donate/)
-
-If you have a feature, suggestion or idea you'd like to see in the plugin, we'd love to hear about it! <a href="https://support.bestwebsoft.com/hc/en-us/requests/new" target="_blank">Suggest a Feature</a>
+* [Updater](https://bestwebsoft.com/products/wordpress/plugins/updater/?k=0b49de6f754761a20284d411e7764d10) - Automatically check and update WordPress website core with all installed plugins and themes to the latest versions.
 
 == Installation ==
 
 1. Upload `post-to-csv` folder to the `/wp-content/plugins/` directory.
 2. Activate the plugin through the 'Plugins' menu in WordPress.
-3. Plugin settings are located in 'BWS Panel', 'Post to CSV'.
+3. Plugin settings are located in 'Post to CSV' menu.
 
 [View a Step-by-step Instruction on Post to CSV Installation](https://docs.google.com/document/d/1-hvn6WRvWnOqj5v5pLUk7Awyu87lq5B_dO-Tv-MC9JQ/)
 
@@ -93,7 +89,7 @@ It works with all post types that are present in the database in the posts table
 
 = How will be the file formed, if I select some post types? = 
 
-The lines in the export file are sorted by post types and separated by an emplty line.
+The lines in the export file are sorted by post types and separated by an empty line.
 
 = I have some problems with the plugin's work. What Information should I provide to receive proper support? =
 
@@ -102,13 +98,17 @@ Please make sure that the problem hasn't been discussed yet on our forum (<https
 1. the link to the page where the problem occurs
 2. the name of the plugin and its version. If you are using a pro version - your order number.
 3. the version of your WordPress installation
-4. copy and paste into the message your system status report. Please read more here: [Instruction on System Status](https://docs.google.com/document/d/1Wi2X8RdRGXk9kMszQy1xItJrpN0ncXgioH935MaBKtc/edit)
+4. copy and paste into the message your system status report. Please read more here: [Instruction on System Status](https://docs.google.com/document/d/1Wi2X8RdRGXk9kMszQy1xItJrpN0ncXgioH935MaBKtc/)
 
 == Screenshots ==
 
 1. Plugin settings page.
 
 == Changelog ==
+
+= V1.3.2 - 06.02.2018 =
+* NEW : An ability to add post date, author, content and custom fields into the exported CSV file.
+* Bugfix : Options removal from the database when working on a multisite network has been fixed.
 
 = V1.3.1 - 17.03.2017 =
 * Budfix : The bug with csv file creation when selecting "permalink" field was fixed.
@@ -158,6 +158,10 @@ Please make sure that the problem hasn't been discussed yet on our forum (<https
 * NEW: The ability to select the fields to be sorted and the order direction were added.
 
 == Upgrade Notice ==
+
+= V1.3.2 =
+* Appearance improved.
+* Bugs fixed.
 
 = V1.3.1 =
 * Bugs fixed.

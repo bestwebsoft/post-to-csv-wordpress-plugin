@@ -1,0 +1,18 @@
+#psttcsv-accordion .ui-accordion-header {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background: initial;
+	border: 1px solid #aaa;
+	color: #212121;
+	font-style: italic;
+	font-weight: normal;
+	font-size: 14px;
+}
+
+.psttcsv-table-settings th {
+	width: 20%;
+}
+
+.psttcsv_custom_fields_settings_accordion_item label {
+	word-break: break-all;
+}

@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Post To CSV\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-03-15 11:40+0200\n"
-"PO-Revision-Date: 2017-03-15 11:42+0200\n"
+"POT-Creation-Date: 2018-01-30 13:15+0200\n"
+"PO-Revision-Date: 2018-01-30 13:15+0200\n"
 "Last-Translator: bestwebsoft.com <plugins@bestwebsoft.com>\n"
 "Language-Team: bestwebsoft.com <plugin@bestwebsoft.com>\n"
 "Language: uk_UA\n"
@@ -16,117 +16,193 @@ msgstr ""
 "X-Generator: Poedit 1.8.7.1\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: post-to-csv.php:115
-msgid "Post"
-msgstr "Записи"
-
-#: post-to-csv.php:116
-msgid "Page"
-msgstr "Сторiнки"
-
-#: post-to-csv.php:117
-msgid "Attachment"
-msgstr "Додатки"
-
-#: post-to-csv.php:121 post-to-csv.php:193
-msgid "Title"
-msgstr "Назва"
-
-#: post-to-csv.php:122
-msgid "Guid"
-msgstr "Guid"
-
-#: post-to-csv.php:123
-msgid "Permalink"
-msgstr "Пермалінк"
-
-#: post-to-csv.php:127
-msgid "Publish"
-msgstr "Опубліковано"
-
-#: post-to-csv.php:128
-msgid "Draft"
-msgstr "Чернетка"
-
-#: post-to-csv.php:129
-msgid "Inherit"
-msgstr "Успадкувати"
-
-#: post-to-csv.php:130
-msgid "Private"
-msgstr "Приватно"
-
-#: post-to-csv.php:149
-msgid "Please, choose at least one Post Type."
-msgstr "Будь ласка, виберіть хоча б один тип Посту."
-
-#: post-to-csv.php:151
-msgid "Please, choose at least one Field."
-msgstr "Будь ласка, виберіть хоча б одне Поле."
-
-#: post-to-csv.php:153
-msgid "Please, choose at least one Post status."
-msgstr "Будь ласка, виберіть хоча б один Статус посту."
-
-#: post-to-csv.php:158 post-to-csv.php:324 post-to-csv.php:338
+#: includes/class-psttcsv-settings.php:24 post-to-csv.php:33
+#: post-to-csv.php:314 post-to-csv.php:328
 msgid "Settings"
 msgstr "Налаштування"
 
-#: post-to-csv.php:164
-msgid "Post Type"
-msgstr "Тип Посту"
+#: includes/class-psttcsv-settings.php:25
+msgid "Misc"
+msgstr "Рiзне"
 
-#: post-to-csv.php:166 post-to-csv.php:175 post-to-csv.php:184
-msgid "All"
-msgstr "Всі"
+#: includes/class-psttcsv-settings.php:45
+msgid "Post"
+msgstr "Записи"
 
-#: post-to-csv.php:173
-msgid "Fields"
-msgstr "Поля"
+#: includes/class-psttcsv-settings.php:46
+msgid "Page"
+msgstr "Сторiнки"
 
-#: post-to-csv.php:182
-msgid "Post status"
-msgstr "Статус посту"
+#: includes/class-psttcsv-settings.php:47
+msgid "Attachment"
+msgstr "Додатки"
 
-#: post-to-csv.php:191
-msgid "Order By"
-msgstr "Сортувати за"
+#: includes/class-psttcsv-settings.php:51
+#: includes/class-psttcsv-settings.php:176
+msgid "Title"
+msgstr "Назва"
 
-#: post-to-csv.php:194
-msgid "Date"
-msgstr "Дата"
+#: includes/class-psttcsv-settings.php:52
+msgid "Guid"
+msgstr "Guid"
 
-#: post-to-csv.php:195
+#: includes/class-psttcsv-settings.php:53
+msgid "Post date"
+msgstr "Дата запису"
+
+#: includes/class-psttcsv-settings.php:54
+#: includes/class-psttcsv-settings.php:178
 msgid "Author"
 msgstr "Автор"
 
-#: post-to-csv.php:199
-msgid "Order Direction"
-msgstr "Напрямок сортування"
+#: includes/class-psttcsv-settings.php:55
+msgid "Content"
+msgstr "Вміст"
 
-#: post-to-csv.php:201
+#: includes/class-psttcsv-settings.php:56
+msgid "Permalink"
+msgstr "Постійне посилання"
+
+#: includes/class-psttcsv-settings.php:60
+msgid "Publish"
+msgstr "Опубліковано"
+
+#: includes/class-psttcsv-settings.php:61
+msgid "Draft"
+msgstr "Чернетка"
+
+#: includes/class-psttcsv-settings.php:62
+msgid "Inherit"
+msgstr "Успадковано"
+
+#: includes/class-psttcsv-settings.php:63
+msgid "Private"
+msgstr "Приватне"
+
+#: includes/class-psttcsv-settings.php:73
+msgid "Please choose at least one Post Type."
+msgstr "Будь ласка, виберіть хоча б один тип запису."
+
+#: includes/class-psttcsv-settings.php:79
+msgid "Please choose at least one Field."
+msgstr "Будь ласка, виберіть хоча б одне поле."
+
+#: includes/class-psttcsv-settings.php:92
+msgid "Please choose at least one Post status."
+msgstr "Будь ласка, виберіть хоча б один статус запису."
+
+#: includes/class-psttcsv-settings.php:103
+msgid "Settings saved."
+msgstr "Налаштування збережені."
+
+#: includes/class-psttcsv-settings.php:109 post-to-csv.php:32
+#: post-to-csv.php:152
+msgid "Post to CSV Settings"
+msgstr "Налаштування Post to CSV"
+
+#: includes/class-psttcsv-settings.php:113
+msgid "Post Type"
+msgstr "Тип запису"
+
+#: includes/class-psttcsv-settings.php:115
+#: includes/class-psttcsv-settings.php:125
+#: includes/class-psttcsv-settings.php:166
+msgid "All"
+msgstr "Всі"
+
+#: includes/class-psttcsv-settings.php:123
+msgid "Fields"
+msgstr "Поля"
+
+#: includes/class-psttcsv-settings.php:134
+msgid "Custom Fields"
+msgstr "Настроювані поля"
+
+#: includes/class-psttcsv-settings.php:137
+msgid "Show hidden fields"
+msgstr "Відображати приховані поля"
+
+#: includes/class-psttcsv-settings.php:144
+msgid "No service meta keys"
+msgstr "Нема настроюваних полів"
+
+#: includes/class-psttcsv-settings.php:164
+msgid "Post Status"
+msgstr "Статус запису"
+
+#: includes/class-psttcsv-settings.php:174
+msgid "Sort by"
+msgstr "Сортування по"
+
+#: includes/class-psttcsv-settings.php:177
+msgid "Date"
+msgstr "Дата"
+
+#: includes/class-psttcsv-settings.php:183
+msgid "Arrange by"
+msgstr "Сортувати"
+
+#: includes/class-psttcsv-settings.php:185
 msgid "ASC"
-msgstr "за зростанням"
+msgstr "За зростанням"
 
-#: post-to-csv.php:202
+#: includes/class-psttcsv-settings.php:186
 msgid "DESC"
-msgstr "за спаданням"
+msgstr "За спаданням"
 
-#: post-to-csv.php:208
-msgid "Save & Export"
-msgstr "Збереження та Експорт"
+#: includes/class-psttcsv-settings.php:191
+msgid "Export to CSV"
+msgstr "Експортувати до CSV"
 
-#: post-to-csv.php:293
-msgid "No items found."
-msgstr "Елементів не знайдено."
+#: includes/class-psttcsv-settings.php:193
+msgid "Export"
+msgstr "Експорт"
 
-#: post-to-csv.php:339
+#: post-to-csv.php:33
+msgid "Post to CSV"
+msgstr "Post to CSV"
+
+#: post-to-csv.php:154
+msgid "No records meet the specified criteria."
+msgstr "За вказаними параметрами не знайдено жодного запису."
+
+#: post-to-csv.php:329
 msgid "FAQ"
 msgstr "FAQ"
 
-#: post-to-csv.php:340
+#: post-to-csv.php:330
 msgid "Support"
 msgstr "Підтримка"
+
+#~ msgid "No items found."
+#~ msgstr "Елементів не знайдено."
+
+#~ msgid "Show hidden fields."
+#~ msgstr "Відображати приховані поля."
+
+#~ msgid "Display services meta keys."
+#~ msgstr "Показати настроювані поля"
+
+#~ msgid "Please, choose at least one Post Type."
+#~ msgstr "Будь ласка, виберіть хоча б один тип Посту."
+
+#~ msgid "Please, choose at least one Field."
+#~ msgstr "Будь ласка, виберіть хоча б одне Поле."
+
+#~ msgid "Please, choose at least one Post status."
+#~ msgstr "Будь ласка, виберіть хоча б один Статус посту."
+
+#~ msgid "Post status"
+#~ msgstr "Статус посту"
+
+#~ msgid "Order By"
+#~ msgstr "Сортувати за"
+
+#~ msgid "Order Direction"
+#~ msgstr "Напрямок сортування"
+
+#~ msgid "Save & Export"
+#~ msgstr "Збереження та Експорт"
 
 #~ msgid "Post To CSV"
 #~ msgstr "Post To CSV"
