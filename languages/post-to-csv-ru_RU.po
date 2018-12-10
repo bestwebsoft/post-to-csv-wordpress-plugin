@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Post To CSV\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-30 13:13+0200\n"
-"PO-Revision-Date: 2018-01-30 13:14+0200\n"
+"POT-Creation-Date: 2018-12-07 12:24+0200\n"
+"PO-Revision-Date: 2018-12-07 12:25+0200\n"
 "Last-Translator: bestwebsoft.com <plugins@bestwebsoft.com>\n"
 "Language-Team: bestwebsoft.com <plugin@bestwebsoft.com>\n"
 "Language: ru_RU\n"
@@ -13,11 +13,11 @@ msgstr ""
 "X-Poedit-KeywordsList: __;_e\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Generator: Poedit 1.8.7.1\n"
+"X-Generator: Poedit 2.2\n"
 "X-Poedit-SearchPath-0: .\n"
 
 #: includes/class-psttcsv-settings.php:24 post-to-csv.php:33
-#: post-to-csv.php:314 post-to-csv.php:328
+#: post-to-csv.php:323 post-to-csv.php:337
 msgid "Settings"
 msgstr "Настройки"
 
@@ -38,7 +38,7 @@ msgid "Attachment"
 msgstr "Вложения"
 
 #: includes/class-psttcsv-settings.php:51
-#: includes/class-psttcsv-settings.php:176
+#: includes/class-psttcsv-settings.php:183
 msgid "Title"
 msgstr "Название"
 
@@ -51,7 +51,7 @@ msgid "Post date"
 msgstr "Дата записи"
 
 #: includes/class-psttcsv-settings.php:54
-#: includes/class-psttcsv-settings.php:178
+#: includes/class-psttcsv-settings.php:185
 msgid "Author"
 msgstr "Автор"
 
@@ -79,82 +79,91 @@ msgstr "Наследуемый"
 msgid "Private"
 msgstr "Личное"
 
-#: includes/class-psttcsv-settings.php:73
+#: includes/class-psttcsv-settings.php:74
 msgid "Please choose at least one Post Type."
 msgstr "Пожалуйста, выберите хотя бы один тип записи."
 
-#: includes/class-psttcsv-settings.php:79
+#: includes/class-psttcsv-settings.php:80
 msgid "Please choose at least one Field."
 msgstr "Пожалуйста, выберите хотя бы одно поле."
 
-#: includes/class-psttcsv-settings.php:92
+#: includes/class-psttcsv-settings.php:93
 msgid "Please choose at least one Post status."
 msgstr "Пожалуйста, выберите хотя бы один cтатус записи."
 
-#: includes/class-psttcsv-settings.php:103
+#: includes/class-psttcsv-settings.php:105
 msgid "Settings saved."
 msgstr "Настройки сохранены."
 
-#: includes/class-psttcsv-settings.php:109 post-to-csv.php:32
-#: post-to-csv.php:152
+#: includes/class-psttcsv-settings.php:111 post-to-csv.php:32
+#: post-to-csv.php:153
 msgid "Post to CSV Settings"
 msgstr "Настройки Post to CSV"
 
-#: includes/class-psttcsv-settings.php:113
+#: includes/class-psttcsv-settings.php:115
 msgid "Post Type"
 msgstr "Тип записи"
 
-#: includes/class-psttcsv-settings.php:115
-#: includes/class-psttcsv-settings.php:125
-#: includes/class-psttcsv-settings.php:166
+#: includes/class-psttcsv-settings.php:117
+#: includes/class-psttcsv-settings.php:127
+#: includes/class-psttcsv-settings.php:150
+#: includes/class-psttcsv-settings.php:173
 msgid "All"
 msgstr "Все"
 
-#: includes/class-psttcsv-settings.php:123
+#: includes/class-psttcsv-settings.php:125
 msgid "Fields"
 msgstr "Поля"
 
-#: includes/class-psttcsv-settings.php:134
+#: includes/class-psttcsv-settings.php:136
 msgid "Custom Fields"
 msgstr "Настраиваемые поля"
 
-#: includes/class-psttcsv-settings.php:137
+#: includes/class-psttcsv-settings.php:139
 msgid "Show hidden fields"
 msgstr "Отображать скрытые поля"
 
-#: includes/class-psttcsv-settings.php:144
+#: includes/class-psttcsv-settings.php:146
 msgid "No service meta keys"
 msgstr "Нет настраиваемых полей"
 
-#: includes/class-psttcsv-settings.php:164
+#: includes/class-psttcsv-settings.php:171
 msgid "Post Status"
 msgstr "Статус записи"
 
-#: includes/class-psttcsv-settings.php:174
+#: includes/class-psttcsv-settings.php:181
 msgid "Sort by"
 msgstr "Сортировка по"
 
-#: includes/class-psttcsv-settings.php:177
+#: includes/class-psttcsv-settings.php:184
 msgid "Date"
 msgstr "Дата"
 
-#: includes/class-psttcsv-settings.php:183
+#: includes/class-psttcsv-settings.php:190
 msgid "Arrange by"
 msgstr "Сортировать"
 
-#: includes/class-psttcsv-settings.php:185
+#: includes/class-psttcsv-settings.php:192
 msgid "ASC"
 msgstr "По возрастанию"
 
-#: includes/class-psttcsv-settings.php:186
+#: includes/class-psttcsv-settings.php:193
 msgid "DESC"
 msgstr "По убыванию"
 
-#: includes/class-psttcsv-settings.php:191
+#: includes/class-psttcsv-settings.php:198
+msgid "Remove HTML Tags"
+msgstr "Удалить HTML теги"
+
+#: includes/class-psttcsv-settings.php:202
+msgid "Enable to remove HTML tags from the post content."
+msgstr "Включите, чтобы убрать HTML теги из содержимого записей."
+
+#: includes/class-psttcsv-settings.php:207
 msgid "Export to CSV"
 msgstr "Экспортировать в CSV"
 
-#: includes/class-psttcsv-settings.php:193
+#: includes/class-psttcsv-settings.php:209
 msgid "Export"
 msgstr "Экспортировать"
 
@@ -162,17 +171,31 @@ msgstr "Экспортировать"
 msgid "Post to CSV"
 msgstr "Post to CSV"
 
-#: post-to-csv.php:154
+#: post-to-csv.php:156
+msgid "WARNING:"
+msgstr "ВНИМАНИЕ:"
+
+#: post-to-csv.php:157
+msgid "The plugin works correctly only if JavaScript is enabled."
+msgstr "Плагин работает корректно только в том случае, если включен JavaScript."
+
+#: post-to-csv.php:162
 msgid "No records meet the specified criteria."
 msgstr "По указанным параметрам не найдено ни одной записи."
 
-#: post-to-csv.php:329
+#: post-to-csv.php:338
 msgid "FAQ"
 msgstr "FAQ"
 
-#: post-to-csv.php:330
+#: post-to-csv.php:339
 msgid "Support"
 msgstr "Поддержка"
+
+#~ msgid "Enable if you use WordPress version 5.0 or higher."
+#~ msgstr "Включите, если вы используете версию WordPress 5.0 или выше."
+
+#~ msgid "This option is provided for those who use WordPress 5.0 in the above."
+#~ msgstr "Это опция предусмотренна для тех кто пользуется Вордпрессом 5.0 и выше."
 
 #~ msgid "No items found."
 #~ msgstr "Элементы не найдены."

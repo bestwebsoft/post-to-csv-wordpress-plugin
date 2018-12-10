@@ -3,8 +3,8 @@ Contributors: bestwebsoft
 Donate link: https://bestwebsoft.com/donate/
 Tags: add post to csv, csv, csv file, export fields, export page, export post, export to csv, export attachment, csv plugin, post to csv plugin, order direction, guid field
 Requires at least: 3.9
-Tested up to: 4.9.3
-Stable tag: 1.3.2
+Tested up to: 5.0
+Stable tag: 1.3.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -30,10 +30,10 @@ http://www.youtube.com/watch?v=rAi-R8naBN0
 		* Title
 		* Guid
 		* Permalink
-		* Post date [NEW]
-		* Author [NEW]
-		* Content [NEW]
-	* Custom fields [NEW]
+		* Post date
+		* Author
+		* Content
+	* Custom fields
 * Choose exported post status:
 	* Published
 	* Draft
@@ -106,6 +106,10 @@ Please make sure that the problem hasn't been discussed yet on our forum (<https
 
 == Changelog ==
 
+= V1.3.3 - 10.12.2018 =
+* NEW : Ability to delete HTML tags from the CSV file has been added.
+* Update : All functionality was updated for wordpress 5.0.
+
 = V1.3.2 - 06.02.2018 =
 * NEW : An ability to add post date, author, content and custom fields into the exported CSV file.
 * Bugfix : Options removal from the database when working on a multisite network has been fixed.
@@ -158,6 +162,10 @@ Please make sure that the problem hasn't been discussed yet on our forum (<https
 * NEW: The ability to select the fields to be sorted and the order direction were added.
 
 == Upgrade Notice ==
+
+= V1.3.3 =
+* Functionality improved.
+* Bugs fixed.
 
 = V1.3.2 =
 * Appearance improved.

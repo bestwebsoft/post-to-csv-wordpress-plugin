@@ -6,12 +6,12 @@ Description: Export WordPress posts to CSV file format easily. Configure data or
 Author: BestWebSoft
 Text Domain: post-to-csv
 Domain Path: /languages
-Version: 1.3.2
+Version: 1.3.3
 Author URI: https://bestwebsoft.com/
 License: GPLv2 or later
 */
 
-/*  © Copyright 2017  BestWebSoft  ( https://support.bestwebsoft.com )
+/*  © Copyright 2018  BestWebSoft  ( https://support.bestwebsoft.com )
 
 	This program is free software; you can redistribute it and/or modify
 	it under the terms of the GNU General Public License, version 2, as
@@ -46,7 +46,7 @@ if ( ! function_exists( 'psttcsv_plugins_loaded' ) ) {
 if ( ! function_exists ( 'psttcsv_plugin_init' ) ) {
 	function psttcsv_plugin_init() {
 		global $psttcsv_plugin_info;
-		
+
 		require_once( dirname( __FILE__ ) . '/bws_menu/bws_include.php' );
 		bws_include_init( plugin_basename( __FILE__ ) );
 
@@ -116,6 +116,7 @@ if ( ! function_exists( 'psttcsv_get_options_default' ) ) {
 			'psttcsv_status' => array( 'publish' ),
 			'psttcsv_order' => 'post_date',
 			'psttcsv_direction' => 'asc',
+			'psttcsv_delete_html' => '0',
 			'psttcsv_show_hidden_fields' => 0,
 		);
 		return $default_options;
@@ -150,6 +151,13 @@ if ( ! function_exists( 'psttcsv_settings_page' ) ) {
 		$page = new Psttcsv_Settings_Tabs( plugin_basename( __FILE__ ) ); ?>
 		<div class="wrap">
 			<h1 class="psttcsv-title"><?php _e( 'Post to CSV Settings', 'post-to-csv' ); ?></h1>
+				<noscript>
+                	<div class="error below-h2">
+                    	<p><strong><?php _e( 'WARNING:', 'timesheet-pro' ); ?>
+                        </strong> <?php _e( 'The plugin works correctly only if JavaScript is enabled.', 'post-to-csv' ); ?>
+                    	</p>
+                	</div>
+           		</noscript>
 			<?php if ( isset( $_SESSION['psttcsv_error_message'] ) && true == $_SESSION['psttcsv_error_message'] ) { ?>
 					<div class="error inline"><p><strong><?php _e( 'No records meet the specified criteria.', 'post-to-csv' ) ?></strong></p></div>
 				<?php }
@@ -192,10 +200,10 @@ if ( ! function_exists( 'psttcsv_print_csv' ) ) {
 			$fields = ( ! empty( $psttcsv_options['psttcsv_fields'] ) && is_array( $psttcsv_options['psttcsv_fields'] ) ) ? ', `' . implode( '`, `', $psttcsv_options['psttcsv_fields'] ) . '`' : '';
 
 			$results = $wpdb->get_results( "
-				SELECT `ID`, `post_type`{$fields} 
-				FROM $wpdb->posts 
-				WHERE `post_type` IN ('" . implode( "', '", $psttcsv_options['psttcsv_post_type'] ) . "') 
-					AND `post_status` IN ('" . $status . "') 
+				SELECT `ID`, `post_type`{$fields}
+				FROM $wpdb->posts
+				WHERE `post_type` IN ('" . implode( "', '", $psttcsv_options['psttcsv_post_type'] ) . "')
+					AND `post_status` IN ('" . $status . "')
 				ORDER BY `post_type`, `" . $order . "` " . $direction . "
 				LIMIT " . $start * $limit . ", " . $limit . "
 			", ARRAY_A );
@@ -205,6 +213,7 @@ if ( ! function_exists( 'psttcsv_print_csv' ) ) {
 						$col_meta_key = array_merge( $col_meta_key, $psttcsv_options[ 'psttcsv_meta_key_' . $post_type ] );
 					}
 				}
+
 				$col_meta_key = array_unique( $col_meta_key );
 				$colArray = array_merge( $colArray, $col_meta_key );
 				sort( $colArray );
@@ -229,6 +238,9 @@ if ( ! function_exists( 'psttcsv_print_csv' ) ) {
 							$user = get_userdata( $result['post_author'] );
 							$result['post_author'] = $user->display_name;
 						}
+						if ( $psttcsv_options['psttcsv_delete_html'] ) {
+							$result['post_content'] =  strip_tags( $result['post_content'] );
+						}
 						if ( '' == $post_type ) {
 							$post_type = $result['post_type'];
 						}
@@ -238,8 +250,8 @@ if ( ! function_exists( 'psttcsv_print_csv' ) ) {
 					}
 					$start++;
 					$results = $wpdb->get_results( "
-						SELECT `ID`, `" . implode( "`, `", $psttcsv_options['psttcsv_fields'] ) . "` 
-						FROM $wpdb->posts 
+						SELECT `ID`, `" . implode( "`, `", $psttcsv_options['psttcsv_fields'] ) . "`
+						FROM $wpdb->posts
 						WHERE `post_type` IN ('" . implode( "', '", $psttcsv_options['psttcsv_post_type'] ) . "')
 						AND `post_status` = 'publish'
 						LIMIT " . $start * $limit . ", " . $limit . "

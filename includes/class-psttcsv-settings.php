@@ -63,7 +63,8 @@ if ( ! class_exists( 'Psttcsv_Settings_Tabs' ) ) {
 				'private' 	=> __( 'Private', 'post-to-csv' )
 			);
 			$this->options['psttcsv_order'] = $psttcsv_options['psttcsv_order'];
-			$this->options['psttcsv_direction'] = $psttcsv_options['psttcsv_direction'];
+			$this->options['psttcsv_direction'] = $psttcsv_options['psttcsv_direction'];	
+			$this->options['psttcsv_delete_html'] = $psttcsv_options['psttcsv_delete_html'];
 
 			}
 
@@ -97,6 +98,7 @@ if ( ! class_exists( 'Psttcsv_Settings_Tabs' ) ) {
 			$this->options['psttcsv_order'] = isset( $_POST['psttcsv_order'] ) ? $_POST['psttcsv_order'] : 'post_date';
 			$this->options['psttcsv_direction'] = isset( $_POST['psttcsv_direction'] ) ? $_POST['psttcsv_direction'] : 'desc';
 			$this->options['psttcsv_show_hidden_fields'] = isset( $_POST['psttcsv_show_hidden_fields'] ) ? 1 : 0;
+			$this->options['psttcsv_delete_html'] = isset( $_POST['psttcsv_delete_html'] ) ? $_POST['psttcsv_delete_html'] : 0 ;
 
 			if ( empty( $error ) ) {
 				update_option( 'psttcsv_options', $this->options );
@@ -190,6 +192,15 @@ if ( ! class_exists( 'Psttcsv_Settings_Tabs' ) ) {
 								<label><input type="radio" name="psttcsv_direction" value="asc" <?php if ( 'asc' == $this->options['psttcsv_direction'] ) echo 'checked="checked"'; ?> /> <?php _e( 'ASC', 'post-to-csv' ); ?></label><br />
 								<label><input type="radio" name="psttcsv_direction" value="desc" <?php if ( 'desc' == $this->options['psttcsv_direction'] ) echo 'checked="checked"'; ?> /> <?php _e( 'DESC', 'post-to-csv' ); ?></label><br />
 							</fieldset>
+						</td>
+					</tr>
+					<tr valgin="top">
+						<th scope="row"><?php _e( 'Remove HTML Tags', 'post-to-csv' ); ?></th>
+						<td>
+							<input type="checkbox" name="psttcsv_delete_html" value="1" <?php if ( '1' == $this->options['psttcsv_delete_html'] )  echo 'checked="checked"'; ?> />
+							<span class="bws_info">
+								<?php _e( 'Enable to remove HTML tags from the post content.', 'post-to-csv'); ?>
+							</span>
 						</td>
 					</tr>
 					<tr>

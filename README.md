@@ -21,12 +21,12 @@
 <li>Title</li>
 <li>Guid</li>
 <li>Permalink</li>
-<li>Post date [NEW]</li>
-<li>Author [NEW]</li>
-<li>Content [NEW]</li>
+<li>Post date</li>
+<li>Author</li>
+<li>Content</li>
 </ul>
 </li>
-<li>Custom fields [NEW]</li>
+<li>Custom fields</li>
 </ul>
 </li>
 <li>Choose exported post status:
