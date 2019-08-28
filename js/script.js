@@ -14,7 +14,7 @@
 			}
 		} );
 
-		$( '[name="psttcsv_post_type[]"], [name="psttcsv_fields[]"], [name="psttcsv_status[]"]' ).on( 'change', function() {
+		$( '[name="psttcsv_post_type[]"], [name="psttcsv_fields[]"], [name="psttcsv_status[]"], [name="psttcsv_comment_fields[]"], [name="psttcsv_comment_fields[]"], [name="psttcsv_status_woocommerce[]"], [name="psttcsv_product_type_woocommerce[]"], [name="psttcsv_product_category_woocommerce[]"]' ).on( 'change', function() {
 			var $element = $( this ),
 				$parent = $element.closest( 'fieldset' ),
 				$checkboxes = $parent.find( 'input[type="checkbox"]:not(.psttcsv_select_all)' );
@@ -45,7 +45,6 @@
 			}
 
 			var $enabled_checkboxes = $visible_checkboxes.filter( ':checked' );
-			// console.log($enabled_checkboxes.length, $visible_checkboxes.length);
 			if ( $visible_checkboxes && $enabled_checkboxes.length == $visible_checkboxes.length ) {
 				$parent_elem.find( '.psttcsv_select_all' ).attr( 'checked', true );
 			} else {
@@ -70,5 +69,48 @@
 				collapsible: true
 			} );
 		} );
-	});
-})(jQuery);
+
+		/* Custom Fields tab accordion */
+		$( function() {
+			$( "#psttcsv-accordion-woocommerce" ).accordion( {
+				heightStyle: "content",
+				active: false,
+				collapsible: true
+			} );
+		} );
+
+
+		/* Custom Fields tab accordion */
+		$( function() {
+			$( "#psttcsv-accordion-taxonomies" ).accordion( {
+				heightStyle: "content",
+				active: false,
+				collapsible: true
+			} );
+		} );
+
+		$( 'input[name="psttcsv_export_type"]' ).on( 'change', function () {
+			if ( $( this ).is( ':checked' ) ) {
+				switch ( $( this ).val() ) {
+					case 'post_type' :
+						$( '#psttcsv-taxonomies-block' ).hide();
+						$( '#psttcsv-posttype-block' ).show();
+						break;
+					case 'taxonomy' :
+						$( '#psttcsv-posttype-block' ).hide();
+						$( '#psttcsv-taxonomies-block' ).show();
+						break;
+				}
+			}
+		} ).trigger( 'change' );
+
+		$( '.bws_form input, .bws_form textarea, .bws_form select' ).bind( "change paste select", function() {
+			if ( $( this ).attr( 'type' ) != 'submit' ) {
+				$ ( '.psttcsv_export_notice' ).show();
+			}
+		});
+		$( 'form.bws_form' ).on( 'submit', function() {
+			$ ( '.psttcsv_error' ).hide();
+		});
+	} );
+} )(jQuery);

@@ -1,10 +1,10 @@
 <a href="https://bestwebsoft.com/products/wordpress/plugins/post-to-csv/" target=_blank>Post to CSV WordPress Plugin</a>
 ========================
 
-<p>Simple plugin which exports any default and custom post types from your WordPress website to a CSV file. Perfect solution for those who have no time for a bunch of settings: install, configure, choose what you want to export, and get the CSV.</p>
+<p>Simple plugin which exports any default, custom post types and WooCommerce products from your WordPress website to a CSV file. Perfect solution for those who have no time for a bunch of settings: install, configure, choose what you want to export, and get the CSV.</p>
 <p>Save your time and get important WordPress data in seconds!</p>
 <p><span class="embed-youtube" style="text-align:center; display: block;"></span></p>
-<h4>Features</h4>
+<h4>Free Features</h4>
 <ul>
 <li>Export:
 <ul>
@@ -27,6 +27,16 @@
 </ul>
 </li>
 <li>Custom fields</li>
+<li>Taxonomies [NEW]</li>
+</ul>
+</li>
+<li>Comment fields [NEW]
+<ul>
+<li>Post ID</li>
+<li>Author</li>
+<li>Author&#8217;s Email</li>
+<li>Comment content</li>
+<li>Comment date</li>
 </ul>
 </li>
 <li>Choose exported post status:
@@ -50,6 +60,15 @@
 <li>Incredibly simple settings for fast setup without modifying code</li>
 <li>Detailed step-by-step documentation and videos</li>
 </ul>
+<blockquote>
+<p><strong>Pro Features</strong></p>
+<p>All features from Free version included plus:</p>
+<ul>
+<li>Export WooCommerce products [NEW]</li>
+<li>Get answer to your question within one business day (<a href="https://bestwebsoft.com/support-policy/" rel="nofollow">Support Policy</a>)</li>
+</ul>
+<p><a href="https://bestwebsoft.com/products/wordpress/plugins/post-to-csv/?k=37a2b391bcf9ee431697c38ac8ba0973" rel="nofollow">Upgrade to Pro Now</a></p>
+</blockquote>
 <p>If you have a feature suggestion or idea you&#8217;d like to see in the plugin, we&#8217;d love to hear about it! <a href="https://support.bestwebsoft.com/hc/en-us/requests/new" rel="nofollow">Suggest a Feature</a></p>
 <h4>Documentation &amp; Videos</h4>
 <ul>

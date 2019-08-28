@@ -1,4 +1,6 @@
-#psttcsv-accordion .ui-accordion-header {
+#psttcsv-accordion .ui-accordion-header,
+#psttcsv-accordion-taxonomies .ui-accordion-header,
+#psttcsv-accordion-woocommerce .ui-accordion-header {
 	padding-top: 10px;
 	padding-bottom: 10px;
 	background: initial;
