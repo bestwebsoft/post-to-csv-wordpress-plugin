@@ -27,10 +27,10 @@
 </ul>
 </li>
 <li>Custom fields</li>
-<li>Taxonomies [NEW]</li>
+<li>Taxonomies</li>
 </ul>
 </li>
-<li>Comment fields [NEW]
+<li>Comment fields
 <ul>
 <li>Post ID</li>
 <li>Author</li>
@@ -64,7 +64,7 @@
 <p><strong>Pro Features</strong></p>
 <p>All features from Free version included plus:</p>
 <ul>
-<li>Export WooCommerce products [NEW]</li>
+<li>Export WooCommerce products</li>
 <li>Get answer to your question within one business day (<a href="https://bestwebsoft.com/support-policy/" rel="nofollow">Support Policy</a>)</li>
 </ul>
 <p><a href="https://bestwebsoft.com/products/wordpress/plugins/post-to-csv/?k=37a2b391bcf9ee431697c38ac8ba0973" rel="nofollow">Upgrade to Pro Now</a></p>

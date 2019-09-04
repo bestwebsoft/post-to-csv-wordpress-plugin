@@ -6,7 +6,7 @@ Description: Export WordPress posts to CSV file format easily. Configure data or
 Author: BestWebSoft
 Text Domain: post-to-csv
 Domain Path: /languages
-Version: 1.3.4
+Version: 1.3.5
 Author URI: https://bestwebsoft.com/
 License: GPLv2 or later
 */

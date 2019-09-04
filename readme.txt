@@ -2,9 +2,9 @@
 Contributors: bestwebsoft
 Donate link: https://bestwebsoft.com/donate/
 Tags: add post to csv, csv, csv file, export fields, export page, export post, export to csv, export attachment, csv plugin, post to csv plugin, order direction, guid field
-Requires at least: 3.9
+Requires at least: 4.0
 Tested up to: 5.2.2
-Stable tag: 1.3.4
+Stable tag: 1.3.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -34,8 +34,8 @@ http://www.youtube.com/watch?v=rAi-R8naBN0
 		* Author
 		* Content
 	* Custom fields
-	* Taxonomies [NEW]
-* Comment fields [NEW]
+	* Taxonomies
+* Comment fields
     * Post ID
     * Author
     * Author's Email
@@ -60,7 +60,7 @@ http://www.youtube.com/watch?v=rAi-R8naBN0
 >
 > All features from Free version included plus:
 >
-> * Export WooCommerce products [NEW]
+> * Export WooCommerce products
 > * Get answer to your question within one business day ([Support Policy](https://bestwebsoft.com/support-policy/))
 >
 > [Upgrade to Pro Now](https://bestwebsoft.com/products/wordpress/plugins/post-to-csv/?k=37a2b391bcf9ee431697c38ac8ba0973)
@@ -124,6 +124,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<https
 
 == Changelog ==
 
+= V1.3.5 - 04.09.2019 =
+* Update: The deactivation feedback has been changed. Misleading buttons have been removed.
+
 = V1.3.4 - 28.08.2019 =
 * Pro: Ability to export WooCommerce products has been added.
 * NEW : Ability to export post comments has been added.
@@ -185,6 +188,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<https
 * NEW: The ability to select the fields to be sorted and the order direction were added.
 
 == Upgrade Notice ==
+
+= V1.3.5 =
+* Usability improved
 
 = V1.3.4 =
 * Functionality improved.
