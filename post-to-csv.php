@@ -6,7 +6,7 @@ Description: Export WordPress posts to CSV file format easily. Configure data or
 Author: BestWebSoft
 Text Domain: post-to-csv
 Domain Path: /languages
-Version: 1.3.5
+Version: 1.3.6
 Author URI: https://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -70,13 +70,13 @@ if ( ! function_exists ( 'psttcsv_plugin_init' ) ) {
 //        }
 
 		/* Function check if plugin is compatible with current WP version */
-		bws_wp_min_version_check( plugin_basename( __FILE__ ), $psttcsv_plugin_info, '3.9' );
+		bws_wp_min_version_check( plugin_basename( __FILE__ ), $psttcsv_plugin_info, '4.5' );
 	}
 }
 
 if ( ! function_exists ( 'psttcsv_plugin_admin_init' ) ) {
 	function psttcsv_plugin_admin_init() {
-		global $bws_plugin_info, $psttcsv_plugin_info;
+		global $pagenow, $psttcsv_options, $bws_plugin_info, $psttcsv_plugin_info;
 
 		if ( empty( $bws_plugin_info ) )
 			$bws_plugin_info = array( 'id' => '113', 'version' => $psttcsv_plugin_info["Version"] );
@@ -94,6 +94,14 @@ if ( ! function_exists ( 'psttcsv_plugin_admin_init' ) ) {
 				psttcsv_print_csv();
 			}
 		}
+
+        if ( 'plugins.php' == $pagenow ) {
+            /* Install the option defaults */
+            if ( function_exists( 'bws_plugin_banner_go_pro' ) ) {
+                psttcsv_register_settings();
+                bws_plugin_banner_go_pro( $psttcsv_options, $psttcsv_plugin_info, 'psttcsv', 'post-to-csv', '82475ff9ff086c6c45ba2d49bf7d952a', '113', 'post-to-csv' );
+            }
+        }
 	}
 }
 
@@ -163,6 +171,8 @@ if ( ! function_exists ( 'psttcsv_register_settings' ) ) {
 /* Register settings function */
 if ( ! function_exists( 'psttcsv_settings_page' ) ) {
 	function psttcsv_settings_page() {
+        if ( ! class_exists( 'Bws_Settings_Tabs' ) )
+            require_once( dirname( __FILE__ ) . '/bws_menu/class-bws-settings.php' );
 		require_once ( dirname( __FILE__ ) . '/includes/class-psttcsv-settings.php' );
 		$page = new Psttcsv_Settings_Tabs( plugin_basename( __FILE__ ) ); ?>
 		<div class="wrap">

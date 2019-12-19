@@ -2,7 +2,6 @@
 /**
  * Displays the content on the plugin settings page
  */
-require_once ( dirname( dirname( __FILE__ ) ) . '/bws_menu/class-bws-settings.php' );
 
 if ( ! class_exists( 'Psttcsv_Settings_Tabs' ) ) {
 	class Psttcsv_Settings_Tabs extends Bws_Settings_Tabs {
@@ -93,7 +92,7 @@ if ( ! class_exists( 'Psttcsv_Settings_Tabs' ) ) {
 			}
 
 		public function save_options() {
-			$error = '';
+			$message = $notice = $error = '';
 			$this->options['psttcsv_export_type'] = isset( $_POST['psttcsv_export_type'] ) ? $_POST['psttcsv_export_type'] : 'post_type';
 
 			if ( ! isset( $_POST['psttcsv_post_type'] ) ) {
