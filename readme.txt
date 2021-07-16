@@ -3,8 +3,8 @@ Contributors: bestwebsoft
 Donate link: https://bestwebsoft.com/donate/
 Tags: add post to csv, csv, csv file, export fields, export page, export post, export to csv, export attachment, csv plugin, post to csv plugin, order direction, guid field
 Requires at least: 4.5
-Tested up to: 5.3.1
-Stable tag: 1.3.6
+Tested up to: 5.8
+Stable tag: 1.3.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -15,6 +15,8 @@ Export WordPress posts to CSV file format easily. Configure data order.
 Simple plugin which exports any default, custom post types and WooCommerce products from your WordPress website to a CSV file. Perfect solution for those who have no time for a bunch of settings: install, configure, choose what you want to export, and get the CSV.
 
 Save your time and get important WordPress data in seconds!
+
+[View Demo](https://bestwebsoft.com/demo-post-to-csv/?ref=readme)
 
 http://www.youtube.com/watch?v=rAi-R8naBN0
 
@@ -69,7 +71,8 @@ If you have a feature suggestion or idea you'd like to see in the plugin, we'd l
 
 = Documentation & Videos =
 
-* [[Doc] Installation](https://docs.google.com/document/d/1-hvn6WRvWnOqj5v5pLUk7Awyu87lq5B_dO-Tv-MC9JQ/)
+* [[Doc] User Guide](https://bestwebsoft.com/documentation/post-to-csv/post-to-csv-user-guide/)
+* [[Doc] Installation](https://bestwebsoft.com/documentation/how-to-install-a-wordpress-product/how-to-install-a-wordpress-plugin/)
 * [[Video] Installation Instruction](http://www.youtube.com/watch?v=uI_ia_7yw4s)
 
 = Help & Support =
@@ -93,7 +96,7 @@ Some of these translations are not complete. We are constantly adding new featur
 2. Activate the plugin through the 'Plugins' menu in WordPress.
 3. Plugin settings are located in 'Post to CSV' menu.
 
-[View a Step-by-step Instruction on Post to CSV Installation](https://docs.google.com/document/d/1-hvn6WRvWnOqj5v5pLUk7Awyu87lq5B_dO-Tv-MC9JQ/)
+[View a Step-by-step Instruction on Post to CSV Installation](https://bestwebsoft.com/documentation/how-to-install-a-wordpress-product/how-to-install-a-wordpress-plugin/)
 
 http://www.youtube.com/watch?v=uI_ia_7yw4s
 
@@ -114,7 +117,7 @@ Please make sure that the problem hasn't been discussed yet on our forum (<https
 1. the link to the page where the problem occurs
 2. the name of the plugin and its version. If you are using a pro version - your order number.
 3. the version of your WordPress installation
-4. copy and paste into the message your system status report. Please read more here: [Instruction on System Status](https://docs.google.com/document/d/1Wi2X8RdRGXk9kMszQy1xItJrpN0ncXgioH935MaBKtc/)
+4. copy and paste into the message your system status report. Please read more here: [Instruction on System Status](https://bestwebsoft.com/documentation/admin-panel-issues/system-status/)
 
 == Screenshots ==
 
@@ -123,6 +126,10 @@ Please make sure that the problem hasn't been discussed yet on our forum (<https
 3. Comments Export settings page.
 
 == Changelog ==
+
+= V1.3.7 - 16.07.2021 =
+* Update : We updated all functionality for wordpress 5.8.
+* Update : Settings page has been changed for better usability.
 
 = V1.3.6 - 17.12.2019 =
 * Update : We updated all functionality for wordpress 5.3.1.
@@ -192,6 +199,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<https
 * NEW: The ability to select the fields to be sorted and the order direction were added.
 
 == Upgrade Notice ==
+
+= V1.3.7 =
+* Usability improved.
 
 = V1.3.6 =
 * Functionality improved.

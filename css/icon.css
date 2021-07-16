@@ -6,3 +6,9 @@
 	content: "\e922";
 	font-family: 'bwsicons' !important;
 }
+#bws_settings_tabs li.bws-tab-comments a:before {
+	content: "\f101" !important;
+}
+#bws_settings_tabs li.bws-tab-woocommerce a:before{
+	content: "\f174" !important;
+}

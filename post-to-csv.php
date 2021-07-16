@@ -6,12 +6,12 @@ Description: Export WordPress posts to CSV file format easily. Configure data or
 Author: BestWebSoft
 Text Domain: post-to-csv
 Domain Path: /languages
-Version: 1.3.6
+Version: 1.3.7
 Author URI: https://bestwebsoft.com/
 License: GPLv2 or later
 */
 
-/*  © Copyright 2019  BestWebSoft  ( https://support.bestwebsoft.com )
+/*  © Copyright 2021  BestWebSoft  ( https://support.bestwebsoft.com )
 
 	This program is free software; you can redistribute it and/or modify
 	it under the terms of the GNU General Public License, version 2, as
@@ -163,6 +163,9 @@ if ( ! function_exists ( 'psttcsv_register_settings' ) ) {
 			psttcsv_plugin_activate();
 			$psttcsv_options = array_merge( $options_default, $psttcsv_options );
 			$psttcsv_options['plugin_option_version'] = $psttcsv_plugin_info["Version"];
+			/* show pro features */
+			$psttcsv_options['hide_premium_options'] = array();
+
 			update_option( 'psttcsv_options', $psttcsv_options );
 		}
 	}
@@ -174,7 +177,10 @@ if ( ! function_exists( 'psttcsv_settings_page' ) ) {
         if ( ! class_exists( 'Bws_Settings_Tabs' ) )
             require_once( dirname( __FILE__ ) . '/bws_menu/class-bws-settings.php' );
 		require_once ( dirname( __FILE__ ) . '/includes/class-psttcsv-settings.php' );
-		$page = new Psttcsv_Settings_Tabs( plugin_basename( __FILE__ ) ); ?>
+		$page = new Psttcsv_Settings_Tabs( plugin_basename( __FILE__ ) );
+		if ( method_exists( $page, 'add_request_feature' ) ) {
+		    $page->add_request_feature(); 
+		} ?>
 		<div class="wrap">
 			<h1 class="psttcsv-title"><?php _e( 'Post to CSV Settings', 'post-to-csv' ); ?></h1>
 				<noscript>
@@ -427,7 +433,7 @@ if ( ! function_exists( 'psttcsv_export_button' ) ) {
         include ( ABSPATH . '/wp-includes/pluggable.php' );
         global $wpdb;
 
-        $category = $_POST['psttcsv_export_submit_button'];
+        $category = sanitize_title( $_POST['psttcsv_export_submit_button'] );
         $category_name = get_term( $category )->name;
 
         // Replace spaces if needed
