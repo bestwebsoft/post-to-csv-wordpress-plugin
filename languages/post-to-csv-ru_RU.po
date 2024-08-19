@@ -2,391 +2,540 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Post To CSV\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-02 17:16+0300\n"
-"PO-Revision-Date: 2021-07-02 17:16+0300\n"
+"POT-Creation-Date: 2024-08-19 15:37+0300\n"
+"PO-Revision-Date: 2024-08-19 15:37+0300\n"
 "Last-Translator: bestwebsoft.com <plugins@bestwebsoft.com>\n"
 "Language-Team: bestwebsoft.com <plugin@bestwebsoft.com>\n"
 "Language: ru_RU\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-KeywordsList: __;_e;esc_html_e;esc_html__\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Generator: Poedit 3.0\n"
+"X-Generator: Poedit 3.4.3\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: bws_menu\n"
 
-#: includes/class-psttcsv-settings.php:23 post-to-csv.php:34
-#: post-to-csv.php:527 post-to-csv.php:541
+#: includes/class-psttcsv-settings.php:53 post-to-csv.php:38
+#: post-to-csv.php:544 post-to-csv.php:564
 msgid "Settings"
 msgstr "Настройки"
 
-#: includes/class-psttcsv-settings.php:24
+#: includes/class-psttcsv-settings.php:54
 msgid "Comments"
 msgstr "Комментарии"
 
-#: includes/class-psttcsv-settings.php:25
+#: includes/class-psttcsv-settings.php:56
 msgid "WooCommerce"
 msgstr "WooCommerce"
 
-#: includes/class-psttcsv-settings.php:26
+#: includes/class-psttcsv-settings.php:59
 msgid "Misc"
 msgstr "Разное"
 
-#: includes/class-psttcsv-settings.php:27
+#: includes/class-psttcsv-settings.php:60
 msgid "Custom Code"
 msgstr "Пользовательский код"
 
-#: includes/class-psttcsv-settings.php:28
+#: includes/class-psttcsv-settings.php:61
 msgid "License Key"
 msgstr "Лицензионный ключ"
 
-#: includes/class-psttcsv-settings.php:55
+#: includes/class-psttcsv-settings.php:91
 msgid "Post"
 msgstr "Записи"
 
-#: includes/class-psttcsv-settings.php:56
+#: includes/class-psttcsv-settings.php:92
 msgid "Page"
 msgstr "Страницы"
 
-#: includes/class-psttcsv-settings.php:57
+#: includes/class-psttcsv-settings.php:93
 msgid "Attachment"
 msgstr "Вложения"
 
-#: includes/class-psttcsv-settings.php:61
-#: includes/class-psttcsv-settings.php:269
+#: includes/class-psttcsv-settings.php:99
+#: includes/class-psttcsv-settings.php:361
 msgid "Title"
 msgstr "Название"
 
-#: includes/class-psttcsv-settings.php:62
+#: includes/class-psttcsv-settings.php:100
 msgid "Guid"
 msgstr "Guid"
 
-#: includes/class-psttcsv-settings.php:63
+#: includes/class-psttcsv-settings.php:101
 msgid "Post date"
 msgstr "Дата записи"
 
-#: includes/class-psttcsv-settings.php:64
-#: includes/class-psttcsv-settings.php:74
-#: includes/class-psttcsv-settings.php:271
-#: includes/class-psttcsv-settings.php:325
+#: includes/class-psttcsv-settings.php:102
+#: includes/class-psttcsv-settings.php:112
+#: includes/class-psttcsv-settings.php:363
+#: includes/class-psttcsv-settings.php:439
 msgid "Author"
 msgstr "Автор"
 
-#: includes/class-psttcsv-settings.php:65
+#: includes/class-psttcsv-settings.php:103
 msgid "Content"
 msgstr "Содержимое"
 
-#: includes/class-psttcsv-settings.php:66
+#: includes/class-psttcsv-settings.php:104
 msgid "Taxonomy"
 msgstr "Таксономия"
 
-#: includes/class-psttcsv-settings.php:67
+#: includes/class-psttcsv-settings.php:105
 msgid "Term"
 msgstr "Термин"
 
-#: includes/class-psttcsv-settings.php:72
+#: includes/class-psttcsv-settings.php:110
 msgid "Post ID"
 msgstr "Номер записи"
 
-#: includes/class-psttcsv-settings.php:73
+#: includes/class-psttcsv-settings.php:111
 msgid "Post Permalink"
 msgstr "Постоянная ссылка"
 
-#: includes/class-psttcsv-settings.php:75
+#: includes/class-psttcsv-settings.php:113
 msgid "Author's Email"
 msgstr "Email автора"
 
-#: includes/class-psttcsv-settings.php:76
+#: includes/class-psttcsv-settings.php:114
 msgid "Comment Content"
 msgstr "Содержание комментария"
 
-#: includes/class-psttcsv-settings.php:77
+#: includes/class-psttcsv-settings.php:115
 msgid "Comment Date"
 msgstr "Дата комментария"
 
-#: includes/class-psttcsv-settings.php:81
-#: includes/class-psttcsv-settings.php:354
+#: includes/class-psttcsv-settings.php:119
+#: includes/class-psttcsv-settings.php:487
 msgid "Publish"
 msgstr "Опубликованный"
 
-#: includes/class-psttcsv-settings.php:82
-#: includes/class-psttcsv-settings.php:355
+#: includes/class-psttcsv-settings.php:120
+#: includes/class-psttcsv-settings.php:488
 msgid "Draft"
 msgstr "Черновик"
 
-#: includes/class-psttcsv-settings.php:83
+#: includes/class-psttcsv-settings.php:121
 msgid "Inherit"
 msgstr "Наследуемый"
 
-#: includes/class-psttcsv-settings.php:84
-#: includes/class-psttcsv-settings.php:353
+#: includes/class-psttcsv-settings.php:122
+#: includes/class-psttcsv-settings.php:486
 msgid "Private"
 msgstr "Личное"
 
-#: includes/class-psttcsv-settings.php:98
+#: includes/class-psttcsv-settings.php:145
+msgid "Sorry, your nonce did not verify."
+msgstr "Извините, ваш одноразовый код не верифицирован."
+
+#: includes/class-psttcsv-settings.php:151
 msgid "Please choose at least one Post Type."
 msgstr "Пожалуйста, выберите хотя бы один тип записи."
 
-#: includes/class-psttcsv-settings.php:104
+#: includes/class-psttcsv-settings.php:157
 msgid "Please choose at least one Field."
 msgstr "Пожалуйста, выберите хотя бы одно поле."
 
-#: includes/class-psttcsv-settings.php:126
+#: includes/class-psttcsv-settings.php:169
 msgid "Please choose at least one Post status."
 msgstr "Пожалуйста, выберите хотя бы один cтатус записи."
 
-#: includes/class-psttcsv-settings.php:139
+#: includes/class-psttcsv-settings.php:182
 msgid "Please choose at least one Comment field."
 msgstr "Пожалуйста, выберите хотя бы  одно поле комментария."
 
-#: includes/class-psttcsv-settings.php:149
+#: includes/class-psttcsv-settings.php:198
 msgid "Settings saved."
 msgstr "Настройки сохранены."
 
-#: includes/class-psttcsv-settings.php:156 post-to-csv.php:33
-#: post-to-csv.php:182
+#: includes/class-psttcsv-settings.php:208 post-to-csv.php:37
+#: post-to-csv.php:206
 msgid "Post to CSV Settings"
 msgstr "Настройки Post to CSV"
 
-#: includes/class-psttcsv-settings.php:160
+#: includes/class-psttcsv-settings.php:213
 msgid "Export"
 msgstr "Экспортировать"
 
-#: includes/class-psttcsv-settings.php:162
-#: includes/class-psttcsv-settings.php:168
+#: includes/class-psttcsv-settings.php:215
+#: includes/class-psttcsv-settings.php:221
 msgid "Post Types"
 msgstr "Тип записей"
 
-#: includes/class-psttcsv-settings.php:163
-#: includes/class-psttcsv-settings.php:186
+#: includes/class-psttcsv-settings.php:216
+#: includes/class-psttcsv-settings.php:241
 msgid "Taxonomies"
 msgstr "Таксономии"
 
-#: includes/class-psttcsv-settings.php:170
-#: includes/class-psttcsv-settings.php:197
-#: includes/class-psttcsv-settings.php:213
-#: includes/class-psttcsv-settings.php:236
-#: includes/class-psttcsv-settings.php:259
-#: includes/class-psttcsv-settings.php:313
-#: includes/class-psttcsv-settings.php:388
-#: includes/class-psttcsv-settings.php:401
-#: includes/class-psttcsv-settings.php:413
+#: includes/class-psttcsv-settings.php:223
+#: includes/class-psttcsv-settings.php:254
+#: includes/class-psttcsv-settings.php:278
+#: includes/class-psttcsv-settings.php:312
+#: includes/class-psttcsv-settings.php:351
+#: includes/class-psttcsv-settings.php:427
+#: includes/class-psttcsv-settings.php:522
+#: includes/class-psttcsv-settings.php:535
+#: includes/class-psttcsv-settings.php:547
 msgid "All"
 msgstr "Все"
 
-#: includes/class-psttcsv-settings.php:211
+#: includes/class-psttcsv-settings.php:276
 msgid "Fields"
 msgstr "Поля"
 
-#: includes/class-psttcsv-settings.php:222
+#: includes/class-psttcsv-settings.php:287
 msgid "Custom Fields"
 msgstr "Настраиваемые поля"
 
-#: includes/class-psttcsv-settings.php:225
+#: includes/class-psttcsv-settings.php:296
 msgid "Show hidden fields"
 msgstr "Отображать скрытые поля"
 
-#: includes/class-psttcsv-settings.php:232
+#: includes/class-psttcsv-settings.php:307
 msgid "No service meta keys"
 msgstr "Нет настраиваемых полей"
 
-#: includes/class-psttcsv-settings.php:257
+#: includes/class-psttcsv-settings.php:349
 msgid "Post Status"
 msgstr "Статус записи"
 
-#: includes/class-psttcsv-settings.php:267
-#: includes/class-psttcsv-settings.php:321
-#: includes/class-psttcsv-settings.php:421
+#: includes/class-psttcsv-settings.php:359
+#: includes/class-psttcsv-settings.php:435
+#: includes/class-psttcsv-settings.php:555
 msgid "Sort by"
 msgstr "Сортировка по"
 
-#: includes/class-psttcsv-settings.php:270
-#: includes/class-psttcsv-settings.php:324
-#: includes/class-psttcsv-settings.php:426
+#: includes/class-psttcsv-settings.php:362
+#: includes/class-psttcsv-settings.php:438
+#: includes/class-psttcsv-settings.php:560
 msgid "Date"
 msgstr "Дата"
 
-#: includes/class-psttcsv-settings.php:276
-#: includes/class-psttcsv-settings.php:330
-#: includes/class-psttcsv-settings.php:432
+#: includes/class-psttcsv-settings.php:368
+#: includes/class-psttcsv-settings.php:444
+#: includes/class-psttcsv-settings.php:566
 msgid "Arrange by"
 msgstr "Сортировать"
 
-#: includes/class-psttcsv-settings.php:278
-#: includes/class-psttcsv-settings.php:332
-#: includes/class-psttcsv-settings.php:434
+#: includes/class-psttcsv-settings.php:370
+#: includes/class-psttcsv-settings.php:446
+#: includes/class-psttcsv-settings.php:568
 msgid "ASC"
 msgstr "По возрастанию"
 
-#: includes/class-psttcsv-settings.php:279
-#: includes/class-psttcsv-settings.php:333
-#: includes/class-psttcsv-settings.php:435
+#: includes/class-psttcsv-settings.php:371
+#: includes/class-psttcsv-settings.php:447
+#: includes/class-psttcsv-settings.php:569
 msgid "DESC"
 msgstr "По убыванию"
 
-#: includes/class-psttcsv-settings.php:284
+#: includes/class-psttcsv-settings.php:376
 msgid "Remove HTML Tags"
 msgstr "Удалить HTML теги"
 
-#: includes/class-psttcsv-settings.php:288
+#: includes/class-psttcsv-settings.php:380
 msgid "Enable to remove HTML tags from the post content."
 msgstr "Включите, чтобы убрать HTML теги из содержимого записей."
 
-#: includes/class-psttcsv-settings.php:293
-#: includes/class-psttcsv-settings.php:338
-#: includes/class-psttcsv-settings.php:440
+#: includes/class-psttcsv-settings.php:385
+#: includes/class-psttcsv-settings.php:452
+#: includes/class-psttcsv-settings.php:574
 msgid "Export to CSV"
 msgstr "Экспортировать в CSV"
 
-#: includes/class-psttcsv-settings.php:295
-#: includes/class-psttcsv-settings.php:340
-#: includes/class-psttcsv-settings.php:442
+#: includes/class-psttcsv-settings.php:388
+#: includes/class-psttcsv-settings.php:455
+msgid "Warning. Read before export"
+msgstr "Внимание. Прочитать перед экспортом"
+
+#: includes/class-psttcsv-settings.php:391
+msgid ""
+"This CSV file may contain content that could auto-execute formulas in "
+"certain spreadsheet applications. This can be problematic as auto-executing "
+"formulas can potentially be used for malicious activity, including malware "
+"and other security threats."
+msgstr ""
+"Этот CSV-файл может содержать содержимое, которое может привести к "
+"автоисполнению формул в некоторых приложениях для работы с электронными "
+"таблицами. Это может быть проблематично, так как автоисполняющиеся формулы "
+"потенциально могут использоваться для вредоносной деятельности, включая "
+"вредоносное ПО и другие угрозы безопасности."
+
+#: includes/class-psttcsv-settings.php:392
+#: includes/class-psttcsv-settings.php:459
+msgid "Here are some elements that could be causing these issues:"
+msgstr "Вот некоторые элементы, которые могут быть причиной этих проблем:"
+
+#: includes/class-psttcsv-settings.php:394
+#: includes/class-psttcsv-settings.php:461
+msgid "Formulas"
+msgstr "Формулы"
+
+#: includes/class-psttcsv-settings.php:394
+msgid ""
+"The most direct issue. CSV files can include formulas that will "
+"automatically execute when the file is opened in a spreadsheet application. "
+"This can be particularly hazardous if the formula includes functions that "
+"can interact with the user's system, such as creating new files, executing "
+"commands on the user's computer, or even sending data to a remote server."
+msgstr ""
+"Самая непосредственная проблема. Файлы CSV могут содержать формулы, которые "
+"автоматически выполняются при открытии файла в приложении для работы с "
+"электронными таблицами. Это может быть особенно опасно, если формула "
+"содержит функции, которые могут взаимодействовать с системой пользователя, "
+"например создавать новые файлы, выполнять команды на компьютере пользователя "
+"или даже отправлять данные на удаленный сервер."
+
+#: includes/class-psttcsv-settings.php:395
+#: includes/class-psttcsv-settings.php:462
+msgid "Hyperlinks"
+msgstr "Гиперссылки"
+
+#: includes/class-psttcsv-settings.php:395
+msgid ""
+"Hyperlinks may also automatically open upon CSV file launch. If a URL leads "
+"to a malicious site, this can pose problems."
+msgstr ""
+"Гиперссылки также могут автоматически открываться при запуске файла CSV. "
+"Если URL-адрес ведет на вредоносный сайт, это может вызвать проблемы."
+
+#: includes/class-psttcsv-settings.php:396
+#: includes/class-psttcsv-settings.php:463
+msgid "Embedded or OLE Objects"
+msgstr "Встраиваемые или OLE-объекты"
+
+#: includes/class-psttcsv-settings.php:396
+#: includes/class-psttcsv-settings.php:463
+msgid ""
+"Some programs allow the embedding of objects (such as images or other files) "
+"within a spreadsheet. If these objects contain malware, they can be "
+"activated upon opening the file."
+msgstr ""
+"Некоторые программы позволяют встраивать объекты (например, изображения или "
+"другие файлы) в электронную таблицу. Если эти объекты содержат вредоносные "
+"программы, они могут быть активированы при открытии файла."
+
+#: includes/class-psttcsv-settings.php:397
+#: includes/class-psttcsv-settings.php:464
+msgid "Macros"
+msgstr "Макрос"
+
+#: includes/class-psttcsv-settings.php:397
+msgid ""
+"While CSV files typically do not support macros, some spreadsheet "
+"applications may automatically convert them into a format that supports "
+"macros, which can also pose a security risk."
+msgstr ""
+"Хотя файлы CSV обычно не поддерживают макросы, некоторые приложения для "
+"работы с электронными таблицами могут автоматически преобразовывать их в "
+"формат, поддерживающий макросы, что также может представлять угрозу "
+"безопасности."
+
+#: includes/class-psttcsv-settings.php:399
+#: includes/class-psttcsv-settings.php:466
+msgid ""
+"Always exercise caution when opening files from untrusted sources, "
+"especially those that can contain auto-executing scripts or other "
+"potentially dangerous content. If possible, disable automatic execution of "
+"formulas and other functions in your spreadsheet applications."
+msgstr ""
+"Всегда соблюдайте осторожность при открытии файлов из ненадежных источников, "
+"особенно тех, которые могут содержать автоматически выполняемые сценарии или "
+"другое потенциально опасное содержимое. По возможности отключите "
+"автоматическое выполнение формул и других функций в приложениях для работы с "
+"электронными таблицами."
+
+#: includes/class-psttcsv-settings.php:403
+#: includes/class-psttcsv-settings.php:470
+#: includes/class-psttcsv-settings.php:576
 msgid "Export Now"
 msgstr "Экспортировать Сейчас"
 
-#: includes/class-psttcsv-settings.php:297
-#: includes/class-psttcsv-settings.php:342
+#: includes/class-psttcsv-settings.php:405
+#: includes/class-psttcsv-settings.php:472
 msgid "Notice"
 msgstr "Внимание"
 
-#: includes/class-psttcsv-settings.php:297
-#: includes/class-psttcsv-settings.php:342
+#: includes/class-psttcsv-settings.php:405
+#: includes/class-psttcsv-settings.php:472
 msgid "The plugin's settings have been changed."
 msgstr "Настройки плагина были изменены."
 
-#: includes/class-psttcsv-settings.php:298
-#: includes/class-psttcsv-settings.php:343
+#: includes/class-psttcsv-settings.php:406
+#: includes/class-psttcsv-settings.php:473
 msgid "Save Changes"
 msgstr "Сохраните изменения"
 
-#: includes/class-psttcsv-settings.php:298
-#: includes/class-psttcsv-settings.php:343
+#: includes/class-psttcsv-settings.php:406
+#: includes/class-psttcsv-settings.php:473
 msgid "before export"
 msgstr "перед экспортом"
 
-#: includes/class-psttcsv-settings.php:307
+#: includes/class-psttcsv-settings.php:420
 msgid "Comments Export Settings"
 msgstr "Настройки экспорта комментариев"
 
-#: includes/class-psttcsv-settings.php:311
+#: includes/class-psttcsv-settings.php:425
 msgid "Comment Fields"
 msgstr "Поля комментариев"
 
-#: includes/class-psttcsv-settings.php:323
-#: includes/class-psttcsv-settings.php:423
+#: includes/class-psttcsv-settings.php:437
+#: includes/class-psttcsv-settings.php:557
 msgid "ID"
 msgstr "Номер"
 
-#: includes/class-psttcsv-settings.php:356
+#: includes/class-psttcsv-settings.php:458
+msgid ""
+"This CSV file may contain content that could auto-execute formulas in "
+"certain spreadsheet applications. This can be problematic as auto-executing "
+"formulas can potentially be used for malicious activity."
+msgstr ""
+"Этот CSV-файл может содержать содержимое, которое может привести к "
+"автоисполнению формул в некоторых приложениях для работы с электронными "
+"таблицами. Это может быть проблематично, поскольку автоисполняющиеся формулы "
+"могут быть использованы для вредоносной деятельности."
+
+#: includes/class-psttcsv-settings.php:461
+msgid ""
+"The most direct issue. CSV files can include formulas that will "
+"automatically execute when the file is opened in a spreadsheet application."
+msgstr ""
+"Самая непосредственная проблема. Файлы CSV могут содержать формулы, которые "
+"автоматически выполняются при открытии файла в приложении для работы с "
+"электронными таблицами."
+
+#: includes/class-psttcsv-settings.php:462
+msgid "Hyperlinks may also automatically open upon CSV file launch."
+msgstr ""
+"Гиперссылки также могут автоматически открываться при запуске CSV-файла."
+
+#: includes/class-psttcsv-settings.php:464
+msgid ""
+"While CSV files typically do not support macros, some spreadsheet "
+"applications may automatically convert them into a format that supports "
+"macros."
+msgstr ""
+"Хотя файлы CSV обычно не поддерживают макросы, некоторые приложения для "
+"работы с электронными таблицами могут автоматически преобразовывать их в "
+"формат, поддерживающий макросы."
+
+#: includes/class-psttcsv-settings.php:489
 msgid "Future"
 msgstr "Будущий"
 
-#: includes/class-psttcsv-settings.php:357
+#: includes/class-psttcsv-settings.php:490
 msgid "Pending"
 msgstr "В ожидании"
 
-#: includes/class-psttcsv-settings.php:361
+#: includes/class-psttcsv-settings.php:494
 msgid "Simple product"
 msgstr "Простой продукт"
 
-#: includes/class-psttcsv-settings.php:362
+#: includes/class-psttcsv-settings.php:495
 msgid "Grouped product"
 msgstr "Сгруппированный продукт"
 
-#: includes/class-psttcsv-settings.php:363
+#: includes/class-psttcsv-settings.php:496
 msgid "External/Affiliate product"
 msgstr "Внешний / Партнерский продукт"
 
-#: includes/class-psttcsv-settings.php:364
+#: includes/class-psttcsv-settings.php:497
 msgid "Variable product"
 msgstr "Вариативный продукт"
 
-#: includes/class-psttcsv-settings.php:365
+#: includes/class-psttcsv-settings.php:498
 msgid "Product variations"
 msgstr "Вариации продуктов"
 
-#: includes/class-psttcsv-settings.php:368
+#: includes/class-psttcsv-settings.php:501
 msgid "WooCommerce Export Product Settings"
 msgstr "Настройки экспорта продукта WooCommerce"
 
-#: includes/class-psttcsv-settings.php:372
+#: includes/class-psttcsv-settings.php:506
 msgid "Close"
 msgstr "Закрыть"
 
-#: includes/class-psttcsv-settings.php:376
+#: includes/class-psttcsv-settings.php:510
 msgid "WooCommerce Product Fields"
 msgstr "Поля продукта WooCommerce"
 
-#: includes/class-psttcsv-settings.php:379
+#: includes/class-psttcsv-settings.php:513
 msgid "Product Fields"
 msgstr "Поля продукта"
 
-#: includes/class-psttcsv-settings.php:386
+#: includes/class-psttcsv-settings.php:520
 msgid "Product Status"
 msgstr "Статус продукта"
 
-#: includes/class-psttcsv-settings.php:399
+#: includes/class-psttcsv-settings.php:533
 msgid "Product Types"
 msgstr "Вид продукта"
 
-#: includes/class-psttcsv-settings.php:411
+#: includes/class-psttcsv-settings.php:545
 msgid "Product Category"
 msgstr "Категория продукта"
 
-#: includes/class-psttcsv-settings.php:415
+#: includes/class-psttcsv-settings.php:549
 msgid "Uncategorized"
 msgstr "Без категории"
 
-#: includes/class-psttcsv-settings.php:424
+#: includes/class-psttcsv-settings.php:558
 msgid "Name"
 msgstr "Имя"
 
-#: includes/class-psttcsv-settings.php:425
+#: includes/class-psttcsv-settings.php:559
 msgid "Type"
 msgstr "Тип"
 
-#: includes/class-psttcsv-settings.php:427
+#: includes/class-psttcsv-settings.php:561
 msgid "Modified"
 msgstr "Изменен"
 
-#: includes/class-psttcsv-settings.php:458
+#: includes/class-psttcsv-settings.php:596
 msgid "No records meet the specified criteria."
 msgstr "По указанным параметрам не найдено ни одной записи."
 
-#: post-to-csv.php:34
+#: includes/class-psttcsv-settings.php:600
+msgid "An error occurred while writing data to the file."
+msgstr "При записи данных в файл произошла ошибка."
+
+#: includes/class-psttcsv-settings.php:604
+msgid "An error occurred while creating the file to record data."
+msgstr "При создании файла для записи данных произошла ошибка."
+
+#: post-to-csv.php:38
 msgid "Post to CSV"
 msgstr "Post to CSV"
 
-#: post-to-csv.php:40
+#: post-to-csv.php:44
 msgid "Update to Pro"
 msgstr "Обновить до \"Про\" версии"
 
-#: post-to-csv.php:185
+#: post-to-csv.php:209
 msgid "WARNING:"
 msgstr "ВНИМАНИЕ:"
 
-#: post-to-csv.php:186
+#: post-to-csv.php:210
 msgid "The plugin works correctly only if JavaScript is enabled."
-msgstr "Плагин работает корректно только в том случае, если включен JavaScript."
+msgstr ""
+"Плагин работает корректно только в том случае, если включен JavaScript."
 
-#: post-to-csv.php:542
+#: post-to-csv.php:566
 msgid "FAQ"
 msgstr "FAQ"
 
-#: post-to-csv.php:543
+#: post-to-csv.php:567
 msgid "Support"
 msgstr "Поддержка"
-
-#~ msgid "Permalink"
-#~ msgstr "Постоянная ссылка"
 
 #~ msgid "Enable if you use WordPress version 5.0 or higher."
 #~ msgstr "Включите, если вы используете версию WordPress 5.0 или выше."
 
-#~ msgid "This option is provided for those who use WordPress 5.0 in the above."
-#~ msgstr "Это опция предусмотренна для тех кто пользуется Вордпрессом 5.0 и выше."
+#~ msgid ""
+#~ "This option is provided for those who use WordPress 5.0 in the above."
+#~ msgstr ""
+#~ "Это опция предусмотренна для тех кто пользуется Вордпрессом 5.0 и выше."
 
 #~ msgid "No items found."
 #~ msgstr "Элементы не найдены."
@@ -430,8 +579,12 @@ msgstr "Поддержка"
 #~ msgid "requires"
 #~ msgstr "требует"
 
-#~ msgid "or higher, that is why it has been deactivated! Please upgrade WordPress and try again."
-#~ msgstr "или выше, поэтому плагин был деактивирован! Пожалуйста, обновите WordPress и попробуйте снова."
+#~ msgid ""
+#~ "or higher, that is why it has been deactivated! Please upgrade WordPress "
+#~ "and try again."
+#~ msgstr ""
+#~ "или выше, поэтому плагин был деактивирован! Пожалуйста, обновите "
+#~ "WordPress и попробуйте снова."
 
 #~ msgid "Back to the WordPress"
 #~ msgstr "Вернуться к WordPress"
@@ -440,7 +593,8 @@ msgstr "Поддержка"
 #~ msgstr "Странице плагинов"
 
 #~ msgid "If you enjoy our plugin, please give it 5 stars on WordPress"
-#~ msgstr "Если вам понравился плагин, пожалуйста, поставте нам 5 звезд на WordPress"
+#~ msgstr ""
+#~ "Если вам понравился плагин, пожалуйста, поставте нам 5 звезд на WordPress"
 
 #~ msgid "Rate the plugin"
 #~ msgstr "Оценить плагин"

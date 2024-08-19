@@ -2,9 +2,9 @@
 Contributors: bestwebsoft
 Donate link: https://bestwebsoft.com/donate/
 Tags: add post to csv, csv, csv file, export fields, export page, export post, export to csv, export attachment, csv plugin, post to csv plugin, order direction, guid field
-Requires at least: 4.5
-Tested up to: 5.9
-Stable tag: 1.3.9
+Requires at least: 5.6
+Tested up to: 6.6.1
+Stable tag: 1.4.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -127,6 +127,19 @@ Please make sure that the problem hasn't been discussed yet on our forum (<https
 
 == Changelog ==
 
+= V1.4.2 - 19.08.2024 =
+* Update : We updated functionality for wordpress 6.6.1.
+* Update : BWS plugins section is updated.
+* Bugfix : Posts/comments export issues has been fixed.
+
+= V1.4.1 - 17.08.2023 =
+* Update : We updated functionality for wordpress 6.3.
+* Update : BWS plugins section is updated.
+* Bugfix : Vulnerability security issues has been fixed.
+
+= V1.4.0 - 05.10.2022 =
+* Bugfix : CSV fomulas while post exporting has been fixed.
+
 = V1.3.9 - 26.04.2022 =
 * Bugfix : Deactivation Feedback fix.
 
@@ -206,6 +219,17 @@ Please make sure that the problem hasn't been discussed yet on our forum (<https
 * NEW: The ability to select the fields to be sorted and the order direction were added.
 
 == Upgrade Notice ==
+
+= V1.4.2 =
+* Usability improved.
+* Bug fixed.
+
+= V1.4.1 =
+* Usability improved.
+* Bug fixed.
+
+= V1.4.0 =
+* Bug fixed.
 
 = V1.3.9 =
 * Bug fixed.

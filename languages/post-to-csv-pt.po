@@ -1,0 +1,526 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2024-08-19 16:04+0300\n"
+"PO-Revision-Date: 2024-08-19 16:04+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: pt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.4.3\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e;esc_html_e;esc_html__\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: bws_menu\n"
+
+#: includes/class-psttcsv-settings.php:53 post-to-csv.php:38
+#: post-to-csv.php:544 post-to-csv.php:564
+msgid "Settings"
+msgstr "Configurações"
+
+#: includes/class-psttcsv-settings.php:54
+msgid "Comments"
+msgstr "Comentários"
+
+#: includes/class-psttcsv-settings.php:56
+msgid "WooCommerce"
+msgstr "WooCommerce"
+
+#: includes/class-psttcsv-settings.php:59
+msgid "Misc"
+msgstr "Diversos"
+
+#: includes/class-psttcsv-settings.php:60
+msgid "Custom Code"
+msgstr "Código Personalizado"
+
+#: includes/class-psttcsv-settings.php:61
+msgid "License Key"
+msgstr "Chave da licença"
+
+#: includes/class-psttcsv-settings.php:91
+msgid "Post"
+msgstr "Post"
+
+#: includes/class-psttcsv-settings.php:92
+msgid "Page"
+msgstr "Página"
+
+#: includes/class-psttcsv-settings.php:93
+msgid "Attachment"
+msgstr "Anexo"
+
+#: includes/class-psttcsv-settings.php:99
+#: includes/class-psttcsv-settings.php:361
+msgid "Title"
+msgstr "Título"
+
+#: includes/class-psttcsv-settings.php:100
+msgid "Guid"
+msgstr "Guia"
+
+#: includes/class-psttcsv-settings.php:101
+msgid "Post date"
+msgstr "Data do Post"
+
+#: includes/class-psttcsv-settings.php:102
+#: includes/class-psttcsv-settings.php:112
+#: includes/class-psttcsv-settings.php:363
+#: includes/class-psttcsv-settings.php:439
+msgid "Author"
+msgstr "Autor"
+
+#: includes/class-psttcsv-settings.php:103
+msgid "Content"
+msgstr "Conteúdo"
+
+#: includes/class-psttcsv-settings.php:104
+msgid "Taxonomy"
+msgstr "Taxonomia"
+
+#: includes/class-psttcsv-settings.php:105
+msgid "Term"
+msgstr "Termo"
+
+#: includes/class-psttcsv-settings.php:110
+msgid "Post ID"
+msgstr "ID do Post"
+
+#: includes/class-psttcsv-settings.php:111
+msgid "Post Permalink"
+msgstr "Link permanente de post"
+
+#: includes/class-psttcsv-settings.php:113
+msgid "Author's Email"
+msgstr "E-mail do autor"
+
+#: includes/class-psttcsv-settings.php:114
+msgid "Comment Content"
+msgstr "Conteúdo da Resposta"
+
+#: includes/class-psttcsv-settings.php:115
+msgid "Comment Date"
+msgstr "Data da resposta"
+
+#: includes/class-psttcsv-settings.php:119
+#: includes/class-psttcsv-settings.php:487
+msgid "Publish"
+msgstr "Publicar"
+
+#: includes/class-psttcsv-settings.php:120
+#: includes/class-psttcsv-settings.php:488
+msgid "Draft"
+msgstr "Rascunho"
+
+#: includes/class-psttcsv-settings.php:121
+msgid "Inherit"
+msgstr "Herdar"
+
+#: includes/class-psttcsv-settings.php:122
+#: includes/class-psttcsv-settings.php:486
+msgid "Private"
+msgstr "Privado"
+
+#: includes/class-psttcsv-settings.php:145
+msgid "Sorry, your nonce did not verify."
+msgstr "Desculpe, seu código único não é válido."
+
+#: includes/class-psttcsv-settings.php:151
+msgid "Please choose at least one Post Type."
+msgstr "Escolha pelo menos um tipo de postagem."
+
+#: includes/class-psttcsv-settings.php:157
+msgid "Please choose at least one Field."
+msgstr "Escolha pelo menos um campo."
+
+#: includes/class-psttcsv-settings.php:169
+msgid "Please choose at least one Post status."
+msgstr "Escolha pelo menos um status de Post."
+
+#: includes/class-psttcsv-settings.php:182
+msgid "Please choose at least one Comment field."
+msgstr "Escolha pelo menos um campo de comentário."
+
+#: includes/class-psttcsv-settings.php:198
+msgid "Settings saved."
+msgstr "Configurações salvas."
+
+#: includes/class-psttcsv-settings.php:208 post-to-csv.php:37
+#: post-to-csv.php:206
+msgid "Post to CSV Settings"
+msgstr "Configurações de envio para CSV"
+
+#: includes/class-psttcsv-settings.php:213
+msgid "Export"
+msgstr "Exportar"
+
+#: includes/class-psttcsv-settings.php:215
+#: includes/class-psttcsv-settings.php:221
+msgid "Post Types"
+msgstr "Tipos de Post"
+
+#: includes/class-psttcsv-settings.php:216
+#: includes/class-psttcsv-settings.php:241
+msgid "Taxonomies"
+msgstr "Taxonomias"
+
+#: includes/class-psttcsv-settings.php:223
+#: includes/class-psttcsv-settings.php:254
+#: includes/class-psttcsv-settings.php:278
+#: includes/class-psttcsv-settings.php:312
+#: includes/class-psttcsv-settings.php:351
+#: includes/class-psttcsv-settings.php:427
+#: includes/class-psttcsv-settings.php:522
+#: includes/class-psttcsv-settings.php:535
+#: includes/class-psttcsv-settings.php:547
+msgid "All"
+msgstr "Todos"
+
+#: includes/class-psttcsv-settings.php:276
+msgid "Fields"
+msgstr "Campos"
+
+#: includes/class-psttcsv-settings.php:287
+msgid "Custom Fields"
+msgstr "Campos Personalizados"
+
+#: includes/class-psttcsv-settings.php:296
+msgid "Show hidden fields"
+msgstr "Mostrar campos ocultos"
+
+#: includes/class-psttcsv-settings.php:307
+msgid "No service meta keys"
+msgstr "Nenhuma meta-chave de serviço"
+
+#: includes/class-psttcsv-settings.php:349
+msgid "Post Status"
+msgstr "Status do post"
+
+#: includes/class-psttcsv-settings.php:359
+#: includes/class-psttcsv-settings.php:435
+#: includes/class-psttcsv-settings.php:555
+msgid "Sort by"
+msgstr "Ordenar por"
+
+#: includes/class-psttcsv-settings.php:362
+#: includes/class-psttcsv-settings.php:438
+#: includes/class-psttcsv-settings.php:560
+msgid "Date"
+msgstr "Data"
+
+#: includes/class-psttcsv-settings.php:368
+#: includes/class-psttcsv-settings.php:444
+#: includes/class-psttcsv-settings.php:566
+msgid "Arrange by"
+msgstr "Organizar por"
+
+#: includes/class-psttcsv-settings.php:370
+#: includes/class-psttcsv-settings.php:446
+#: includes/class-psttcsv-settings.php:568
+msgid "ASC"
+msgstr "ASC"
+
+#: includes/class-psttcsv-settings.php:371
+#: includes/class-psttcsv-settings.php:447
+#: includes/class-psttcsv-settings.php:569
+msgid "DESC"
+msgstr "DESC"
+
+#: includes/class-psttcsv-settings.php:376
+msgid "Remove HTML Tags"
+msgstr "Remover tags HTML"
+
+#: includes/class-psttcsv-settings.php:380
+msgid "Enable to remove HTML tags from the post content."
+msgstr "Habilite a remoção de tags HTML do conteúdo do post."
+
+#: includes/class-psttcsv-settings.php:385
+#: includes/class-psttcsv-settings.php:452
+#: includes/class-psttcsv-settings.php:574
+msgid "Export to CSV"
+msgstr "Exportar para CSV"
+
+#: includes/class-psttcsv-settings.php:388
+#: includes/class-psttcsv-settings.php:455
+msgid "Warning. Read before export"
+msgstr "Aviso. Leia antes de exportar"
+
+#: includes/class-psttcsv-settings.php:391
+msgid ""
+"This CSV file may contain content that could auto-execute formulas in "
+"certain spreadsheet applications. This can be problematic as auto-executing "
+"formulas can potentially be used for malicious activity, including malware "
+"and other security threats."
+msgstr ""
+"Esse arquivo CSV pode conter conteúdo que poderia executar fórmulas "
+"automaticamente em determinados aplicativos de planilha. Isso pode ser "
+"problemático, pois as fórmulas de execução automática podem ser usadas para "
+"atividades mal-intencionadas, incluindo malware e outras ameaças à segurança."
+
+#: includes/class-psttcsv-settings.php:392
+#: includes/class-psttcsv-settings.php:459
+msgid "Here are some elements that could be causing these issues:"
+msgstr "Aqui estão alguns elementos que podem estar causando esses problemas:"
+
+#: includes/class-psttcsv-settings.php:394
+#: includes/class-psttcsv-settings.php:461
+msgid "Formulas"
+msgstr "Fórmulas"
+
+#: includes/class-psttcsv-settings.php:394
+msgid ""
+"The most direct issue. CSV files can include formulas that will "
+"automatically execute when the file is opened in a spreadsheet application. "
+"This can be particularly hazardous if the formula includes functions that "
+"can interact with the user's system, such as creating new files, executing "
+"commands on the user's computer, or even sending data to a remote server."
+msgstr ""
+"O problema mais direto. Os arquivos CSV podem incluir fórmulas que serão "
+"executadas automaticamente quando o arquivo for aberto em um aplicativo de "
+"planilha eletrônica. Isso pode ser particularmente perigoso se a fórmula "
+"incluir funções que possam interagir com o sistema do usuário, como a "
+"criação de novos arquivos, a execução de comandos no computador do usuário "
+"ou até mesmo o envio de dados para um servidor remoto."
+
+#: includes/class-psttcsv-settings.php:395
+#: includes/class-psttcsv-settings.php:462
+msgid "Hyperlinks"
+msgstr "Hyperlinks"
+
+#: includes/class-psttcsv-settings.php:395
+msgid ""
+"Hyperlinks may also automatically open upon CSV file launch. If a URL leads "
+"to a malicious site, this can pose problems."
+msgstr ""
+"Os hiperlinks também podem ser abertos automaticamente ao abrir o arquivo "
+"CSV. Se um URL levar a um site malicioso, isso pode causar problemas."
+
+#: includes/class-psttcsv-settings.php:396
+#: includes/class-psttcsv-settings.php:463
+msgid "Embedded or OLE Objects"
+msgstr "Objetos incorporados ou OLE"
+
+#: includes/class-psttcsv-settings.php:396
+#: includes/class-psttcsv-settings.php:463
+msgid ""
+"Some programs allow the embedding of objects (such as images or other files) "
+"within a spreadsheet. If these objects contain malware, they can be "
+"activated upon opening the file."
+msgstr ""
+"Alguns programas permitem a incorporação de objetos (como imagens ou outros "
+"arquivos) em uma planilha. Se esses objetos contiverem malware, eles poderão "
+"ser ativados ao abrir o arquivo."
+
+#: includes/class-psttcsv-settings.php:397
+#: includes/class-psttcsv-settings.php:464
+msgid "Macros"
+msgstr "Macros"
+
+#: includes/class-psttcsv-settings.php:397
+msgid ""
+"While CSV files typically do not support macros, some spreadsheet "
+"applications may automatically convert them into a format that supports "
+"macros, which can also pose a security risk."
+msgstr ""
+"Embora os arquivos CSV normalmente não sejam compatíveis com macros, alguns "
+"aplicativos de planilhas podem convertê-los automaticamente em um formato "
+"compatível com macros, o que também pode representar um risco à segurança."
+
+#: includes/class-psttcsv-settings.php:399
+#: includes/class-psttcsv-settings.php:466
+msgid ""
+"Always exercise caution when opening files from untrusted sources, "
+"especially those that can contain auto-executing scripts or other "
+"potentially dangerous content. If possible, disable automatic execution of "
+"formulas and other functions in your spreadsheet applications."
+msgstr ""
+"Sempre tenha cuidado ao abrir arquivos de fontes não confiáveis, "
+"especialmente aqueles que podem conter scripts de execução automática ou "
+"outros conteúdos potencialmente perigosos. Se possível, desative a execução "
+"automática de fórmulas e outras funções em seus aplicativos de planilha."
+
+#: includes/class-psttcsv-settings.php:403
+#: includes/class-psttcsv-settings.php:470
+#: includes/class-psttcsv-settings.php:576
+msgid "Export Now"
+msgstr "Exportar Agora"
+
+#: includes/class-psttcsv-settings.php:405
+#: includes/class-psttcsv-settings.php:472
+msgid "Notice"
+msgstr "Aviso"
+
+#: includes/class-psttcsv-settings.php:405
+#: includes/class-psttcsv-settings.php:472
+msgid "The plugin's settings have been changed."
+msgstr "As configurações do plug-in foram alteradas."
+
+#: includes/class-psttcsv-settings.php:406
+#: includes/class-psttcsv-settings.php:473
+msgid "Save Changes"
+msgstr "Salvar Alterações"
+
+#: includes/class-psttcsv-settings.php:406
+#: includes/class-psttcsv-settings.php:473
+msgid "before export"
+msgstr "antes da exportação"
+
+#: includes/class-psttcsv-settings.php:420
+msgid "Comments Export Settings"
+msgstr "Configurações de exportação de comentários"
+
+#: includes/class-psttcsv-settings.php:425
+msgid "Comment Fields"
+msgstr "Campos de comentários"
+
+#: includes/class-psttcsv-settings.php:437
+#: includes/class-psttcsv-settings.php:557
+msgid "ID"
+msgstr "ID"
+
+#: includes/class-psttcsv-settings.php:458
+msgid ""
+"This CSV file may contain content that could auto-execute formulas in "
+"certain spreadsheet applications. This can be problematic as auto-executing "
+"formulas can potentially be used for malicious activity."
+msgstr ""
+"Esse arquivo CSV pode conter conteúdo que poderia executar fórmulas "
+"automaticamente em determinados aplicativos de planilha. Isso pode ser "
+"problemático, pois as fórmulas de execução automática podem ser usadas para "
+"atividades mal-intencionadas."
+
+#: includes/class-psttcsv-settings.php:461
+msgid ""
+"The most direct issue. CSV files can include formulas that will "
+"automatically execute when the file is opened in a spreadsheet application."
+msgstr ""
+"O problema mais direto. Os arquivos CSV podem incluir fórmulas que serão "
+"executadas automaticamente quando o arquivo for aberto em um aplicativo de "
+"planilha eletrônica."
+
+#: includes/class-psttcsv-settings.php:462
+msgid "Hyperlinks may also automatically open upon CSV file launch."
+msgstr ""
+"Os hiperlinks também podem ser abertos automaticamente ao iniciar o arquivo "
+"CSV."
+
+#: includes/class-psttcsv-settings.php:464
+msgid ""
+"While CSV files typically do not support macros, some spreadsheet "
+"applications may automatically convert them into a format that supports "
+"macros."
+msgstr ""
+"Embora os arquivos CSV normalmente não sejam compatíveis com macros, alguns "
+"aplicativos de planilha podem convertê-los automaticamente em um formato "
+"compatível com macros."
+
+#: includes/class-psttcsv-settings.php:489
+msgid "Future"
+msgstr "Futuro"
+
+#: includes/class-psttcsv-settings.php:490
+msgid "Pending"
+msgstr "Pendente"
+
+#: includes/class-psttcsv-settings.php:494
+msgid "Simple product"
+msgstr "Produto Simples"
+
+#: includes/class-psttcsv-settings.php:495
+msgid "Grouped product"
+msgstr "Produto agrupado"
+
+#: includes/class-psttcsv-settings.php:496
+msgid "External/Affiliate product"
+msgstr "Produto Externo/Afiliado"
+
+#: includes/class-psttcsv-settings.php:497
+msgid "Variable product"
+msgstr "Produto Variável"
+
+#: includes/class-psttcsv-settings.php:498
+msgid "Product variations"
+msgstr "Variações do produto"
+
+#: includes/class-psttcsv-settings.php:501
+msgid "WooCommerce Export Product Settings"
+msgstr "Configurações do produto de exportação do WooCommerce"
+
+#: includes/class-psttcsv-settings.php:506
+msgid "Close"
+msgstr "Fechar"
+
+#: includes/class-psttcsv-settings.php:510
+msgid "WooCommerce Product Fields"
+msgstr "Campos de produto do WooCommerce"
+
+#: includes/class-psttcsv-settings.php:513
+msgid "Product Fields"
+msgstr "Campos do produto"
+
+#: includes/class-psttcsv-settings.php:520
+msgid "Product Status"
+msgstr "Status do produto"
+
+#: includes/class-psttcsv-settings.php:533
+msgid "Product Types"
+msgstr "Tipos de produto"
+
+#: includes/class-psttcsv-settings.php:545
+msgid "Product Category"
+msgstr "Categoria de Produto"
+
+#: includes/class-psttcsv-settings.php:549
+msgid "Uncategorized"
+msgstr "Sem categoria"
+
+#: includes/class-psttcsv-settings.php:558
+msgid "Name"
+msgstr "Nome"
+
+#: includes/class-psttcsv-settings.php:559
+msgid "Type"
+msgstr "Tipo"
+
+#: includes/class-psttcsv-settings.php:561
+msgid "Modified"
+msgstr "Modificado"
+
+#: includes/class-psttcsv-settings.php:596
+msgid "No records meet the specified criteria."
+msgstr "Nenhum registro atende aos critérios especificados."
+
+#: includes/class-psttcsv-settings.php:600
+msgid "An error occurred while writing data to the file."
+msgstr "Ocorreu um erro ao gravar dados no arquivo."
+
+#: includes/class-psttcsv-settings.php:604
+msgid "An error occurred while creating the file to record data."
+msgstr "Ocorreu um erro ao criar o arquivo para registrar os dados."
+
+#: post-to-csv.php:38
+msgid "Post to CSV"
+msgstr "Postar em CSV"
+
+#: post-to-csv.php:44
+msgid "Update to Pro"
+msgstr "Atualização para o Pro"
+
+#: post-to-csv.php:209
+msgid "WARNING:"
+msgstr "AVISO:"
+
+#: post-to-csv.php:210
+msgid "The plugin works correctly only if JavaScript is enabled."
+msgstr ""
+"O plug-in funciona corretamente somente se o JavaScript estiver ativado."
+
+#: post-to-csv.php:566
+msgid "FAQ"
+msgstr "FAQ"
+
+#: post-to-csv.php:567
+msgid "Support"
+msgstr "Suporte"
